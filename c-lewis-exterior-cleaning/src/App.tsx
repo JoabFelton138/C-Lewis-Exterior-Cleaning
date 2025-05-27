@@ -1,11 +1,10 @@
-import './App.css'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './components/ui/carousel'
+import { HomeCarousel } from './components/HomeCarousel'
 
 function App() {
 
   return (
     <>
-
+      <HomeCarousel />
     </>
   )
 }
