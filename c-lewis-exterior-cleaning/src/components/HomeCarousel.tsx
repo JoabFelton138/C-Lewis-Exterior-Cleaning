@@ -9,6 +9,7 @@ import van5 from '../assets/images/carousel/van5-min.jpg';
 import cc from '../assets/images/carousel/cc-min.jpg';
 import pw3 from '../assets/images/carousel/pw3-min.jpg';
 import gc3 from '../assets/images/carousel/gc3.jpg';
+import { Button } from './ui/button';
 
 
 export const HomeCarousel = () => {
@@ -17,7 +18,7 @@ export const HomeCarousel = () => {
         {
             src: van5,
             alt: 'Van',
-            title: 'PROFESSIONAL EXTERIOR CLEANING',
+            title: 'EXPERT EXTERIOR CLEANING',
             subtitle: 'COVERING PERTON, SHIFNAL, WHEATON ASTON & MORE'
         },
         {
@@ -53,9 +54,17 @@ export const HomeCarousel = () => {
                                     className='w-screen h-full object-cover'/>
                                 <div className='absolute inset-0 bg-black/40'></div>
                                 <div className='absolute inset-0 flex items-center justify-center'>
-                                    <h2 className='text-6xl md:text-7xl lg:text-8xl font-bold text-white text-center'>
-                                        {slide.title}
-                                    </h2>
+                                    <div className='flex flex-col items-center gap-6'>
+                                        <h2 className='text-6xl md:text-3xl lg:text-8xl font-bold text-white text-center'>
+                                            {slide.title}
+                                        </h2>
+                                        <h4 className='text-2xl md:text-2xl text-white text-center'>
+                                            {slide.subtitle}
+                                        </h4>
+                                        <Button variant='outline' className='cursor-pointer' size='lg'>
+                                            READ MORE
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
                         </CarouselItem>

@@ -2,10 +2,10 @@ import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
-import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -183,7 +183,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "absolute rounded-full hover:bg-transparent text-white [&_svg]:!size-16",
+        "absolute rounded-full hover:bg-transparent hover:text-white cursor-pointer text-white [&_svg]:!size-16",
         orientation === "horizontal"
           ? "top-1/2 -left-6 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -213,7 +213,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "absolute rounded-full hover:bg-transparent text-white [&_svg]:!size-16",
+        "absolute rounded-full hover:bg-transparent hover:text-white cursor-pointer text-white [&_svg]:!size-16",
         orientation === "horizontal"
           ? "top-1/2 -right-6 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
