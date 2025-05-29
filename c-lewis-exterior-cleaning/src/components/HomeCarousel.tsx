@@ -2,7 +2,8 @@ import { Carousel,
         CarouselContent,    
         CarouselItem, 
         CarouselNext, 
-        CarouselPrevious } from './ui/carousel';
+        CarouselPrevious,
+        type CarouselApi } from './ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import Fade from 'embla-carousel-fade';
 import van5 from '../assets/images/carousel/van5-min.jpg';
@@ -10,9 +11,10 @@ import cc from '../assets/images/carousel/cc-min.jpg';
 import pw3 from '../assets/images/carousel/pw3-min.jpg';
 import gc3 from '../assets/images/carousel/gc3.jpg';
 import { Button } from './ui/button';
-
+import { useState } from 'react';
 
 export const HomeCarousel = () => {
+    const [activeSlide, setActiveSlide] = useState(0);
 
     const slides = [
         {
@@ -45,7 +47,10 @@ export const HomeCarousel = () => {
         <div className='w-screen overflow-hidden'>
             <Carousel opts={{ loop: true, 
                             dragFree: true}} 
-                        plugins={[Autoplay({ delay: 4000 }), Fade()]}>
+                        plugins={[Autoplay({ delay: 4000 }), Fade()]}
+                        setApi={(api: CarouselApi) => {
+                            api?.on('select', () => setActiveSlide(api.selectedScrollSnap()))
+                        }}>
                 <CarouselContent>
                     {slides.map((slide, index) => (
                         <CarouselItem key={index}>
@@ -55,13 +60,13 @@ export const HomeCarousel = () => {
                                 <div className='absolute inset-0 bg-black/40'></div>
                                 <div className='absolute inset-0 flex items-center justify-center'>
                                     <div className='flex flex-col items-center gap-6'>
-                                        <h2 className='text-6xl md:text-3xl lg:text-8xl font-bold text-white text-center'>
+                                        <h2 className={`text-6xl md:text-3xl lg:text-8xl font-bold text-white text-center animate-slide-down ${activeSlide === index ? 'active': ''}`}>
                                             {slide.title}
                                         </h2>
-                                        <h4 className='text-2xl md:text-2xl text-white text-center'>
+                                        <h4 className={`text-2xl md:text-2xl text-white text-center ${activeSlide === index ? 'animate-slide-left active': ''}`}>
                                             {slide.subtitle}
                                         </h4>
-                                        <Button variant='outline' className='cursor-pointer' size='lg'>
+                                        <Button className={`hover:scale-105 ${activeSlide === index ? 'animate-slide-up active': ''}`} variant='outline' size='lg'>
                                             READ MORE
                                         </Button>
                                     </div>
