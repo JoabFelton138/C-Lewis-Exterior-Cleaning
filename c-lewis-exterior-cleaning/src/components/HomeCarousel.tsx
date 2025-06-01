@@ -53,8 +53,7 @@ export const HomeCarousel = () => {
                         }}>
                 <CarouselContent>
                     {slides.map((slide, index) => (
-                        <CarouselItem key={index}>
-                            <div className='w-full h-[800px]'>
+                        <CarouselItem key={index} className='w-full h-[800px]'>
                                 <img src={slide.src} alt={slide.alt} 
                                     className='w-screen h-full object-cover'/>
                                 <div className='absolute inset-0 bg-black/40'></div>
@@ -70,7 +69,6 @@ export const HomeCarousel = () => {
                                             READ MORE
                                         </Button>
                                     </div>
-                                </div>
                             </div>
                         </CarouselItem>
                     ))}

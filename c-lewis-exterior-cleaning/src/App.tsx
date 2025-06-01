@@ -1,10 +1,10 @@
-import { HomeCarousel } from './components/HomeCarousel'
+import { Home } from "./pages/Home"
 
 function App() {
 
   return (
     <>
-      <HomeCarousel />
+      <Home />
     </>
   )
 }
