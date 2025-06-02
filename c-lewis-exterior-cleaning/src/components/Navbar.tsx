@@ -1,6 +1,6 @@
-import * as React from "react";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "./ui/navigation-menu";
 import logo from "../assets/Transparent Logo.png";
+import { useState, useEffect } from "react";
 
 const services = [
     {
@@ -31,12 +31,36 @@ const services = [
 ]
 
 export const Navbar = () => {
+
+    const [isScrolled, setIsScrolled] = useState(false);
+    
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setIsScrolled(scrollPosition > 25);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+    
     return (
-        <NavigationMenu viewport={false}>
+        <NavigationMenu viewport={false}
+                className={`transition-all duration-700 ease-in-out
+                    ${isScrolled 
+                        ? 'bg-white/100 shadow-md opacity-100' 
+                        : 'bg-white/0'
+                }`}>
             <div>
-                <img src={logo} className="w-50 brightness-0 invert" alt="logo" />
+                <img src={logo} 
+                     className={`transition-all duration-300
+                        ${isScrolled 
+                        ? 'w-45 brightness-0' 
+                        : 'w-50 brightness-0 invert'
+                    }`} alt="logo" />
             </div>
-            <NavigationMenuList>
+            <NavigationMenuList className={` transition-colors duration-300
+                        ${isScrolled ? 'text-black [&>li>a]:text-black' : 'text-white [&>li>a]'}`}>
                     <NavigationMenuItem>
                         <NavigationMenuLink href="/">
                             GET A QUOTE
@@ -48,8 +72,8 @@ export const Navbar = () => {
                         </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger className="font-normal">SERVICES</NavigationMenuTrigger>
-                        <NavigationMenuContent>
+                        <NavigationMenuTrigger className={`font-normal ${isScrolled ? 'text-black' : 'text-white'}`}>SERVICES</NavigationMenuTrigger>
+                        <NavigationMenuContent >
                             <ul className="grid w-[200px]">
                                 {services.map((service) => (
                                     <li key={service.title}>

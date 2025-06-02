@@ -47,7 +47,7 @@ export const HomeCarousel = () => {
         <div className='w-screen overflow-hidden'>
             <Carousel opts={{ loop: true, 
                             dragFree: true}} 
-                        plugins={[Autoplay({ delay: 4000 }), Fade()]}
+                        plugins={[Autoplay({ delay: 6000 }), Fade()]}
                         setApi={(api: CarouselApi) => {
                             api?.on('select', () => setActiveSlide(api.selectedScrollSnap()))
                         }}>
