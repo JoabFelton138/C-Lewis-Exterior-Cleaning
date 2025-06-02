@@ -4,8 +4,7 @@ import { AboutMe } from '../components/AboutMe';
 export const Home = () => {
     return (
         <main>
-            <HomeCarousel />
-            
+            <HomeCarousel />   
             <AboutMe />
         </main>
     );
