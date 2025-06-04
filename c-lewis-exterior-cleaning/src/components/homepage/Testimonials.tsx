@@ -66,7 +66,8 @@ export const Testimonials = () => {
                 }
             </div>
             <div className="flex flex-col sm:flex-row justify-center">
-                <Button size='lg' className="bg-black hover:bg-primary/90 hover:scale-105 text-lg px-8">
+                <Button size='lg' 
+                        className="bg-black hover:bg-primary/90 hover:scale-105 text-lg px-8">
                     TESTIMONIALS
                 </Button>
             </div>

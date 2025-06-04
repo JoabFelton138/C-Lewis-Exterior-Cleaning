@@ -98,7 +98,7 @@ export const AboutMe = () => {
                   </Button>
                 </div>
                 <Button className="bg-primary hover:bg-primary/90 hover:scale-105 text-lg px-8">
-                  Get a Free Quote
+                  GET A FREE QUOTE
                 </Button>
               </div>
             </div>
