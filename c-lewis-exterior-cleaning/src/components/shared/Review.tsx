@@ -24,7 +24,10 @@ export const Review = ({ ...ReviewProps }: ReviewProps) => {
         </p>
       <div className="flex items-center gap-4">
         <div className="w-12 h-12 bg-primary/10 rounded-full">
-            <img src={ReviewProps.image} alt={ReviewProps.author} className="w-full h-full object-cover rounded-full" />
+            <img src={ReviewProps.image} 
+                 alt={ReviewProps.author} 
+                 className="w-full h-full object-cover rounded-full" 
+            />
         </div>
         <div>
             <h4 className="font-semibold text-gray-900">

@@ -46,19 +46,19 @@ const reviews: Review[] = [
 
 export const Testimonials = () => {
     return (
-       <section className='w-full relative h-[800px] overflow-hidden'>
+       <section className='w-full relative min-h-[800px] py-24 overflow-hidden'>
         <div className='absolute inset-0 object-cover w-full h-full z-0'>
-            <div className='absolute inset-0 bg-black/20 z-10'></div>
+            <div className='absolute inset-0 bg-black/30 z-10'></div>
             <img className='w-full h-full object-cover' src={van} alt='van'/>
         </div>
-        <div className='container relative mx-auto px-4 h-full flex flex-col justify-center'>
+        <div className='container relative mx-auto max-w-sm md:max-w-6xl px-4 h-full flex flex-col justify-center'>
             <div className='text-center mb-16'>
                 <h2 className='text-6xl font-bold text-white mb-4'>
                     What My Clients Say
                 </h2>
                 <div className='w-24 h-1 bg-white mx-auto'/>
             </div>
-            <div className= 'grid grid-cols-1 md[:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+            <div className= 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
                 {
                     reviews.map((review, index) => (
                         <Review 
@@ -73,7 +73,7 @@ export const Testimonials = () => {
                     ))
                 }
             </div>
-            <div className="flex flex-col sm:flex-row justify-center">
+            <div className="flex flex-col sm:flex-row justify-center max-w-fit mx-auto">
                 <Button size='lg' 
                         className="bg-black hover:bg-primary/90 hover:scale-105 text-lg px-8">
                     TESTIMONIALS
