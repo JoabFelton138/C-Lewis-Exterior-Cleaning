@@ -48,7 +48,7 @@ export const Testimonials = () => {
     return (
        <section className='w-full relative min-h-[800px] py-24 overflow-hidden'>
         <div className='absolute inset-0 object-cover w-full h-full z-0'>
-            <div className='absolute inset-0 bg-black/30 z-10'></div>
+            <div className='absolute inset-0 bg-black/40 z-10'></div>
             <img className='w-full h-full object-cover' src={van} alt='van'/>
         </div>
         <div className='container relative mx-auto max-w-sm md:max-w-6xl px-4 h-full flex flex-col justify-center'>

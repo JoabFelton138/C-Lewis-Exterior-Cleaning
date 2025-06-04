@@ -9,32 +9,21 @@ import {
 import logo from "../../assets/Transparent Logo.png";
 import { useState, useEffect } from "react";
 
-const services = [
-  {
-    title: "WINDOW CLEANING",
-    href: "",
-    description: "?",
-  },
-  {
-    title: "GUTTERS & FASCIAS",
-    href: "",
-    description: "",
-  },
-  {
-    title: "CONSERVATORY CLEANING",
-    href: "",
-    description: "",
-  },
-  {
-    title: "PRESSURE WASHING",
-    href: "",
-    description: "",
-  },
-  {
-    title: "CONSERVATORIES & SOLAR PANELS",
-    href: "",
-    description: "",
-  },
+const menuItems = [
+    {title: "GET A QUOTE", href: "/"},
+    {title: "CONTACT US", href: "/"},
+    {title: "PORTFOLIO", href: "/"},
+    {
+        title: "SERVICES", 
+        items: [
+            {title: "WINDOW CLEANING", href: "/"},
+            {title: "GUTTERS & FASCIAS", href: "/"},
+            {title: "CONSERVATORY CLEANING", href: "/"},
+            {title: "PRESSURE WASHING", href: "/"},
+            {title: "CONSERVATORIES & SOLAR PANELS", href: "/"},
+        ],
+    },
+    {title: "TESTIMONIALS", href: "/"},
 ];
 
 export const Navbar = () => {
@@ -58,55 +47,45 @@ export const Navbar = () => {
                       isScrolled
                         ? "bg-white/100 shadow-md opacity-100"
                         : "bg-white/0"
-                    }`}
-    >
+                    }`}>
       <div>
         <img
           src={logo}
-          className={`transition-all duration-300
-                        ${
-                          isScrolled
-                            ? "w-42 brightness-0 pl-1"
-                            : "w-50 brightness-0 invert"
-                        }`}
+          className={`transition-all duration-300 ${isScrolled ? "w-42 brightness-0 pl-1" : "w-50 brightness-0 invert"}`}
           alt="logo"
         />
       </div>
-      <NavigationMenuList
-        className={` transition-colors duration-300
-                        ${isScrolled ? "text-black [&>li>a]:text-black" : "text-white [&>li>a]"}`}
-      >
-        <NavigationMenuItem>
-          <NavigationMenuLink href="/">GET A QUOTE</NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink href="/">CONTACT US</NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger
-            className={`font-normal ${isScrolled ? "text-black" : "text-white"}`}
-          >
-            SERVICES
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[200px]">
-              {services.map((service) => (
-                <li key={service.title}>
-                  <NavigationMenuLink href={service.href}>
-                    {service.title}
-                  </NavigationMenuLink>
-                </li>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink href="/">PORTFOLIO</NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink href="/">TESTIMONIALS</NavigationMenuLink>
-        </NavigationMenuItem>
+
+      <NavigationMenuList>
+        {menuItems.map((item, index) => (
+            <NavigationMenuItem key={index}>
+                {item.items ? (
+                    <>
+                        <NavigationMenuTrigger className="font-normal">
+                            {item.title}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                            <ul className="w-[300px] md:w-[250px]">
+                                {item.items.map((subItem, index) => (
+                                    <li key={index}>
+                                        <NavigationMenuLink href={subItem.href}>
+                                            {subItem.title}
+                                        </NavigationMenuLink>
+                                    </li>
+                                ))}
+                            </ul>
+                        </NavigationMenuContent>
+                    </>
+                ) : (
+                    <NavigationMenuLink href={item.href}>
+                        {item.title}
+                    </NavigationMenuLink>
+                )
+            }
+            </NavigationMenuItem>
+        ))}  
       </NavigationMenuList>
+
     </NavigationMenu>
   );
 };
