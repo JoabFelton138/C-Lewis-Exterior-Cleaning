@@ -1,6 +1,9 @@
 import van from '../../assets/images/carousel/van.png'
 import { Review } from '../shared/Review';
 import { Button } from '@/components/ui/button';
+import cena from '../../assets/images/john-cena.webp';
+import ferguson from '../../assets/images/af.jpg';
+import statham from '../../assets/images/js.jpg';
 
 interface Review {
     rating: number;
@@ -8,6 +11,7 @@ interface Review {
     author: string;
     authorTitle: string;
     url: string;
+    image: string;
 }
 
 const reviews: Review[] = [
@@ -17,7 +21,8 @@ const reviews: Review[] = [
         The results were beyond our expectations!`,
         author: 'John Cena', 
         authorTitle: '17 Time WWE Champion', 
-        url:'https://www.google.com'
+        url:'https://www.google.com',
+        image: cena
     },
     {
         rating: 5, 
@@ -25,14 +30,16 @@ const reviews: Review[] = [
         The results were beyond our expectations!`,
         author: 'Alex Ferguson', 
         authorTitle: 'Former Manchester United Manager', 
-        url:'https://www.google.com'
+        url:'https://www.google.com',
+        image: ferguson
     },
     {
         rating: 5, 
         comment: `Chad’s expertise brought our vision to life in ways we never imagined. His craftsmanship and dedication made all the difference—our space feels brand new!`,
         author: 'Jason Statham', 
         authorTitle: 'Generic Movie Tough Guy', 
-        url:'https://www.google.com'
+        url:'https://www.google.com',
+        image: statham
     }
 ]
 
@@ -61,6 +68,7 @@ export const Testimonials = () => {
                             author={review.author}
                             authorTitle={review.authorTitle}
                             url={review.url}
+                            image={review.image}
                         />
                     ))
                 }
