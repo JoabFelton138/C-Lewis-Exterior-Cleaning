@@ -56,22 +56,22 @@ export const HomeCarousel = () => {
       >
         <CarouselContent>
           {slides.map((slide, index) => (
-            <CarouselItem key={index} className="w-full h-[800px]">
+            <CarouselItem key={index} className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px]">
               <img
                 src={slide.src}
                 alt={slide.alt}
                 className="w-screen h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/25"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex flex-col items-center gap-6">
+              <div className="absolute inset-0 flex items-center justify-center px-4">
+                <div className="flex flex-col items-center gap-4 sm:gap-6">
                   <h2
-                    className={`text-6xl md:text-3xl lg:text-8xl font-bold text-white text-center animate-slide-down ${activeSlide === index ? "active" : ""}`}
+                    className={`text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white text-center animate-slide-down ${activeSlide === index ? "active" : ""}`}
                   >
                     {slide.title}
                   </h2>
                   <h4
-                    className={`text-2xl md:text-2xl text-white text-center ${activeSlide === index ? "animate-slide-left active" : ""}`}
+                    className={`text-lg sm:text-xl md:text-2xl text-white text-center ${activeSlide === index ? "animate-slide-left active" : ""}`}
                   >
                     {slide.subtitle}
                   </h4>
@@ -87,8 +87,8 @@ export const HomeCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious variant="ghost" />
-        <CarouselNext variant="ghost" />
+        <CarouselPrevious className="hidden sm:flex" variant="ghost" />
+        <CarouselNext className="hidden sm:flex" variant="ghost" />
       </Carousel>
     </div>
   );
