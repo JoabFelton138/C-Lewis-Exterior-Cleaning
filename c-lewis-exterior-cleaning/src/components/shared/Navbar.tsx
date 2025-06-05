@@ -66,7 +66,7 @@ export const Navbar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className={`!w-[180px] ${isScrolled ? "text-black" : "text-white"}`}>
+            <NavigationMenuContent className={`!w-[150px] !right-0 !left-auto ${isScrolled ? "text-black" : "text-white"}`}>
                     {menuItems.map((item, index) => (
                         <NavigationMenuItem key={index}>
                             {item.items ? (
