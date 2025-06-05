@@ -56,16 +56,17 @@ export const Navbar = () => {
         />
       </div>
 
-      <NavigationMenuList>
+      <NavigationMenuList className={`transition-colors duration-300
+                        ${isScrolled ? "text-black [&>li>a]:text-black" : "[&>li>a]:text-white"}`}>
         {menuItems.map((item, index) => (
             <NavigationMenuItem key={index}>
                 {item.items ? (
                     <>
-                        <NavigationMenuTrigger className="font-normal">
+                        <NavigationMenuTrigger className={`font-normal transition-colors duration-300 ${isScrolled ? "text-black" : "text-white"}`}>
                             {item.title}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ul className="w-[300px] md:w-[250px]">
+                            <ul>
                                 {item.items.map((subItem, index) => (
                                     <li key={index}>
                                         <NavigationMenuLink href={subItem.href}>
