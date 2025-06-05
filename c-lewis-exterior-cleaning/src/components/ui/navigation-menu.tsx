@@ -18,7 +18,7 @@ function NavigationMenu({
       data-slot="navigation-menu"
       data-viewport={viewport}
       className={cn(
-        "group/navigation-menu fixed top-0 left-0 pe-4 right-0 z-50 flex justify-between items-center",
+        "group/navigation-menu fixed top-0 left-0 right-0 z-50 flex justify-between items-center pl-[1px] pr-0 md:px-2 py-2",
         className,
       )}
       {...props}
@@ -37,7 +37,7 @@ function NavigationMenuList({
     <NavigationMenuPrimitive.List
       data-slot="navigation-menu-list"
       className={cn(
-        "group flex flex-1 list-none items-center justify-center gap-0.5 [&>li>a]:text-white",
+        "group flex flex-1 list-none items-center justify-center gap-0.5 pr-2 md:pr-4 [&>li>a]:text-white",
         className,
       )}
       {...props}

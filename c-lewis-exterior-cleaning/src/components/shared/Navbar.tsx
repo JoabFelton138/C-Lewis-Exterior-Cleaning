@@ -48,15 +48,15 @@ export const Navbar = () => {
                         ? "bg-white/100 shadow-md opacity-100"
                         : "bg-white/0"
                     }`}>
-      <div>
+      <div className="ml-[1px]">
         <img
           src={logo}
-          className={`transition-all duration-300 ${isScrolled ? "w-42 brightness-0 pl-1" : "w-50 brightness-0 invert"}`}
+          className={`transition-all duration-300 ${isScrolled ? "w-36 md:w-44 brightness-0" : "w-40 md:w-52 brightness-0 invert"}`}
           alt="logo"
         />
       </div>
     
-      <NavigationMenuList className={`flex items-center ${isScrolled ? "text-black [&>li>a]:text-black" 
+      <NavigationMenuList className={`flex items-center pr-4 ${isScrolled ? "text-black [&>li>a]:text-black" 
                                        : "text-white [&>li>a]:text-white"}`}>
        
        <MobileMenuTrigger menuItems={menuItems} isScrolled={isScrolled} />
