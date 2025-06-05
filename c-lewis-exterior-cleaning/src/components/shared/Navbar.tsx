@@ -18,7 +18,6 @@ const menuItems = [
         items: [
             {title: "WINDOW CLEANING", href: "/"},
             {title: "GUTTERS & FASCIAS", href: "/"},
-            {title: "CONSERVATORY CLEANING", href: "/"},
             {title: "PRESSURE WASHING", href: "/"},
             {title: "CONSERVATORIES & SOLAR PANELS", href: "/"},
         ],
@@ -56,16 +55,55 @@ export const Navbar = () => {
         />
       </div>
 
-      <NavigationMenuList className={`transition-colors duration-300
-                        ${isScrolled ? "text-black [&>li>a]:text-black" : "[&>li>a]:text-white"}`}>
+      <NavigationMenuList className={`flex items-center ${isScrolled ? "text-black [&>li>a]:text-black" 
+                                       : "text-white [&>li>a]:text-white"}`}>
+        {/* Mobile Menu Trigger */}
+        <NavigationMenuItem className="md:hidden">
+            <NavigationMenuTrigger className={`flex items-center ${isScrolled ? "text-black" 
+                                       : "text-white"}`}>
+                <span className="sr-only">Menu</span>
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </NavigationMenuTrigger>
+            <NavigationMenuContent className={`!w-[180px] ${isScrolled ? "text-black" : "text-white"}`}>
+                    {menuItems.map((item, index) => (
+                        <NavigationMenuItem key={index}>
+                            {item.items ? (
+                                <>
+                                    <NavigationMenuTrigger className={`font-normal ${isScrolled ? "text-black" : "text-white"}`}>
+                                        {item.title}
+                                    </NavigationMenuTrigger>
+                                    <NavigationMenuContent className={`${isScrolled ? "text-black" : "text-white"}`}>
+                                <ul>
+                                    {item.items.map((subItem, index) => (
+                                        <li key={index}>
+                                            <NavigationMenuLink href={subItem.href}>
+                                                {subItem.title}
+                                            </NavigationMenuLink>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </NavigationMenuContent>
+                                </>
+                            ) : (
+                                <NavigationMenuLink href={item.href}>
+                                    {item.title}
+                                </NavigationMenuLink>
+                            )}
+                        </NavigationMenuItem>
+                    ))}
+            </NavigationMenuContent>
+        </NavigationMenuItem>
+        {/* Desktop Menu Items */}
         {menuItems.map((item, index) => (
-            <NavigationMenuItem key={index}>
+            <NavigationMenuItem key={index} className="hidden md:block"> 
                 {item.items ? (
                     <>
-                        <NavigationMenuTrigger className={`font-normal transition-colors duration-300 ${isScrolled ? "text-black" : "text-white"}`}>
+                        <NavigationMenuTrigger className={`font-normal ${isScrolled ? "text-black" : "text-white"}`}>
                             {item.title}
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent>
+                        <NavigationMenuContent className={`${isScrolled ? "text-black" : "text-white"}`}>
                             <ul>
                                 {item.items.map((subItem, index) => (
                                     <li key={index}>
@@ -81,12 +119,10 @@ export const Navbar = () => {
                     <NavigationMenuLink href={item.href}>
                         {item.title}
                     </NavigationMenuLink>
-                )
-            }
+                )}
             </NavigationMenuItem>
-        ))}  
+        ))}
       </NavigationMenuList>
-
     </NavigationMenu>
   );
 };
