@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import logo from "../../assets/Transparent Logo.png";
 import { useState, useEffect } from "react";
+import { ChevronDown } from "lucide-react";
 
 const menuItems = [
     {title: "GET A QUOTE", href: "/"},
@@ -27,6 +28,7 @@ const menuItems = [
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,25 +68,30 @@ export const Navbar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className={`!w-[150px] !right-0 !left-auto ${isScrolled ? "text-black" : "text-white"}`}>
+            <NavigationMenuContent className={`!w-[175px] !right-0 !left-auto ${isScrolled ? "text-black" : "text-white"}`}>
                     {menuItems.map((item, index) => (
                         <NavigationMenuItem key={index}>
                             {item.items ? (
                                 <>
-                                    <NavigationMenuTrigger className={`font-normal text-black`}>
-                                        {item.title}
-                                    </NavigationMenuTrigger>
-                                    <NavigationMenuContent>
-                                        <ul>
-                                            {item.items.map((subItem, index) => (
-                                                <li key={index}>
-                                                    <NavigationMenuLink href={subItem.href}>
-                                                        {subItem.title}
-                                                    </NavigationMenuLink>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </NavigationMenuContent>
+                                    <span className="cursor-pointer p-2 text-sm hover:bg-accent hover:text-accent-foreground transition-all block w-full rounded-sm"
+                                        onClick={() => setIsOpen(!isOpen)}>
+                                            <div className="flex items-center justify-center gap-1">
+                                                {item.title}
+                                                    <ChevronDown className={`h-3 w-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}/>
+                                            </div>
+                                    </span>
+                                    {isOpen && (
+                                            <ul>
+                                                {item.items.map((subItem, index) => (
+                                                    <li key={index} >
+                                                        <NavigationMenuLink href={subItem.href} className="text-xs">
+                                                            {subItem.title}
+                                                        </NavigationMenuLink>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                    )}
+                        
                                 </>
                             ) : (
                                 <NavigationMenuLink href={item.href}>
@@ -95,6 +102,7 @@ export const Navbar = () => {
                     ))}
             </NavigationMenuContent>
         </NavigationMenuItem>
+
         {/* Desktop Menu Items */}
         {menuItems.map((item, index) => (
             <NavigationMenuItem key={index} className="hidden md:block"> 
