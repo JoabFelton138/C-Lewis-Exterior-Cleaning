@@ -73,25 +73,35 @@ export const Navbar = () => {
                         <NavigationMenuItem key={index}>
                             {item.items ? (
                                 <>
-                                    <span className="cursor-pointer p-2 text-sm hover:bg-accent hover:text-accent-foreground transition-all block w-full rounded-sm"
-                                        onClick={() => setIsOpen(!isOpen)}>
-                                            <div className="flex items-center justify-center gap-1">
-                                                {item.title}
-                                                    <ChevronDown className={`h-3 w-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}/>
-                                            </div>
+                                    <span 
+                                        role="button"
+                                        tabIndex={0}
+                                        aria-expanded={isOpen}
+                                        className="cursor-pointer p-2 text-sm block w-full rounded-sm hover:bg-accent/50 focus:bg-accent/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 transition-colors"
+                                        onClick={() => setIsOpen(!isOpen)}
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter' || e.key === ' ') {
+                                                e.preventDefault();
+                                                setIsOpen(!isOpen);
+                                            }
+                                        }}
+                                    >
+                                        <div className="flex items-center justify-center gap-1">
+                                            {item.title}
+                                            <ChevronDown className={`h-3 w-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}/>
+                                        </div>
                                     </span>
                                     {isOpen && (
-                                            <ul>
-                                                {item.items.map((subItem, index) => (
-                                                    <li key={index} >
-                                                        <NavigationMenuLink href={subItem.href} className="text-xs">
-                                                            {subItem.title}
-                                                        </NavigationMenuLink>
-                                                    </li>
-                                                ))}
-                                            </ul>
+                                        <ul>
+                                            {item.items.map((subItem, index) => (
+                                                <li key={index}>
+                                                    <NavigationMenuLink href={subItem.href} className="text-xs">
+                                                        {subItem.title}
+                                                    </NavigationMenuLink>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     )}
-                        
                                 </>
                             ) : (
                                 <NavigationMenuLink href={item.href}>
