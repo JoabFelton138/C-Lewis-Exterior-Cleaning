@@ -11,21 +11,21 @@ import { ThumbsUp } from "lucide-react";
 
 export const AboutMe = () => {
   return (
-    <section className="w-full py-24 bg-white overflow-hidden">
+    <section className="w-full py-12 sm:py-16 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="relative">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-68 h-68 bg-primary/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+          <div className="absolute top-0 left-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64  bg-primary/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
 
-          <div className="text-center mb-16">
-            <h2 className="text-6xl font-bold text-gray-900 mb-4">Meet Chad</h2>
-            <div className="w-24 h-1 bg-primary mx-auto"></div>
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">Meet Chad</h2>
+            <div className="w-16 h-1 bg-primary mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative order-2 lg:order-1">
-              <div className="absolute -inset-4 bg-primary/10 rounded-lg -rotate-6"></div>
-              <div className="relative h-[600px] rounded-lg overflow-hidden">
+              <div className="absolute -inset-2 sm:-inset-3 md:-inset-4 bg-primary/10 rounded-lg -rotate-6"></div>
+              <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] rounded-lg overflow-hidden">
                 <img
                   src={cLewisImage}
                   alt="About C. Lewis Exterior Cleaning"
@@ -35,7 +35,7 @@ export const AboutMe = () => {
               </div>
             </div>
 
-            <div className="order-1 lg:order-2 space-y-8">
+            <div className="order-2 space-y-8">
               <div className="space-y-6 text-gray-600 text-lg">
                 <p>
                   With over 10 years of experience in exterior cleaning, I've
@@ -55,21 +55,16 @@ export const AboutMe = () => {
               <div className="grid grid-cols-3 gap-8 py-8">
                 <div className="text-center">
                   <div className="flex justify-center">
-                    <ThumbsUp size={48} />
-                  </div>
-                  <div className="text-gray-600 p-1">Fully Insured</div>
-                </div>
+                  <ThumbsUp className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />                  </div>
+                  <div className="text-sm sm:text-base text-gray-600 p-1">Fully Insured</div>                </div>
                 <div className="text-center">
                   <div className="flex justify-center">
-                    <Bubbles size={48} />
-                  </div>
-                  <div className="text-gray-600 p-1">Mark Guarantee</div>
-                </div>
+                  <Bubbles className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />                  </div>
+                  <div className="text-sm sm:text-base text-gray-600 p-1">Mark Guarantee</div>                </div>
                 <div className="text-center">
                   <div className="flex justify-center">
-                    <TreeDeciduous size={48} />
-                  </div>
-                  <div className="text-gray-600 p-1">Eco-Friendly</div>
+                  <TreeDeciduous className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />                  </div>
+                  <div className="text-sm sm:text-base text-gray-600 p-1">Eco-Friendly</div>
                 </div>
               </div>
 
