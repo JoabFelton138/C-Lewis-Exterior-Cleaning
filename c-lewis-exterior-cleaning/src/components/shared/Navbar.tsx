@@ -12,7 +12,6 @@ import { useState, useEffect } from "react";
 const menuItems = [
     {title: "GET A QUOTE", href: "/"},
     {title: "CONTACT US", href: "/"},
-    {title: "PORTFOLIO", href: "/"},
     {
         title: "SERVICES", 
         items: [
@@ -22,6 +21,7 @@ const menuItems = [
             {title: "CONSERVATORIES & SOLAR PANELS", href: "/"},
         ],
     },
+    {title: "PORTFOLIO", href: "/"},
     {title: "TESTIMONIALS", href: "/"},
 ];
 
@@ -71,20 +71,20 @@ export const Navbar = () => {
                         <NavigationMenuItem key={index}>
                             {item.items ? (
                                 <>
-                                    <NavigationMenuTrigger className={`font-normal ${isScrolled ? "text-black" : "text-white"}`}>
+                                    <NavigationMenuTrigger className={`font-normal text-black`}>
                                         {item.title}
                                     </NavigationMenuTrigger>
-                                    <NavigationMenuContent className={`${isScrolled ? "text-black" : "text-white"}`}>
-                                <ul>
-                                    {item.items.map((subItem, index) => (
-                                        <li key={index}>
-                                            <NavigationMenuLink href={subItem.href}>
-                                                {subItem.title}
-                                            </NavigationMenuLink>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </NavigationMenuContent>
+                                    <NavigationMenuContent>
+                                        <ul>
+                                            {item.items.map((subItem, index) => (
+                                                <li key={index}>
+                                                    <NavigationMenuLink href={subItem.href}>
+                                                        {subItem.title}
+                                                    </NavigationMenuLink>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </NavigationMenuContent>
                                 </>
                             ) : (
                                 <NavigationMenuLink href={item.href}>
@@ -103,7 +103,7 @@ export const Navbar = () => {
                         <NavigationMenuTrigger className={`font-normal ${isScrolled ? "text-black" : "text-white"}`}>
                             {item.title}
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent className={`${isScrolled ? "text-black" : "text-white"}`}>
+                        <NavigationMenuContent className={`!w-[200px] ${isScrolled ? "text-black" : "text-white"}`}>
                             <ul>
                                 {item.items.map((subItem, index) => (
                                     <li key={index}>
