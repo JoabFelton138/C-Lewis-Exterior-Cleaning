@@ -35,7 +35,7 @@ const reviews: Review[] = [
     },
     {
         rating: 5, 
-        comment: `Chad’s expertise brought our vision to life in ways we never imagined. His craftsmanship and dedication made all the difference—our space feels brand new!`,
+        comment: `Chad's expertise brought our vision to life in ways we never imagined. His craftsmanship and dedication made all the difference—our space feels brand new!`,
         author: 'Jason Statham', 
         authorTitle: 'Generic Movie Tough Guy', 
         url:'https://www.google.com',
@@ -53,10 +53,10 @@ export const Testimonials = () => {
         </div>
         <div className='container relative mx-auto max-w-sm md:max-w-6xl px-4 h-full flex flex-col justify-center'>
             <div className='text-center mb-16'>
-                <h2 className='text-6xl font-bold text-white mb-4'>
+                <h2 className='text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4'>
                     What My Clients Say
                 </h2>
-                <div className='w-24 h-1 bg-white mx-auto'/>
+                <div className='w-16 sm:w-20 md:w-24 h-1 bg-white mx-auto'/>
             </div>
             <div className= 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
                 {
