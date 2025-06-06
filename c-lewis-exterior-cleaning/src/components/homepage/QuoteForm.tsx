@@ -42,6 +42,7 @@ export const QuoteForm = () => {
         try {
             await new Promise(resolve => setTimeout(resolve, 1000));
             console.log(data);
+            form.reset();
         } catch (error) {
             console.error(error);
         }
