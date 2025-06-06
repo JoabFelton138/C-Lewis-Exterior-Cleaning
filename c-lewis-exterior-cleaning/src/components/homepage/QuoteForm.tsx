@@ -1,12 +1,52 @@
-import { Form, FormControl, FormField, FormItem, FormLabel } from "../ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { useForm } from "react-hook-form";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader } from "../ui/card";
 import { Button } from "../ui/button";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const formSchema = z.object({
+    firstName: z.string().min(2, "First name must be at least 2 characters"),
+    surName: z.string().min(2, "Surname must be at least 2 characters"),
+    number: z.string()
+            .min(11, "Number must be at least 11 digits")
+            .regex(/^[0-9]+$/, "Number must contain only digits"),
+    email: z.string().email("Invalid email address"),
+    address: z.string().min(10, "Address must be at least 10 characters"),
+    postcode: z.string()
+               .regex(/^[A-Z]{1,2}[0-9][A-Z0-9]? ?[0-9][A-Z]{2}$/i, 
+                "Enter a valid UK postode (e.g. WV8 1QY)"),
+    area: z.string().min(5, "Area must be at least 5 characters"),
+    message: z.string().min(10, "Message must be at least 10 characters"),
+})
 
 export const QuoteForm = () => {
-    const form = useForm();
+    const form = useForm({
+            resolver: zodResolver(formSchema),
+            defaultValues: {
+                firstName: "",
+                surName: "",
+                number: "",
+                email: "",
+                address: "",
+                postcode: "",
+                area: "",
+                message: "",
+            }
+        }
+    );
+
+    const onSubmit = async (data: z.infer<typeof formSchema>) => {
+        try {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            console.log(data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
         <section className="py-24">
             <Card className="p-4 sm:p-6 md:p-10 max-w-[800px] mx-auto space-y-4 sm:space-y-6 md:space-y-8 w-[90%] sm:w-[85%] md:w-full">
@@ -32,6 +72,7 @@ export const QuoteForm = () => {
                                             <FormControl>
                                                 <Input placeholder="First Name" {...field}/>
                                             </FormControl>
+                                            <FormMessage />
                                         </FormItem>
                                     )}
                                 />
@@ -46,6 +87,7 @@ export const QuoteForm = () => {
                                             <FormControl>
                                                 <Input placeholder="Surname" {...field}/>
                                             </FormControl>
+                                            <FormMessage />
                                         </FormItem>
                                     )}
                                 />
@@ -62,6 +104,7 @@ export const QuoteForm = () => {
                                             <FormControl>
                                                 <Input placeholder="Number" {...field}/>
                                             </FormControl>
+                                            <FormMessage />
                                         </FormItem>
                                     )}
                                 />
@@ -76,6 +119,7 @@ export const QuoteForm = () => {
                                         <FormControl>
                                             <Input placeholder="Email" {...field}/>
                                         </FormControl>
+                                        <FormMessage />
                                     </FormItem>
                                 )}
                             />
@@ -92,6 +136,7 @@ export const QuoteForm = () => {
                                             <FormControl>
                                                 <Input placeholder="Address" {...field}/>
                                             </FormControl>
+                                            <FormMessage />
                                         </FormItem>
                                     )}
                                 />
@@ -106,6 +151,7 @@ export const QuoteForm = () => {
                                                 <FormControl>
                                                     <Input placeholder="Postcode" {...field}/>
                                                 </FormControl>
+                                                <FormMessage />
                                             </FormItem>
                                         )}
                                 />
@@ -120,6 +166,7 @@ export const QuoteForm = () => {
                                             <FormControl>
                                                 <Input placeholder="Area" {...field}/>
                                             </FormControl>
+                                            <FormMessage />
                                         </FormItem>
                                     )}
                                 />
@@ -136,16 +183,19 @@ export const QuoteForm = () => {
                                             <FormControl>
                                                 <Textarea placeholder="Message" {...field}/>
                                             </FormControl>
+                                            <FormMessage />
                                         </FormItem>
                                     )}
                                 />
                             </div>
                         </div>
+                        <Button className="mt-6" 
+                            type="submit"
+                            onClick={form.handleSubmit(onSubmit)}
+                            disabled={form.formState.isSubmitting}>
+                                {form.formState.isSubmitting ? "Submitting..." : "Submit"}
+                        </Button>
                     </Form>
-                    <Button className="mt-6" 
-                            type="submit">
-                                Submit
-                    </Button>
                 </CardContent>
             </Card>
         </section>
