@@ -1,0 +1,153 @@
+import { Form, FormControl, FormField, FormItem, FormLabel } from "../ui/form";
+import { useForm } from "react-hook-form";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Card, CardContent, CardDescription, CardHeader } from "../ui/card";
+import { Button } from "../ui/button";
+
+export const QuoteForm = () => {
+    const form = useForm();
+    return (
+        <section className="py-24">
+            <Card className="p-10 max-w-[800px] mx-auto space-y-8">
+                <CardHeader className="text-[30px]">
+                    Need a Quote?
+                <CardDescription className="text-base">
+                    If you would like a free quote, 
+                    fill out the form and i'll get back to you!
+                </CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <Form {...form}>
+                        <div className="space-y-8">
+                            <div className="grid grid-cols-2 gap-3">
+                                <FormField
+                                    control={form.control}
+                                    name="firstName"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                First Name
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="First Name" {...field}/>
+                                            </FormControl>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name="surName"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                Surname
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="Surname" {...field}/>
+                                            </FormControl>
+                                        </FormItem>
+                                    )}
+                                />
+                            </div>
+                            <div className="grid grid-cols-2 gap-3">
+                                <FormField
+                                    control={form.control}
+                                    name="number"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                Number
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="Number" {...field}/>
+                                            </FormControl>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name="email"
+                                    render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>
+                                            Email
+                                        </FormLabel>
+                                        <FormControl>
+                                            <Input placeholder="Email" {...field}/>
+                                        </FormControl>
+                                    </FormItem>
+                                )}
+                            />
+                            </div>
+                            <div className="grid grid-cols-3 gap-3">
+                                <FormField
+                                    control={form.control}
+                                    name="address"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                Address
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="Address" {...field}/>
+                                            </FormControl>
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                        control={form.control}
+                                        name="postcode"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>
+                                                    Postcode
+                                                </FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="Postcode" {...field}/>
+                                                </FormControl>
+                                            </FormItem>
+                                        )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name="area"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                Area
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Input placeholder="Area" {...field}/>
+                                            </FormControl>
+                                        </FormItem>
+                                    )}
+                                />
+                            </div>
+                            <div className="col-span-full">
+                                <FormField
+                                    control={form.control}
+                                    name="message"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel>
+                                                Message
+                                            </FormLabel>
+                                            <FormControl>
+                                                <Textarea placeholder="Message" {...field}/>
+                                            </FormControl>
+                                        </FormItem>
+                                    )}
+                                />
+                            </div>
+                        </div>
+                    </Form>
+                    <Button className="mt-6" 
+                            type="submit">
+                                Submit
+                    </Button>
+                </CardContent>
+            </Card>
+        </section>
+    );
+}
