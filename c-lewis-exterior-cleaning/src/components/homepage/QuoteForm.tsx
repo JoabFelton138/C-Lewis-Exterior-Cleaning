@@ -6,6 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader } from "../ui/card";
 import { Button } from "../ui/button";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+import { SuccessDialog } from "./SuccessDialog";
 
 const formSchema = z.object({
     firstName: z.string().min(2, "First name must be at least 2 characters"),
@@ -43,11 +45,14 @@ export const QuoteForm = () => {
             await new Promise(resolve => setTimeout(resolve, 1000));
             console.log(data);
             form.reset();
+            setShowSuccessDialog(true);
         } catch (error) {
             console.error(error);
         }
     };
 
+    const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+    
     return (
         <section className="py-24">
             <Card className="p-4 sm:p-6 md:p-10 max-w-[800px] mx-auto space-y-4 sm:space-y-6 md:space-y-8 w-[90%] sm:w-[85%] md:w-full">
@@ -261,6 +266,7 @@ export const QuoteForm = () => {
                     </Form>
                 </CardContent>
             </Card>
+            <SuccessDialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}/>
         </section>
     );
 }
