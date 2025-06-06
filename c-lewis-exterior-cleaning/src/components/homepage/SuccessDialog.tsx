@@ -31,9 +31,9 @@ export const SuccessDialog = ({open, onOpenChange}: SuccessDialogProps) => {
                         Thank You!
                     </DialogTitle>
                     <DialogDescription className="text-center space-y-4">
-                        <p className="text-lg">
+                        <span className="text-lg">
                             I'll get back to you as soon as possible.
-                        </p>
+                        </span>
                     </DialogDescription>
                 </DialogHeader>
             </DialogContent>
