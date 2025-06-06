@@ -59,88 +59,129 @@ export const QuoteForm = () => {
                 </CardHeader>
                 <CardContent>
                     <Form {...form}>
-                        <div className="space-y-4 sm:space-y-6 md:space-y-8">
+                        <div className="space-y-4 sm:space-y-6 md:space-y-5">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <FormField
-                                    control={form.control}
-                                    name="firstName"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>
-                                                First Name
-                                            </FormLabel>
-                                            <FormControl>
-                                                <Input placeholder="First Name" {...field}/>
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                                <FormField
-                                    control={form.control}
-                                    name="surName"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>
-                                                Surname
-                                            </FormLabel>
-                                            <FormControl>
-                                                <Input placeholder="Surname" {...field}/>
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
+                                <div>
+                                    <FormField
+                                        control={form.control}
+                                        name="firstName"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>
+                                                    First Name
+                                                </FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="First Name" {...field}/>
+                                                </FormControl>
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <div className="min-h-[20px] mt-1">
+                                        <FormField
+                                            control={form.control}
+                                            name="firstName"
+                                            render={() => <FormMessage />}
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <FormField
+                                        control={form.control}
+                                        name="surName"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>
+                                                    Surname
+                                                </FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="Surname" {...field}/>
+                                                </FormControl>
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <div className="min-h-[20px] mt-1">
+                                        <FormField
+                                            control={form.control}
+                                            name="surName"
+                                            render={() => <FormMessage />}
+                                        />
+                                    </div>
+                                </div>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <FormField
-                                    control={form.control}
-                                    name="number"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>
-                                                Number
-                                            </FormLabel>
-                                            <FormControl>
-                                                <Input placeholder="Number" {...field}/>
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                                <FormField
-                                    control={form.control}
-                                    name="email"
-                                    render={({ field }) => (
-                                    <FormItem>
-                                        <FormLabel>
-                                            Email
-                                        </FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="Email" {...field}/>
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
+                                <div>
+                                    <FormField
+                                        control={form.control}
+                                        name="number"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>
+                                                    Number
+                                                </FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="Number" {...field}/>
+                                                </FormControl>
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <div className="min-h-[20px] mt-1">
+                                        <FormField
+                                            control={form.control}
+                                            name="number"
+                                            render={() => <FormMessage />}
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <FormField
+                                        control={form.control}
+                                        name="email"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>
+                                                    Email
+                                                </FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="Email" {...field}/>
+                                                </FormControl>
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <div className="min-h-[20px] mt-1">
+                                        <FormField
+                                            control={form.control}
+                                            name="email"
+                                            render={() => <FormMessage />}
+                                        />
+                                    </div>
+                                </div>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                                <FormField
-                                    control={form.control}
-                                    name="address"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>
-                                                Address
-                                            </FormLabel>
-                                            <FormControl>
-                                                <Input placeholder="Address" {...field}/>
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                                <FormField
+                                <div>
+                                    <FormField
+                                        control={form.control}
+                                        name="address"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>
+                                                    Address
+                                                </FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="Address" {...field}/>
+                                                </FormControl>
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <div className="min-h-[20px] mt-1">
+                                        <FormField
+                                            control={form.control}
+                                            name="address"
+                                            render={() => <FormMessage />}
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <FormField
                                         control={form.control}
                                         name="postcode"
                                         render={({ field }) => (
@@ -151,27 +192,42 @@ export const QuoteForm = () => {
                                                 <FormControl>
                                                     <Input placeholder="Postcode" {...field}/>
                                                 </FormControl>
-                                                <FormMessage />
                                             </FormItem>
                                         )}
-                                />
-                                <FormField
-                                    control={form.control}
-                                    name="area"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>
-                                                Area
-                                            </FormLabel>
-                                            <FormControl>
-                                                <Input placeholder="Area" {...field}/>
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
+                                    />
+                                    <div className="min-h-[20px] mt-1">
+                                        <FormField
+                                            control={form.control}
+                                            name="postcode"
+                                            render={() => <FormMessage />}
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <FormField
+                                        control={form.control}
+                                        name="area"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>
+                                                    Area
+                                                </FormLabel>
+                                                <FormControl>
+                                                    <Input placeholder="Area" {...field}/>
+                                                </FormControl>
+                                            </FormItem>
+                                        )}
+                                    />
+                                    <div className="min-h-[20px] mt-1">
+                                        <FormField
+                                            control={form.control}
+                                            name="area"
+                                            render={() => <FormMessage />}
+                                        />
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col-span-full">
+                            <div>
                                 <FormField
                                     control={form.control}
                                     name="message"
@@ -183,10 +239,16 @@ export const QuoteForm = () => {
                                             <FormControl>
                                                 <Textarea placeholder="Message" {...field}/>
                                             </FormControl>
-                                            <FormMessage />
                                         </FormItem>
                                     )}
                                 />
+                                <div className="min-h-[20px] mt-1">
+                                    <FormField
+                                        control={form.control}
+                                        name="message"
+                                        render={() => <FormMessage />}
+                                    />
+                                </div>
                             </div>
                         </div>
                         <Button className="mt-6" 
