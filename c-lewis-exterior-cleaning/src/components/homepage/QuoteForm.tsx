@@ -9,7 +9,7 @@ export const QuoteForm = () => {
     const form = useForm();
     return (
         <section className="py-24">
-<Card className="p-4 sm:p-6 md:p-10 max-w-[800px] mx-auto space-y-8 w-[90%] sm:w-[85%] md:w-full">
+            <Card className="p-4 sm:p-6 md:p-10 max-w-[800px] mx-auto space-y-4 sm:space-y-6 md:space-y-8 w-[90%] sm:w-[85%] md:w-full">
                 <CardHeader className="text-[30px]">
                     Need a Quote?
                 <CardDescription className="text-base">
