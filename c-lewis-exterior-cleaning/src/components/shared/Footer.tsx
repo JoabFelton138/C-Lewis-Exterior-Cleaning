@@ -1,12 +1,14 @@
 import React from "react";
-import { Facebook, Instagram, Mail, Phone, Twitter } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import { SocialIcons } from "./SocialIcons";
 
 export const Footer = () => {
+    const hasBackground = true;
     return (
         <footer className="bg-slate-50 text-black">
             <div className="max-w-2xl mx-auto px-4 py-12">
                 <div className="space-y-4 text-center">
-                    <h3 className="text-2xl font-bold">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                         C. Lewis Exterior Cleaning
                     </h3>
                     <p className="text-sm">
@@ -33,15 +35,9 @@ export const Footer = () => {
                     <div>
                         <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
                         <div className="flex space-x-4 justify-center">
-                            <a href="" className="hover:text-black">
-                                <Facebook className="h-5 w-5"/>
-                            </a>
-                            <a href="" className="hover:text-black">
-                                <Instagram className="h-5 w-5"/>
-                            </a>
-                            <a href="" className="hover:text-black">
-                                <Twitter className="h-5 w-5"/>
-                            </a>
+                            <SocialIcons background={hasBackground} title="facebook" />
+                            <SocialIcons background={hasBackground} title="instagram" />
+                            <SocialIcons background={hasBackground} title="twitter" />
                         </div>
                     </div>
                 </div>

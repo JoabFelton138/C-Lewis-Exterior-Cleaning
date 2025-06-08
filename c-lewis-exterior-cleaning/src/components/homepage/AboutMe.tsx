@@ -1,13 +1,11 @@
 import {
   Bubbles,
-  Facebook,
-  Instagram,
   TreeDeciduous,
-  Twitter,
 } from "lucide-react";
 import { Button } from "../ui/button";
 import cLewisImage from "../../assets/images/etc/chad2.png";
 import { ThumbsUp } from "lucide-react";
+import { SocialIcons } from "../shared/SocialIcons";
 
 export const AboutMe = () => {
   return (
@@ -70,27 +68,9 @@ export const AboutMe = () => {
 
               <div className="flex flex-col sm:flex-row items-center gap-6 pt-8">
                 <div className="flex gap-4">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full hover:bg-primary hover:text-white transition-colors"
-                  >
-                    <Facebook className="h-5 w-5" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full hover:bg-primary hover:text-white transition-colors"
-                  >
-                    <Instagram className="h-5 w-5" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full hover:bg-primary hover:text-white transition-colors"
-                  >
-                    <Twitter className="h-5 w-5" />
-                  </Button>
+                  <SocialIcons title="facebook" />
+                  <SocialIcons title="instagram" />
+                  <SocialIcons title="twitter" />
                 </div>
                 <Button className="bg-primary hover:bg-primary/90 hover:scale-105 text-lg px-8">
                   GET A FREE QUOTE
