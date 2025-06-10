@@ -16,9 +16,10 @@ const menuItems = [
     {
         title: "SERVICES", 
         items: [
-            {title: "WINDOW CLEANING", href: "/"},
-            {title: "GUTTERS & FASCIAS", href: "/"},
             {title: "PRESSURE WASHING", href: "/"},
+            {title: "ROOF CLEANING & MOSS REMOVAL", href: "/"},
+            {title: "GUTTERS & FASCIAS", href: "/"},
+            {title: "WINDOW CLEANING", href: "/"},
             {title: "CONSERVATORIES & SOLAR PANELS", href: "/"},
         ],
     },
