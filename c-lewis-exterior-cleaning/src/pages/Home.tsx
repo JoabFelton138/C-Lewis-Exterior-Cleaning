@@ -3,14 +3,16 @@ import { AboutMe } from "../components/homepage/AboutMe";
 import { Testimonials } from "@/components/homepage/Testimonials";
 import { QuoteForm } from "@/components/homepage/QuoteForm";
 import { WhyUs } from "@/components/homepage/WhyUs";
+import { MasonryGrid } from "@/components/shared/MasonryGrid";
 
 export const Home = () => {
   return (
     <main>
       <HomeCarousel />
       <AboutMe />
-      <Testimonials />
+      <MasonryGrid />
       <WhyUs />
+      <Testimonials />
       <QuoteForm />
     </main>
   );

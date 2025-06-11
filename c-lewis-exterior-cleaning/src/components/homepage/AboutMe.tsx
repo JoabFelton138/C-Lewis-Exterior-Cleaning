@@ -1,16 +1,12 @@
 import { Button } from "../ui/button";
 import { SocialIcons } from "../shared/SocialIcons";
+import { SectionTitle } from "../shared/SectionTitle";
 
 export const AboutMe = () => {
   return (
-    <section className="w-full py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+    <section className="w-full py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            About Us
-          </h2>
-          <div className="w-16 h-1 bg-primary mx-auto"></div>
-        </div>
+        <SectionTitle title="About Us" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative order-2 lg:order-1 group">
             <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] rounded-lg overflow-hidden shadow-xl">
@@ -26,7 +22,7 @@ export const AboutMe = () => {
           </div>
           <div className="order-2 space-y-8">
             <div className="space-y-6 text-gray-600 text-lg">
-              <p>Hi! I’m Chad, the owner of C.Lewis Exterior Cleaning.</p>
+              <p>Hi! I'm Chad, the owner of C.Lewis Exterior Cleaning.</p>
               <p>
                 In early 2021, I embarked on my journey in the exterior cleaning business. 
                 My unwavering mission has been to provide the local community with a professional,
@@ -34,7 +30,7 @@ export const AboutMe = () => {
                 </p>
                 <p>
                 I take immense pride in delivering exceptional results and cultivating a stellar reputation within my vicinity and beyond. 
-                Recognizing the significance of customer satisfaction, I’ve grown my business 
+                Recognizing the significance of customer satisfaction, I've grown my business 
                 through word-of-mouth recommendations. This commitment fuels my determination
                 to consistently offer the finest services possible.
                 </p>
