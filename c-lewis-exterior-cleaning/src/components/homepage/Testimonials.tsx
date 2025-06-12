@@ -4,6 +4,9 @@ import { Button } from '@/components/ui/button';
 import cena from '../../assets/images/john-cena.webp';
 import ferguson from '../../assets/images/af.jpg';
 import statham from '../../assets/images/js.jpg';
+import { Star } from 'lucide-react';
+import googleLogo from '../../assets/images/logo.svg';
+import roof from '../../assets/images/roof.webp';
 
 interface Review {
     rating: number;
@@ -46,15 +49,37 @@ const reviews: Review[] = [
 
 export const Testimonials = () => {
     return (
-       <section className='w-full relative min-h-[450px] py-16 sm:py-20 md:py-24 overflow-hidden'>
-        <div className='absolute inset-0 object-cover w-full h-full z-0'>
-            <div className='absolute inset-0 bg-black/40 z-10'></div>
-            <img className='w-full h-full object-cover' src={van} alt='van'/>
+        <section className='w-full py-16 sm:py-20 md:py-24 bg-black overflow-hidden relative'>
+        <div className='absolute inset-0 z-0'>
+            <img 
+                src={roof} 
+                alt="Roof background" 
+                className='w-full h-full object-cover'
+            />
+            <div className='absolute inset-0 bg-black/40'></div>
         </div>
-        <div className='container relative mx-auto max-w-sm md:max-w-6xl px-4 min-h-[450px] flex flex-col justify-center'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                {
-                    reviews.map((review, index) => (
+        <div className='container mx-auto px-4 relative z-10'>
+            <div className='flex flex-row items-center gap-12'>
+                <div className='flex flex-col gap-4'>
+                    <h3 className="text-white text-3xl font-bold">
+                        EXCELLENT
+                    </h3>
+                    <div className='flex gap-2'>
+                        {[...Array(5)].map((_, i) => (
+                            <Star key={i} 
+                                className="w-8 h-8 fill-yellow-400 text-yellow-400"
+                            />
+                        ))}
+                    </div>
+                    <p className='text-white text-lg'>
+                        Based on <span className="font-bold">60+ reviews</span>
+                    </p>
+                    <img src={googleLogo} 
+                         alt="Google Logo" 
+                    />
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                    {reviews.map((review, index) => (
                         <Review 
                             key={index}
                             rating={review.rating}
@@ -64,10 +89,10 @@ export const Testimonials = () => {
                             url={review.url}
                             image={review.image}
                         />
-                    ))
-                }
+                    ))}
+                </div>
             </div>
-            <div className="flex flex-col sm:flex-row justify-center max-w-fit mx-auto mt-16">
+            <div className="flex justify-center mt-16">
                 <Button size='lg' 
                         className="bg-black hover:bg-primary/90 hover:scale-105 text-lg px-8">
                     TESTIMONIALS
@@ -76,4 +101,4 @@ export const Testimonials = () => {
         </div>
        </section>
     );
-}; 
+};
