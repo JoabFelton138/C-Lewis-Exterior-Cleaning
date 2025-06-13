@@ -13,7 +13,7 @@ interface ReviewProps {
 export const Review = ({ ...ReviewProps }: ReviewProps) => {
   return (
     <div 
-        className="bg-white p-5 cursor-pointer rounded-lg hover:-translate-y-2 transition-all duration-300"
+        className="bg-white p-5 h-full w-[300px] cursor-pointer rounded-lg"
         onClick={() => window.location.href = ReviewProps.url}>
       <div className="flex items-center gap-2 mb-3">
         <div className="w-10 h-10 bg-primary/10 rounded-full">

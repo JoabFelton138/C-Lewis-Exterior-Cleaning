@@ -6,7 +6,7 @@ import ferguson from '../../assets/images/af.jpg';
 import statham from '../../assets/images/js.jpg';
 import { Star } from 'lucide-react';
 import googleLogo from '../../assets/images/logo.svg';
-import roof from '../../assets/images/roof.webp';
+import roof from '../../assets/images/roof.jpg';
 
 interface Review {
     rating: number;
