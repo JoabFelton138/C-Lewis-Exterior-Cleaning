@@ -49,7 +49,7 @@ export const ReviewCarousel = () => {
         <Carousel
             opts={{ loop: true, dragFree: true }}
             plugins={[Autoplay({ delay: 6000 })]}
-            className="w-full max-w-[345px] min-[900px]:max-w-[750px] min-[1280px]:max-w-[1200px] mx-auto overflow-hidden"
+            className="w-full max-w-[345px] min-[1025px]:max-w-[700px] min-[1330px]:max-w-[1200px] mx-auto overflow-hidden"
         >
             <CarouselContent className="">
                 {reviews.map((review) => (
