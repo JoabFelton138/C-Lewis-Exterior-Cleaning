@@ -8,7 +8,7 @@ interface ReviewProps {
   rating: number;
   comment: string;
   author: string;
-  authorTitle: string;
+  date: string;
   image?: string;
   url: string;
 }
@@ -30,7 +30,7 @@ export const Review = ({ ...ReviewProps }: ReviewProps) => {
             </Avatar>
             <div>
               <h3 className="text-sm font-bold">{ReviewProps.author}</h3>
-              <p className="text-xs text-gray-500">{ReviewProps.authorTitle}</p>
+              <p className="text-xs text-gray-500">{ReviewProps.date}</p>
             </div>
           </div>
           <img src={google} alt="Google" className="w-6 h-6 mb-[25px]" />
