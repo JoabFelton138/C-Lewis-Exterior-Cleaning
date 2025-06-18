@@ -17,7 +17,7 @@ export const Review = ({ ...ReviewProps }: ReviewProps) => {
   return (
     <Card 
         className="bg-white p-5 h-full w-[320px] 
-        cursor-pointer rounded-lg gap-2"
+        cursor-pointer rounded-lg gap-2 hover:-translate-y-2 transition-all duration-300"
         onClick={() => window.location.href = ReviewProps.url}>
       <CardHeader className="px-0">
         <CardTitle className="flex justify-between">
