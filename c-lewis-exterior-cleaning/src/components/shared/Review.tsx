@@ -16,7 +16,7 @@ interface ReviewProps {
 export const Review = ({ ...ReviewProps }: ReviewProps) => {
   return (
     <Card 
-        className="bg-white p-5 h-full w-[340px] 
+        className="bg-white p-5 h-full w-[320px] 
         cursor-pointer rounded-lg gap-2"
         onClick={() => window.location.href = ReviewProps.url}>
       <CardHeader className="px-0">

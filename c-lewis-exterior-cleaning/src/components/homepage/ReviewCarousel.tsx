@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/carousel"
 import { reviews } from "@/data/reviews"
 import { Review } from "../shared/Review"
+import Autoplay from "embla-carousel-autoplay"
 
 export function ReviewCarousel() {
   return (
@@ -15,6 +16,7 @@ export function ReviewCarousel() {
         align: "start",
         loop: true,
       }}
+      plugins={[Autoplay({ delay: 6000 })]}
       className="w-full max-w-xs md:max-w-2xl lg:max-w-5xl relative"
     >
       <CarouselContent className="-ml-1">
