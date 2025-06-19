@@ -36,7 +36,7 @@ export const Testimonials = () => {
                          alt="Google Logo" 
                     />
                 </div>
-                <div className="max-w-xs lg:max-w-2xl xl:max-w-5xl">
+                <div className="max-w-xs md:max-w-md lg:max-w-2xl xl:max-w-5xl">
                     <ReviewCarousel />
                 </div>
             </div>
