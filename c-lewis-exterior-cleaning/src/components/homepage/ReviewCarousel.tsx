@@ -17,11 +17,11 @@ export function ReviewCarousel() {
         loop: true,
       }}
       plugins={[Autoplay({ delay: 6000 })]}
-      className="w-full max-w-xs md:max-w-2xl lg:max-w-5xl relative"
+      className="w-full relative"
     >
       <CarouselContent className="-ml-1">
         {reviews.map((review, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-1 pt-2">
+          <CarouselItem key={index} className="basis-full lg:basis-1/2 xl:basis-1/3 pl-1 pt-2">
             <Review
               rating={review.rating}
               comment={review.comment}
