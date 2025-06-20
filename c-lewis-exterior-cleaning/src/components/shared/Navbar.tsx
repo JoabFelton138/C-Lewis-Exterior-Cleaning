@@ -9,12 +9,13 @@ import {
 import logo from "../../assets/Transparent Logo.png";
 import { useState, useEffect } from "react";
 import { MobileMenuTrigger } from "./MobileMenuTrigger";
-import { useQuoteNavigation } from "../utils/navigation";
+import { useLogoNavigation, useQuoteNavigation } from "../utils/navigation";
 
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const navigateToQuoteForm = useQuoteNavigation();
+  const navigateToTop = useLogoNavigation();
 
   const menuItems = [
     {title: "GET A QUOTE", onClick: navigateToQuoteForm},
@@ -55,8 +56,9 @@ export const Navbar = () => {
       <div className="ml-[1px]">
         <img
           src={logo}
-          className={`transition-all duration-300 ${isScrolled ? "w-36 md:w-44 brightness-0" : "w-40 md:w-52 brightness-0 invert"}`}
+          className={`transition-all duration-300 ${isScrolled ? "w-36 md:w-44 brightness-0" : "w-40 md:w-52 brightness-0 invert"} cursor-pointer`}
           alt="logo"
+          onClick={navigateToTop}
         />
       </div>
     
@@ -77,7 +79,7 @@ export const Navbar = () => {
                             <ul>
                                 {item.items.map((subItem, index) => (
                                     <li key={index}>
-                                        <NavigationMenuLink href={subItem.href} onClick={subItem.onClick}>
+                                        <NavigationMenuLink href={subItem.href}>
                                             {subItem.title}
                                         </NavigationMenuLink>
                                     </li>

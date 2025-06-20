@@ -7,7 +7,7 @@ import { MasonryGrid } from "@/components/shared/MasonryGrid";
 
 export const Home = () => {
   return (
-    <main>
+    <main id="home-main">
       <HomeCarousel />
       <AboutMe />
       <MasonryGrid />
