@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+html {
+  scroll-padding-top: 50px;
+}
+
 @keyframes slideDown {
   0% {
     opacity: 0;

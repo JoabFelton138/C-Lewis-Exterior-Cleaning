@@ -1,8 +1,11 @@
 import { Button } from "../ui/button";
 import { SocialIcons } from "../shared/SocialIcons";
 import { SectionTitle } from "../shared/SectionTitle";
+import { useQuoteNavigation } from "../utils/navigation";
 
 export const AboutMe = () => {
+  const navigateToQuoteForm = useQuoteNavigation();
+  
   return (
     <section className="w-full py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -45,7 +48,9 @@ export const AboutMe = () => {
                 <SocialIcons title="instagram" />
                 <SocialIcons title="twitter" />
               </div>
-              <Button className="bg-primary hover:bg-primary/90 hover:scale-105 text-lg px-8 transition-all duration-300">
+              <Button 
+                  className="bg-primary hover:bg-primary/90 hover:scale-105 text-lg px-8 transition-all duration-300"
+                  onClick={navigateToQuoteForm}>
                 GET A FREE QUOTE
               </Button>
             </div>

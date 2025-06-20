@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 interface MenuItem {
     title: string;
     href?: string;
+    onClick?: () => void;
     items?: {title: string; href: string}[]
 }
 
@@ -15,6 +16,7 @@ interface MobileMenuTriggerProps {
 
 export const MobileMenuTrigger = ({menuItems, isScrolled} : MobileMenuTriggerProps) => {
     const [isOpen, setIsOpen] = useState(false);
+
     return (
         <NavigationMenuItem className="md:hidden">
         <NavigationMenuTrigger className={`flex items-center ${isScrolled ? "text-black" 
@@ -60,7 +62,7 @@ export const MobileMenuTrigger = ({menuItems, isScrolled} : MobileMenuTriggerPro
                                 )}
                             </>
                         ) : (
-                            <NavigationMenuLink href={item.href}>
+                            <NavigationMenuLink href={item.href} onClick={item.onClick}>
                                 {item.title}
                             </NavigationMenuLink>
                         )}

@@ -9,9 +9,15 @@ import {
 import logo from "../../assets/Transparent Logo.png";
 import { useState, useEffect } from "react";
 import { MobileMenuTrigger } from "./MobileMenuTrigger";
+import { useQuoteNavigation } from "../utils/navigation";
 
-const menuItems = [
-    {title: "GET A QUOTE", href: "/"},
+
+export const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navigateToQuoteForm = useQuoteNavigation();
+
+  const menuItems = [
+    {title: "GET A QUOTE", onClick: navigateToQuoteForm},
     {title: "CONTACT US", href: "/"},
     {
         title: "SERVICES", 
@@ -25,10 +31,7 @@ const menuItems = [
     },
     {title: "PORTFOLIO", href: "/"},
     {title: "TESTIMONIALS", href: "/"},
-];
-
-export const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +77,7 @@ export const Navbar = () => {
                             <ul>
                                 {item.items.map((subItem, index) => (
                                     <li key={index}>
-                                        <NavigationMenuLink href={subItem.href}>
+                                        <NavigationMenuLink href={subItem.href} onClick={subItem.onClick}>
                                             {subItem.title}
                                         </NavigationMenuLink>
                                     </li>
@@ -83,7 +86,7 @@ export const Navbar = () => {
                         </NavigationMenuContent>
                     </>
                 ) : (
-                    <NavigationMenuLink href={item.href}>
+                    <NavigationMenuLink href={item.href} onClick={item.onClick}>
                         {item.title}
                     </NavigationMenuLink>
                 )}
