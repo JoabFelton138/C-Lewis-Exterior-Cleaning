@@ -19,8 +19,7 @@ export const MobileMenuTrigger = ({menuItems, isScrolled} : MobileMenuTriggerPro
 
     return (
         <NavigationMenuItem className="md:hidden">
-        <NavigationMenuTrigger className={`flex items-center ${isScrolled ? "text-black" 
-                                   : "text-white"}`}>
+        <NavigationMenuTrigger className={`flex items-center ${isScrolled ? "text-black sky-hover" : "text-white"}`}>
             <span className="sr-only">Menu</span>
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -35,7 +34,7 @@ export const MobileMenuTrigger = ({menuItems, isScrolled} : MobileMenuTriggerPro
                                     role="button"
                                     tabIndex={0}
                                     aria-expanded={isOpen}
-                                    className="cursor-pointer p-2 text-sm block w-full rounded-sm hover:bg-accent/50 focus:bg-accent/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 transition-colors"
+                                    className={`cursor-pointer p-2 text-sm block w-full rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 transition-colors ${isScrolled ? "hover:bg-sky-400/30 focus:bg-sky-400/30" : "hover:bg-accent/50 focus:bg-accent/50"}`}
                                     onClick={() => setIsOpen(!isOpen)}
                                     onKeyDown={(e) => {
                                         if (e.key === 'Enter' || e.key === ' ') {
@@ -53,7 +52,10 @@ export const MobileMenuTrigger = ({menuItems, isScrolled} : MobileMenuTriggerPro
                                     <ul>
                                         {item.items.map((subItem, index) => (
                                             <li key={index}>
-                                                <NavigationMenuLink href={subItem.href} className="text-xs">
+                                                <NavigationMenuLink 
+                                                    href={subItem.href} 
+                                                    className={`text-xs ${isScrolled ? "hover:bg-sky-400/30" : ""}`}
+                                                >
                                                     {subItem.title}
                                                 </NavigationMenuLink>
                                             </li>
@@ -62,7 +64,11 @@ export const MobileMenuTrigger = ({menuItems, isScrolled} : MobileMenuTriggerPro
                                 )}
                             </>
                         ) : (
-                            <NavigationMenuLink href={item.href} onClick={item.onClick}>
+                            <NavigationMenuLink 
+                                href={item.href} 
+                                onClick={item.onClick}
+                                className={`${isScrolled ? "hover:bg-sky-400/30" : ""}`}
+                            >
                                 {item.title}
                             </NavigationMenuLink>
                         )}
