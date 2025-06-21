@@ -55,8 +55,8 @@ export const QuoteForm = () => {
     
     return (
         <section id="quote-form" className="py-24">
-            <Card className="p-4 sm:p-6 md:p-10 max-w-[900px] mx-auto space-y-4 sm:space-y-6 md:space-y-8 w-[90%] sm:w-[85%] md:w-full">
-                <CardHeader className="text-[30px]">
+            <Card className="p-4 sm:p-6 md:p-10 max-w-[900px] mx-auto space-y-4 sm:space-y-6 md:space-y-8 w-[90%] sm:w-[85%] md:w-[95%] lg:w-[90%] xl:w-[85%]">
+                <CardHeader className="p-4 text-[30px]">
                     Need a Quote?
                 <CardDescription className="text-base">
                     If you would like a free quote, 
@@ -257,11 +257,12 @@ export const QuoteForm = () => {
                                 </div>
                             </div>
                         </div>
-                        <Button className="mt-6" 
+                        <Button className="m-6 flex justify-center hover:bg-primary/90 hover:scale-105 text-lg px-12 mx-auto" 
                             type="submit"
+                            size="lg"
                             onClick={form.handleSubmit(onSubmit)}
                             disabled={form.formState.isSubmitting}>
-                                {form.formState.isSubmitting ? "Submitting..." : "Submit"}
+                                {form.formState.isSubmitting ? "SUBMITTING..." : "SUBMIT"}
                         </Button>
                     </Form>
                 </CardContent>
