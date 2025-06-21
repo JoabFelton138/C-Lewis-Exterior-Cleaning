@@ -72,14 +72,19 @@ export const Navbar = () => {
             <NavigationMenuItem key={index} className="hidden md:block"> 
                 {item.items ? (
                     <>
-                        <NavigationMenuTrigger className={`font-normal ${isScrolled ? "text-black" : "text-white"}`}>
+                        <NavigationMenuTrigger 
+                            className={`font-normal ${isScrolled ? "text-black sky-hover" : "text-white"}`}
+                        >
                             {item.title}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent className={`!w-[200px] ${isScrolled ? "text-black" : "text-white"}`}>
                             <ul>
                                 {item.items.map((subItem, index) => (
                                     <li key={index}>
-                                        <NavigationMenuLink href={subItem.href}>
+                                        <NavigationMenuLink 
+                                            href={subItem.href}
+                                            className={`${isScrolled ? "hover:bg-sky-400/30 data-[active=true]:bg-sky-400/30 data-[active=true]:text-black" : ""}`}
+                                        >
                                             {subItem.title}
                                         </NavigationMenuLink>
                                     </li>
@@ -88,7 +93,11 @@ export const Navbar = () => {
                         </NavigationMenuContent>
                     </>
                 ) : (
-                    <NavigationMenuLink href={item.href} onClick={item.onClick}>
+                    <NavigationMenuLink 
+                        href={item.href} 
+                        onClick={item.onClick}
+                        className={`${isScrolled ? "hover:bg-sky-400/30 !data-[active=true]:bg-sky-400/30 !data-[active=true]:text-black" : ""}`}
+                    >
                         {item.title}
                     </NavigationMenuLink>
                 )}
