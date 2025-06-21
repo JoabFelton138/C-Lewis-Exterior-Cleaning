@@ -34,7 +34,7 @@ export const MobileMenuTrigger = ({menuItems, isScrolled} : MobileMenuTriggerPro
                                     role="button"
                                     tabIndex={0}
                                     aria-expanded={isOpen}
-                                    className={`cursor-pointer p-2 text-sm block w-full rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 transition-colors ${isScrolled ? "hover:bg-sky-400/30 focus:bg-sky-400/30" : "hover:bg-accent/50 focus:bg-accent/50"}`}
+                                    className="cursor-pointer p-2 text-sm block w-full rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 transition-colors hover:bg-sky-400/30 focus:bg-sky-400/30"
                                     onClick={() => setIsOpen(!isOpen)}
                                     onKeyDown={(e) => {
                                         if (e.key === 'Enter' || e.key === ' ') {
@@ -54,7 +54,7 @@ export const MobileMenuTrigger = ({menuItems, isScrolled} : MobileMenuTriggerPro
                                             <li key={index}>
                                                 <NavigationMenuLink 
                                                     href={subItem.href} 
-                                                    className={`text-xs ${isScrolled ? "hover:bg-sky-400/30" : ""}`}
+                                                    className="text-xs hover:bg-sky-400/30"
                                                 >
                                                     {subItem.title}
                                                 </NavigationMenuLink>
@@ -67,7 +67,7 @@ export const MobileMenuTrigger = ({menuItems, isScrolled} : MobileMenuTriggerPro
                             <NavigationMenuLink 
                                 href={item.href} 
                                 onClick={item.onClick}
-                                className={`${isScrolled ? "hover:bg-sky-400/30" : ""}`}
+                                className="hover:bg-sky-400/30"
                             >
                                 {item.title}
                             </NavigationMenuLink>
