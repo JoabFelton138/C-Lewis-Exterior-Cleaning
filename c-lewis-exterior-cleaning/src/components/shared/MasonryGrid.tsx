@@ -79,7 +79,7 @@ export const MasonryGrid = () => {
     
     return (
         <section className="pb-14 bg-slate-50 overflow-hidden">
-            <div className={`w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4`}>
+            <div className={`w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}>
                 {
                     items.map((item, index) => (
                         <div key={index} 
@@ -90,9 +90,12 @@ export const MasonryGrid = () => {
                                 alt={item.title} 
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                 <span className="text-sm sm:text-sm md:text-lg lg:text-base font-semibold text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out">
                                     {item.title}
+                                </span>
+                                <span className="text-xs sm:text-sm md:text-base lg:text-sm text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out">
+                                    {item.description}
                                 </span>
                             </div>
                         </div>
