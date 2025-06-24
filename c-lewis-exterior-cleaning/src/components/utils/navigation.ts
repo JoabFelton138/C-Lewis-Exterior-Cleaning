@@ -1,19 +1,20 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import { animateScroll as scroll } from 'react-scroll';
 
 export const useQuoteNavigation = () => {
     const navigate = useNavigate();
     
     const navigateToQuoteForm = () => {
         navigate('/#quote-form');
-        setTimeout(() => {
-            const element = document.getElementById('quote-form');
-            if (element) {
-                element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }, 100);
+        const element = document.getElementById('quote-form');
+        if (element) {
+            scroll.scrollTo(element.offsetTop - 40, {
+                duration: 1200,
+                smooth: true,
+                spy: true,
+                spyThrottle: 500,
+            });
+        }
     };
     
     return navigateToQuoteForm;
@@ -26,10 +27,12 @@ export const useLogoNavigation = () => {
     const handleLogoClick = () => {
         if (location.pathname === '/'){
             const element = document.getElementById('home-main');
-            if (element){
-                element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            if (element) {
+                scroll.scrollTo(element.offsetTop - 20, {
+                    duration: 1200,
+                    smooth: true,
+                    spy: true,
+                    spyThrottle: 500,
                 });
             }
         } else {
