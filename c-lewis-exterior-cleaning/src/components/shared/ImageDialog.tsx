@@ -13,7 +13,7 @@ export const ImageDialog = ({open, onOpenChange, imageUrl, altText, title, descr
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className="max-w-screen max-h-screen sm:max-w-[98vw] sm:max-h-[98vh] w-auto h-auto flex flex-col bg-white rounded-lg">
-                <div className="flex-1 min-h-0 p-2 sm:p-1 flex items-center justify-center">
+                <div className="flex-1 min-h-0 p-2 sm:p-1 flex items-center justify-center overflow-hidden">
                     <img 
                         src={imageUrl} 
                         alt={altText} 
