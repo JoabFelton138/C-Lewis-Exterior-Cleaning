@@ -10,14 +10,20 @@ import { Review } from "../shared/Review"
 import Autoplay from "embla-carousel-autoplay"
 
 export function ReviewCarousel() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 6000, stopOnInteraction: false })
+  );
+
   return (
     <Carousel
       opts={{
         align: "start",
         loop: true,
       }}
-      plugins={[Autoplay({ delay: 6000 })]}
+      plugins={[plugin.current]}
       className="w-full relative"
+      onMouseEnter={() => plugin.current.stop()}
+      onMouseLeave={() => plugin.current.play()}
     >
       <CarouselContent className="-ml-1">
         {reviews.map((review, index) => (
