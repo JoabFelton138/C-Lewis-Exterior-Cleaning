@@ -1,9 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-html {
-  scroll-padding-top: 50px;
-}
 
 @keyframes slideDown {
   0% {
@@ -18,10 +15,11 @@ html {
 
 .animate-slide-down {
   animation: none;
+  opacity: 0;
 }
 
 .animate-slide-down.active {
-  animation: slideDown 0.6s ease-out forwards;
+  animation: slideDown 0.5s ease-out 0.2s forwards;
 }
 
 @keyframes slideLeft {
@@ -37,10 +35,11 @@ html {
 
 .animate-slide-left {
   animation: none;
+  opacity: 0;
 }
 
 .animate-slide-left.active {
-  animation: slideLeft 0.8s ease-out forwards;
+  animation: slideLeft 0.7s ease-out 0.4s forwards;
 }
 
 @keyframes slideUp {
@@ -56,10 +55,11 @@ html {
 
 .animate-slide-up {
   animation: none;
+  opacity: 0;
 }
 
 .animate-slide-up.active {
-  animation: slideUp 0.9s ease-out forwards;
+  animation: slideUp 0.8s ease-out 0.5s forwards;
 }
 
 @keyframes checkmark {

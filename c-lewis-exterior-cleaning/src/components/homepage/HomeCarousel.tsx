@@ -13,10 +13,11 @@ import cc from "../../assets/images/carousel/cc-min.jpg";
 import pw3 from "../../assets/images/carousel/pw3-min.jpg";
 import gc3 from "../../assets/images/carousel/gc3.jpg";
 import { Button } from "../ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const HomeCarousel = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const slides = [
     {
@@ -45,6 +46,17 @@ export const HomeCarousel = () => {
     },
   ];
 
+  useEffect(() => {
+
+    const slideTimer = setTimeout(() => {
+      setIsTransitioning(false);
+    }, 300);
+    
+    return () => {
+      clearTimeout(slideTimer);
+    }
+  }, [activeSlide])
+
   return (
     <div className="w-screen overflow-hidden">
       <Carousel
@@ -62,21 +74,21 @@ export const HomeCarousel = () => {
                 alt={slide.alt}
                 className="w-screen h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/25"></div>
+              <div className="absolute inset-0 bg-black/30"></div>
               <div className="absolute inset-0 flex items-center justify-center px-4">
                 <div className="flex flex-col items-center gap-4 sm:gap-6">
                   <h2
-                    className={`text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white text-center animate-slide-down ${activeSlide === index ? "active" : ""}`}
+                    className={`text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white text-center animate-slide-down ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.title}
                   </h2>
                   <h4
-                    className={`text-lg sm:text-xl md:text-2xl text-white text-center ${activeSlide === index ? "animate-slide-left active" : ""}`}
+                    className={`text-lg sm:text-xl md:text-2xl text-white text-center ${activeSlide === index && !isTransitioning ? "animate-slide-left active" : ""}`}
                   >
                     {slide.subtitle}
                   </h4>
                   <Button
-                    className={`hover:scale-105 ${activeSlide === index ? "animate-slide-up active" : ""}`}
+                    className={`hover:scale-105 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
                     variant="outline"
                     size="lg"
                   >
