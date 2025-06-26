@@ -31,7 +31,7 @@ export const Navbar = () => {
         ],
     },
     {title: "PORTFOLIO", href: "/"},
-    {title: "TESTIMONIALS", href: "/"},
+    {title: "TESTIMONIALS", href: "/testimonials"},
   ];
 
   useEffect(() => {
