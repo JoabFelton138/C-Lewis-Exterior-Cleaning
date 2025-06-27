@@ -3,9 +3,9 @@ import { animateScroll as scroll } from 'react-scroll';
 
 export const useQuoteNavigation = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     
-    const navigateToQuoteForm = () => {
-        navigate('/#quote-form');
+    const scrollToQuoteForm = () => {
         const element = document.getElementById('quote-form');
         if (element) {
             scroll.scrollTo(element.offsetTop - 40, {
@@ -14,6 +14,15 @@ export const useQuoteNavigation = () => {
                 spy: true,
                 spyThrottle: 500,
             });
+        }
+    };
+
+    const navigateToQuoteForm = () => {
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(scrollToQuoteForm, 100);
+        } else {
+            scrollToQuoteForm();
         }
     };
     
