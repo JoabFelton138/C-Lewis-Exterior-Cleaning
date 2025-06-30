@@ -2,8 +2,13 @@ import { Hero } from "@/components/shared/Hero";
 import roofCleanBefore from '@/assets/images/before-after/before1.jpg';
 import roofCleanAfter from '@/assets/images/before-after/after1.jpg';
 import { Quote } from "lucide-react";
+import { useEffect } from "react";
 
 export const Testimonials = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main>
             <Hero title="testimonials" />

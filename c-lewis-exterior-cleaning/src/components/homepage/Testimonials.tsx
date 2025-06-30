@@ -3,9 +3,19 @@ import { Star } from 'lucide-react';
 import googleLogo from '../../assets/images/logo.svg';
 import roof from '../../assets/images/roof.jpg';
 import { ReviewCarousel } from './ReviewCarousel';
-
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export const Testimonials = () => {
+    const navigate = useNavigate();
+    const handleTestimonialsClick = () => {
+        navigate('/testimonials');
+    }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <section className='w-full py-16 sm:py-20 md:py-24 bg-black overflow-hidden relative'>
         <div className='absolute inset-0 z-0'>
@@ -42,7 +52,8 @@ export const Testimonials = () => {
             </div>
             <div className="flex justify-center mt-16">
                 <Button size='lg' 
-                        className="bg-black hover:bg-primary/90 hover:scale-105 text-lg px-8">
+                        className="bg-black hover:bg-primary/90 hover:scale-105 text-lg px-8"
+                        onClick={handleTestimonialsClick}>
                     TESTIMONIALS
                 </Button>
             </div>
