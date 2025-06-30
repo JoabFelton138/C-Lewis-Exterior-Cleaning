@@ -24,7 +24,7 @@ export const HomeCarousel = () => {
       src: van5,
       alt: "Van",
       title: "EXPERT EXTERIOR CLEANING",
-      subtitle: "COVERING PERTON, SHIFNAL, WHEATON ASTON & MORE",
+      subtitle: "COVERING STAFFORDSHIRE, SHROPSHIRE, WEST MIDLANDS & MORE",
     },
     {
       src: cc,

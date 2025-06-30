@@ -12,7 +12,7 @@ export const WhyUs = () => {
         {
             icon: Bubbles,
             title: "Mark Guarantee",
-            description: "if you find any spotting or marking up to 24 hours after receiving a service, you can call myself to come back for a touch up, free of charge!"
+            description: "Check each service for guarantee!"
         },
         {
             icon: TreeDeciduous,

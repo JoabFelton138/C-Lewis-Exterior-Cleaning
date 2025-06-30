@@ -46,7 +46,7 @@ export const AboutMe = () => {
               <div className="flex gap-4">
                 <SocialIcons title="facebook" />
                 <SocialIcons title="instagram" />
-                <SocialIcons title="twitter" />
+                <SocialIcons title="tiktok" />
               </div>
               <Button 
                   className="bg-primary hover:bg-primary/90 hover:scale-105 text-lg px-8 transition-all duration-300"

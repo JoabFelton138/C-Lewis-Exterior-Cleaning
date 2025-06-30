@@ -28,7 +28,7 @@ export const Footer = () => {
                         </div>
                         <div className="flex items-center space-x-2 justify-center">
                             <Mail className="h-4 w-4"/>
-                            <span>c.lewis.wcs@hotmail.com</span>
+                            <span>c.lewis.pws@hotmail.com</span>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ export const Footer = () => {
                     <div className="flex space-x-4 justify-center">
                         <SocialIcons background={hasBackground} title="facebook" />
                         <SocialIcons background={hasBackground} title="instagram" />
-                        <SocialIcons background={hasBackground} title="twitter" />
+                        <SocialIcons background={hasBackground} title="tiktok" />
                     </div>
                 </div>                
                 </div>

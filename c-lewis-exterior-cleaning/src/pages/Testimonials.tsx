@@ -12,7 +12,7 @@ export const Testimonials = () => {
                     <h2 className="text-4xl md:text-5xl font-bold mb-12">
                         Roof Cleaning & Moss Removal
                     </h2>
-                    <div className="flex flex-col md:flex-row gap-12 justify-center items-center mb-16">
+                    <div className="flex flex-col md:flex-row gap-2 justify-center items-center mb-16">
                         <div className="relative">
                             <img 
                                 src={roofCleanBefore} 
