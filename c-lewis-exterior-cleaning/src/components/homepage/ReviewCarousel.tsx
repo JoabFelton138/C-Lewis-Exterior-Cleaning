@@ -5,7 +5,7 @@ import {
     CarouselContent,
     CarouselItem,
 } from "@/components/ui/carousel"
-import { reviews } from "@/data/reviews"
+import { reviews } from "@/data/testimonial-section-reviews"
 import { Review } from "../shared/Review"
 import Autoplay from "embla-carousel-autoplay"
 
