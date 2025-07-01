@@ -29,7 +29,7 @@ export const Testimonials = () => {
                 />
             </section>
             
-            <section className="pt-20 px-4">
+            <section className="py-20 px-4">
                 <BeforeAfterTestimonial 
                     layout="right-to-left"
                     beforeImage={roofCleanBefore}
