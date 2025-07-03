@@ -13,7 +13,7 @@ interface BeforeAfterTestimonialProps {
 
 export const BeforeAfterTestimonial = ({ layout, beforeImage, afterImage, beforeAlt, afterAlt, text, author }: BeforeAfterTestimonialProps) => {
     return (
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center justify-items-center">
             {layout === 'left-to-right' ? (
                 <>
                     <BeforeAfter 

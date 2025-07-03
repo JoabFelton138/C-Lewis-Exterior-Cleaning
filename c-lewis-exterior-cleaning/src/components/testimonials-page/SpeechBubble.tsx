@@ -20,8 +20,8 @@ export const SpeechBubble = ({text, author, size = "small", direction = "left"} 
             footer: "text-base md:text-xl font-bold text-center mt-2 md:mt-4"
         },
         large: {
-            container: "p-6 md:p-14 rounded-2xl w-[400px] md:w-[500px] max-w-2xl mx-auto h-[300px] md:h-[400px] flex flex-col justify-between",
-            icon: "w-8 h-8 md:w-10 md:h-10 mb-3 md:mb-6",
+            container: "p-6 md:p-14 rounded-2xl max-w-[350px] md:max-w-[900px] mx-auto h-[300px] md:h-[400px] flex flex-col justify-between",
+            icon: `w-8 h-8 md:w-12 md:h-12 mb-3 md:mb-6 ${direction === 'right' ? 'rotate-180' : ''}`,
             text: "text-sm md:text-base text-center",
             leftTriangle: "border-t-[40px] border-b-[40px] border-r-[40px]",
             rightTriangle: "border-t-[40px] border-b-[40px] border-l-[40px]",
