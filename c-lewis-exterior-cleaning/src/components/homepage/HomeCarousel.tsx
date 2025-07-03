@@ -11,7 +11,7 @@ import Fade from "embla-carousel-fade";
 import van5 from "../../assets/images/carousel/van5-min.jpg";
 import cc from "../../assets/images/carousel/cc-min.jpg";
 import pw3 from "../../assets/images/carousel/pw3-min.jpg";
-import gc3 from "../../assets/images/carousel/gc3.jpg";
+import gutter from "../../assets/images/carousel/gutter.jpg";
 import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
 
@@ -39,7 +39,7 @@ export const HomeCarousel = () => {
       subtitle: "PRESSURE WASHING SERVICES",
     },
     {
-      src: gc3,
+      src: gutter,
       alt: "Gutter Cleaning",
       title: "CLEAN GUTTERS, CLEAN MIND",
       subtitle: "GUTTERS & FASCIA CLEANING",
