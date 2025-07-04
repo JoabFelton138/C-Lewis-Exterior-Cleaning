@@ -21,7 +21,7 @@ export const Testimonials = () => {
                 quote={`"Superb job carried out by Chad. Reasonably priced, reliable and courteous. we would definitely recommend him."`}
                 author={"- MORAG BAYLEY"}
             />
-            <section className="pt-20 pb-10 px-4">            
+            <section className="pt-20 px-4">            
                 <BeforeAfterTestimonial 
                     layout="left-to-right"
                     beforeImage={roofCleanBefore2}
@@ -32,9 +32,20 @@ export const Testimonials = () => {
                     author={"HELEN ROBERTS"}
                 />
             </section>
-            <section className="pb-20 px-4">
+            <section className="pt-10 px-4">
                 <BeforeAfterTestimonial 
                     layout="right-to-left"
+                    beforeImage={roofCleanBefore}
+                    afterImage={roofCleanAfter}
+                    beforeAlt="Roof before cleaning"
+                    afterAlt="Roof after cleaning"
+                    text={"Amazing transformation of roof and exterior area of property. Absolutely delighted with the results- thank you!!! Chad worked diligently, was punctual, polite & trustworthy being left alone with the property whilst the work was completed. Totally recommend his services & you too will be delighted with the result."} 
+                    author={"HELEN ROBERTS"}
+                />
+            </section>
+            <section className="pt-10 pb-20 px-4">
+                <BeforeAfterTestimonial 
+                    layout="left-to-right"
                     beforeImage={roofCleanBefore}
                     afterImage={roofCleanAfter}
                     beforeAlt="Roof before cleaning"
