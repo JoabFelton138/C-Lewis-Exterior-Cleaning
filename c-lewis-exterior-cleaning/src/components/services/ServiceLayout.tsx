@@ -13,7 +13,7 @@ export const ServiceLayout = ({ subtitle1, description1, subtitle2, description2
         description: "text-gray-600 text-sm sm:text-base leading-relaxed",
     }
     return (
-        <section className="max-w-7xl mx-auto py-20 px-4">
+        <section className="max-w-7xl mx-auto py-20 px-4 pb-10">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${ 
                 reverse ? '[&>*:first-child]:order-2 [&>*:last-child]:order-1' : ''
             }`}>
@@ -33,7 +33,7 @@ export const ServiceLayout = ({ subtitle1, description1, subtitle2, description2
                         </div>
                     )}
                 </div>
-                <img src={image} alt={image} className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[450px] w-full rounded-lg overflow-hidden shadow-lg object-cover object-center"/>
+                <img src={image} alt={image} className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[450px] w-full rounded-lg overflow-hidden shadow-xl object-cover object-center"/>
             </div>
         </section>
     );
