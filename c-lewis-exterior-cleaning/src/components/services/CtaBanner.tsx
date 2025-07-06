@@ -1,12 +1,9 @@
 import { Phone } from "lucide-react";
 import { MessageCircle } from "lucide-react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { useQuoteNavigation } from "../utils/navigation";
 
 export const CtaBanner = () => {
-
-    const navigate = useNavigate();
     
     const styles = {
         container: "p-20 text-white flex flex-row text-center items-center justify-center",
