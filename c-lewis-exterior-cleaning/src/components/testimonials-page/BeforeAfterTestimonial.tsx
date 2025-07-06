@@ -1,4 +1,4 @@
-import { BeforeAfter } from "./BeforeAfter";
+import { BeforeAfter } from "../shared/BeforeAfter";
 import { SpeechBubble } from "./SpeechBubble";
 
 interface BeforeAfterTestimonialProps {
