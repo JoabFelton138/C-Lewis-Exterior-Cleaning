@@ -32,7 +32,7 @@ export const BeforeAfterGrid = ({service}: BeforeAfterGridProps) => {
                     See The Transformation.
                 </h2>
             </div>
-            <div className="max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto py-10 px-4">
+            <div className="max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto py-10 px-4 justify-items-center md:justify-items-start">
                 {images?.map((item, index) => (
                     <BeforeAfter 
                         key={index} 
