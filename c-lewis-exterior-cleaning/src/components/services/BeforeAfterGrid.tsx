@@ -27,8 +27,8 @@ export const BeforeAfterGrid = ({service}: BeforeAfterGridProps) => {
 
     return (
         <section>
-            <div className="w-full bg-gradient-to-r from-white to-gray-400 p-20 flex items-center justify-center">
-                <h2 className="text-4xl leading-relaxed">
+            <div className="w-full bg-gradient-to-r from-white via-gray-200 to-gray-300 p-20 flex items-center justify-center">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-gray-800 uppercase tracking-wider drop-shadow-lg">
                     See The Transformation.
                 </h2>
             </div>
