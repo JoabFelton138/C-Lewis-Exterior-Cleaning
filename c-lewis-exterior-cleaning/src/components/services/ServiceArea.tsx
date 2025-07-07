@@ -11,7 +11,18 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
     let areas: string[] = [];
     let map = "";
 
-    if (service === "roofsAndPatios") {
+    const getServiceTitle = (service: string) => {
+        switch (service) {
+            case "roofs":
+                return "Roof Cleaning";
+            case "patios":
+                return "Patio Cleaning";
+        }
+    }
+
+    const serviceTitle = getServiceTitle(service);
+
+    if (service === "roofs" || service === "patios") {
         areas = serviceAreas.roofsAndPatios.areas;
         map = serviceAreas.roofsAndPatios.mapSrc;
     }
@@ -29,7 +40,7 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
                 </div>
                 <div className="flex flex-col text-center">
                     <h2 className="text-lg font-bold text-gray-800 mb-1">
-                        Areas We Cover for Patio & Driveway Cleaning
+                        Areas We Cover for {serviceTitle}
                     </h2>
                     {areas.map((area, index) => (
                         <p className="text-gray-600 font-sm text-base" key={index}>
