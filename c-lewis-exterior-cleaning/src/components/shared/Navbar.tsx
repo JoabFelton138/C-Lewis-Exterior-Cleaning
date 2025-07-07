@@ -24,7 +24,7 @@ export const Navbar = () => {
         title: "SERVICES", 
         items: [
             {title: "DRIVEWAYS & PATIOS", href: "/driveways&patios"},
-            {title: "ROOF CLEANING & MOSS REMOVAL", href: "/"},
+            {title: "ROOF CLEANING & MOSS REMOVAL", href: "/roofcleaning&mossremoval"},
             {title: "GUTTERS & FASCIAS", href: "/"},
             {title: "WINDOW CLEANING", href: "/"},
             {title: "CONSERVATORIES & SOLAR PANELS", href: "/"},

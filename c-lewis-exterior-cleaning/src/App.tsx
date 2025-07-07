@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { Footer } from "./components/shared/Footer";
 import { Testimonials } from './pages/Testimonials';
 import { Patios } from './pages/services/Patios';
+import { RoofCleaning } from './pages/services/RoofCleaning';
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/testimonials" element={<Testimonials />}/>
         <Route path="/driveways&patios" element={<Patios />}/>
+        <Route path="/roofcleaning&mossremoval" element={<RoofCleaning />}/>
+        <Route path="/testimonials" element={<Testimonials />}/>
       </Routes>
       <Footer />
     </Router>
