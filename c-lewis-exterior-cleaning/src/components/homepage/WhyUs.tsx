@@ -30,15 +30,15 @@ export const WhyUs = () => {
             <div className="container mx-auto">
                 <SectionTitle title="Why Choose Us" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-                    <div className="flex flex-col gap-4 md:gap-6">
+                    <div className="flex flex-col gap-6 md:gap-6">
                         {reasons.map((reason, index) => {
                             return (
                                 <div key={index}>
-                                    <div className="flex gap-3 items-center mb-2">
-                                        <reason.icon className="w-6 h-6 md:w-8 md:h-8 text-primary"/>
-                                        <h3 className="text-lg md:text-xl lg:text-2xl font-bold">{reason.title}</h3>
+                                    <div className="flex gap-3 items-start mb-2">
+                                        <reason.icon className="w-6 h-6 md:w-7 md:h-7 text-primary"/>
+                                        <h3 className="text-lg md:text-xl lg:text-2xl font-black text-gray-800 uppercase tracking-wider">{reason.title}</h3>
                                     </div>
-                                    <p className="text-gray-600 text-sm md:text-base ml-9 md:ml-11">
+                                    <p className="text-gray-600 text-sm sm:text-base xl:text-lg ">
                                         {reason.description}
                                     </p>
                                 </div>
