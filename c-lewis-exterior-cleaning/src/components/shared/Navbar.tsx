@@ -56,8 +56,12 @@ export const Navbar = () => {
       <div className="ml-[1px]">
         <img
           src={logo}
-          className={`transition-all duration-300 ${isScrolled ? "w-36 md:w-44 brightness-0" : "w-40 md:w-52 brightness-0 invert"} cursor-pointer`}
-          alt="logo"
+          className={`transition-all duration-300 ease-in-out object-contain ${
+            isScrolled 
+              ? "w-32 sm:w-36 md:w-40 lg:w-44 brightness-0" 
+              : "w-36 sm:w-40 md:w-44 lg:w-48 brightness-0 invert"
+          } cursor-pointer hover:scale-105`}
+          alt="C-Lewis Exterior Cleaning Logo"
           onClick={navigateToTop}
         />
       </div>
