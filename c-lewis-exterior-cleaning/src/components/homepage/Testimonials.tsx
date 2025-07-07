@@ -1,10 +1,10 @@
-import { Button } from '@/components/ui/button';
 import { Star } from 'lucide-react';
 import googleLogo from '../../assets/images/logo.svg';
 import roof from '../../assets/images/roof.jpg';
 import { ReviewCarousel } from './ReviewCarousel';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { ResponsiveButton } from '../shared/ResponsiveButton';
 
 export const Testimonials = () => {
     const navigate = useNavigate();
@@ -51,11 +51,7 @@ export const Testimonials = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-16">
-                <Button size='lg' 
-                        className="bg-black hover:bg-primary/90 hover:scale-105 text-lg px-8"
-                        onClick={handleTestimonialsClick}>
-                    TESTIMONIALS
-                </Button>
+               <ResponsiveButton text="TESTIMONIALS" onClick={handleTestimonialsClick} />
             </div>
         </div>
        </section>

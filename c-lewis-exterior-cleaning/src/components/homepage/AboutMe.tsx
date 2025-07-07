@@ -1,4 +1,4 @@
-import { Button } from "../ui/button";
+import { ResponsiveButton } from "../shared/ResponsiveButton";
 import { SocialIcons } from "../shared/SocialIcons";
 import { SectionTitle } from "../shared/SectionTitle";
 import { useQuoteNavigation } from "../utils/navigation";
@@ -48,11 +48,7 @@ export const AboutMe = () => {
                 <SocialIcons title="instagram" />
                 <SocialIcons title="tiktok" />
               </div>
-              <Button 
-                  className="bg-primary hover:bg-primary/90 hover:scale-105 text-lg px-8 transition-all duration-300"
-                  onClick={navigateToQuoteForm}>
-                GET A FREE QUOTE
-              </Button>
+              <ResponsiveButton text="GET A FREE QUOTE" onClick={navigateToQuoteForm} />
             </div>
           </div>
         </div>

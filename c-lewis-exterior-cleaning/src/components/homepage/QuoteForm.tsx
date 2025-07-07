@@ -8,6 +8,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { SuccessDialog } from "./SuccessDialog";
+import { ResponsiveButton } from "../shared/ResponsiveButton";
 
 const formSchema = z.object({
     fullName: z.string()
@@ -182,13 +183,12 @@ export const QuoteForm = () => {
                                 </div>
                             </div>
                         </div>
-                        <Button className="mt-6 mb-2 flex justify-center hover:bg-primary/90 hover:scale-105 text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-12 mx-auto" 
+                        <ResponsiveButton className="mt-6 mb-2 mx-auto" 
                             type="submit"
-                            size="lg"
                             onClick={form.handleSubmit(onSubmit)}
-                            disabled={form.formState.isSubmitting}>
-                                {form.formState.isSubmitting ? "SUBMITTING..." : "SUBMIT"}
-                        </Button>
+                            disabled={form.formState.isSubmitting}
+                            text={form.formState.isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+                        />
                     </Form>
                 </CardContent>
             </Card>

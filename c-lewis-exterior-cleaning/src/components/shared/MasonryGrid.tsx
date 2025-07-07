@@ -6,9 +6,9 @@ import wc1 from '../../assets/images/wc/wc1.jpg'
 import wc from '../../assets/images/gallery/bwc.jpg'
 import wc2 from '../../assets/images/wc/wc7.jpg'
 import wc3 from '../../assets/images/wc/wc2fin.jpg'
-import { Button } from '../ui/button'
 import { useState } from 'react'
 import { ImageDialog } from './ImageDialog'
+import { ResponsiveButton } from './ResponsiveButton'
 
 interface GridItem {
     href: string | null;
@@ -104,9 +104,10 @@ export const MasonryGrid = () => {
                 }
             </div>
             <div className="flex justify-center mt-16">
-                <Button size="lg" className="px-12 hover:bg-primary/90 hover:scale-105 text-lg">
-                    PORTFOLIO
-                </Button>
+                <ResponsiveButton 
+                    text="PORTFOLIO" 
+                    onClick={() => {}} 
+                />
             </div>
             <ImageDialog 
                 open={open} 
