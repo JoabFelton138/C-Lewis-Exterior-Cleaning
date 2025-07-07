@@ -8,7 +8,6 @@ interface ReviewProps {
   rating: number;
   comment: string;
   author: string;
-  date: string;
   image?: string;
   url: string;
 }
@@ -29,20 +28,19 @@ export const Review = ({ ...ReviewProps }: ReviewProps) => {
               </AvatarFallback>
             </Avatar>
             <div>
-              <h3 className="text-sm font-bold">{ReviewProps.author}</h3>
-              <p className="text-xs text-gray-500">{ReviewProps.date}</p>
+              <h3 className="text-sm font-bold gap-1">{ReviewProps.author}</h3>
+              <div className="flex gap-">
+                {[...Array(ReviewProps.rating)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
             </div>
           </div>
           <img src={google} alt="Google" className="w-6 h-6 mb-[25px]" />
         </CardTitle>
       </CardHeader>
       <CardContent className="px-0">
-        <div className="flex gap-0">
-          {[...Array(ReviewProps.rating)].map((_, i) => (
-            <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-          ))}
-        </div>
-        <p className="text-sm pt-1 text-gray-500">{ReviewProps.comment}</p>
+        <p className="text-xs sm:text-sm pt-1 text-gray-500">{ReviewProps.comment}</p>
       </CardContent>
     </Card>
   );
