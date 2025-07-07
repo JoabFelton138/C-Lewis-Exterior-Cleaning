@@ -22,7 +22,7 @@ export const Patios = () => {
             />
             <BeforeAfterGrid service="patios" />
             <CtaBanner />
-            <ServiceArea service={"roofsAndPatios"}/>
+            <ServiceArea service={"patios"}/>
         </main>
     );
 }
