@@ -29,7 +29,7 @@ export const Testimonials = () => {
         <div className='container mx-auto px-4 relative z-10'>
             <div className='flex flex-col lg:flex-row items-center justify-center gap-12'>
                 <div className='flex flex-col gap-2 items-center'>
-                    <h3 className="text-white text-1xl sm:text-2xl font-bold">  
+                    <h3 className="text-white text-sm sm:text-base md:text-xl lg:text-2xl font-bold">  
                         EXCELLENT
                     </h3>
                     <div className='flex gap-1 sm:gap-2'>
