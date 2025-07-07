@@ -2,8 +2,8 @@ import { Hero } from "@/components/shared/Hero";
 
 import { useEffect } from "react";
 import { BeforeAfterTestimonial } from "@/components/testimonials-page/BeforeAfterTestimonial";
-import roofCleanBefore2 from '@/assets/images/before-after/roof-before-2.jpg';
-import roofCleanAfter2 from '@/assets/images/before-after/roof-after-2.jpg';
+import roofCleanBefore2 from '@/assets/images/before-after/roof-cleaning/roof-before-2.jpg';
+import roofCleanAfter2 from '@/assets/images/before-after/roof-cleaning/roof-after-2.jpg';
 import roofCleanBefore from '@/assets/images/before-after/before1.jpg';
 import roofCleanAfter from '@/assets/images/before-after/after1.jpg';
 import { CustomerQuote } from "@/components/testimonials-page/CustomerQuote";
