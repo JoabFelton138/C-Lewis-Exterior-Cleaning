@@ -11,7 +11,7 @@ export const RoofCleaning = () => {
     const description2 = ` We offer a comprehensive roof cleaning service that uses state-of-the-art equipment and eco-friendly solutions to remove dirt, moss, and algae from your roof. Our expert technicians will assess your roof's condition and develop a tailored cleaning plan to suit your specific needs. We use gentle yet effective cleaning methods to remove dirt and debris without damaging your roof's surface or surrounding vegetation.`   
     return (
         <main>
-            <Hero title="roof cleaning" subtitle="Clean Roofs, Clean Minds." image={roofHero} />
+            <Hero title="roof cleaning" subtitle="Protect Your Home, One Shingle at a Time." image={roofHero} />
             <ServiceLayout 
                 subtitle1="Why Should I Clean My Roof?"
                 description1={description1}
