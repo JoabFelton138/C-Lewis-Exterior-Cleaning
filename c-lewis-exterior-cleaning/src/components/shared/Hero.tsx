@@ -16,11 +16,11 @@ export const Hero = ({ title, subtitle, image }: HeroProps) => {
             )}
             <div className="absolute inset-0 bg-black/30"></div>
             <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white text-center">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white title-style text-center">
                     {title.toUpperCase()}
                 </h2>
                 <h4
-                    className="text-lg sm:text-xl md:text-2xl text-white text-center"
+                    className="text-lg sm:text-xl md:text-2xl text-white title-style text-center"
                   >
                     {subtitle}
                   </h4>

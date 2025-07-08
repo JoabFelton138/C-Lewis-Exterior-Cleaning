@@ -67,9 +67,9 @@ export const HomeCarousel = () => {
                   </Button>
                 </div>
               </div>
-              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 sm:px-8 pointer-events-none hidden md:flex">
-                <CarouselPrevious className="pointer-events-auto" variant="ghost" />
-                <CarouselNext className="pointer-events-auto" variant="ghost" />
+              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 sm:px-8 pointer-events-none hidden lg:flex">
+                <CarouselPrevious className="pointer-events-auto ml-2" variant="ghost" />
+                <CarouselNext className="pointer-events-auto mr-2" variant="ghost" />
               </div>
             </CarouselItem>
           ))}
