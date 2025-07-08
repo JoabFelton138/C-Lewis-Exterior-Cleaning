@@ -39,7 +39,7 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
                     />
                 </div>
                 <div className="flex flex-col text-center order-1 lg:order-2">
-                    <h2 className="text-lg font-bold text-gray-800 mb-1">
+                    <h2 className="text-lg text-gray-800 title-style mb-1">
                         Areas We Cover for {serviceTitle}
                     </h2>
                     {areas.map((area, index) => (
@@ -47,7 +47,7 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
                             {area}
                         </p>
                     ))}
-                    <h2 className="text-lg font-bold text-gray-800 mt-1">
+                    <h2 className="text-lg text-gray-800 title-style mt-1">
                         … and the surrounding areas too!
                     </h2>
                 </div>

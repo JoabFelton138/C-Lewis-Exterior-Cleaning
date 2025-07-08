@@ -219,7 +219,7 @@
 
 @layer components {
   .title-style {
-    font-weight: 900;
+    font-weight: 900 !important;
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
