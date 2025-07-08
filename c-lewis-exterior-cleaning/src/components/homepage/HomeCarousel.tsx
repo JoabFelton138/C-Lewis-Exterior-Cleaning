@@ -39,7 +39,7 @@ export const HomeCarousel = () => {
       >
         <CarouselContent>
           {slides.map((slide, index) => (
-            <CarouselItem key={index} className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px]">
+            <CarouselItem key={index} className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] relative">
               <img
                 src={slide.src}
                 alt={slide.alt}
@@ -67,11 +67,13 @@ export const HomeCarousel = () => {
                   </Button>
                 </div>
               </div>
+              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-4 sm:px-8 pointer-events-none hidden md:flex">
+                <CarouselPrevious className="pointer-events-auto" variant="ghost" />
+                <CarouselNext className="pointer-events-auto" variant="ghost" />
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden sm:flex" variant="ghost" />
-        <CarouselNext className="hidden sm:flex" variant="ghost" />
       </Carousel>
     </div>
   );
