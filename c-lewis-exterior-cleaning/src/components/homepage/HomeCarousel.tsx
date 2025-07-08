@@ -49,17 +49,17 @@ export const HomeCarousel = () => {
               <div className="absolute inset-0 flex items-center justify-center px-4">
                 <div className="flex flex-col items-center gap-4 sm:gap-6">
                   <h2
-                    className={`text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white text-center animate-slide-down ${activeSlide === index && !isTransitioning ? "active" : ""}`}
+                    className={`text-4xl sm:text-5xl md:text-6xl lg:text-[88px] title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.title}
                   </h2>
                   <h4
-                    className={`text-lg sm:text-xl md:text-2xl text-white text-center ${activeSlide === index && !isTransitioning ? "animate-slide-left active" : ""}`}
+                    className={`text-lg sm:text-xl md:text-2xl title-style text-white/90 text-center animate-slide-left drop-shadow-lg ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.subtitle}
                   </h4>
                   <Button
-                    className={`hover:scale-105 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
+                    className={`hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
                     variant="outline"
                     size="lg"
                   >
