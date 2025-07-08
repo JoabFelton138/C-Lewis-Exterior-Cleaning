@@ -9,7 +9,7 @@ interface ServiceLayoutProps {
 
 export const ServiceLayout = ({ subtitle1, description1, subtitle2, description2, image, reverse = false}: ServiceLayoutProps) => {
     const styleClass = {
-        subtitle: "text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-gray-800 uppercase tracking-wider",
+        subtitle: "text-lg sm:text-xl md:text-2xl lg:text-3xl title-style text-gray-800",
         description: "text-gray-600 text-sm sm:text-base leading-relaxed",
     }
     return (

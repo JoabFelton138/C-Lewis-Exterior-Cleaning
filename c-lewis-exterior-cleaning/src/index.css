@@ -216,3 +216,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .title-style {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}

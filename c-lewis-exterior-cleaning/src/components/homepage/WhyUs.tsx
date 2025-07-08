@@ -36,7 +36,7 @@ export const WhyUs = () => {
                                 <div key={index}>
                                     <div className="flex gap-3 items-start mb-2">
                                         <reason.icon className="w-6 h-6 md:w-7 md:h-7 text-primary"/>
-                                        <h3 className="text-lg md:text-xl lg:text-2xl font-black text-gray-800 uppercase tracking-wider">{reason.title}</h3>
+                                        <h3 className="text-lg md:text-xl lg:text-2xl text-gray-800 title-style">{reason.title}</h3>
                                     </div>
                                     <p className="text-gray-600 text-sm sm:text-base xl:text-lg ">
                                         {reason.description}

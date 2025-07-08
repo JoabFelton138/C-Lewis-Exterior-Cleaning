@@ -52,7 +52,7 @@ export const QuoteForm = () => {
     return (
         <section id="quote-form" className="py-24">
             <Card className="p-4 sm:p-6 md:p-10 max-w-[700px] mx-auto space-y-4 sm:space-y-6 md:space-y-8 w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%]">
-                <CardHeader className="text-center p-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-gray-800 uppercase tracking-wider">
+                <CardHeader className="text-center p-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-800 title-style">
                     Need a Quote?
                     <CardDescription className="text-sm sm:text-base font-normal normal-case tracking-normal mt-2">
                         If you would like a free quote, 
