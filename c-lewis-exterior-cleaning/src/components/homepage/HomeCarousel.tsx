@@ -59,7 +59,7 @@ export const HomeCarousel = () => {
                     {slide.subtitle}
                   </h4>
                   <Button
-                    className={`hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
+                    className={`sm:hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 scale-75 sm:scale-100 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
                     variant="outline"
                     size="lg"
                   >
