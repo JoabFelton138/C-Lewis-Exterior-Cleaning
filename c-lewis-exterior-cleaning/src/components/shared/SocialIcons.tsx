@@ -43,7 +43,7 @@ export const SocialIcons = ({ title, background }: SocialIconProps) => {
         <Button
             variant="outline"
             size="icon"
-            className={`rounded-full ${background ? "bg-slate-50" : ""} hover:bg-sky-500 hover:text-white transition-colors`}
+            className={`rounded-full scale-90 sm:scale-100 ${background ? "bg-slate-50" : ""} hover:bg-sky-500 hover:text-white transition-colors`}
             onClick={handleClick}
             aria-label={`Visit our ${title} Page`}
         >

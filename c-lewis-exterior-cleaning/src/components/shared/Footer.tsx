@@ -41,7 +41,7 @@ export const Footer = () => {
                     <h3 className="text-base sm:text-sm lg:text-lg title-style">
                         Follow Us
                     </h3>
-                    <div className="flex space-x-4 justify-center">
+                    <div className="flex space-x-2 sm:space-x-4 justify-center">
                         <SocialIcons background={hasBackground} title="facebook" />
                         <SocialIcons background={hasBackground} title="instagram" />
                         <SocialIcons background={hasBackground} title="tiktok" />
