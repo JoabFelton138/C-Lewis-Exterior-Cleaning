@@ -29,7 +29,7 @@ export const CtaBanner = () => {
 
     return (
         <section className="w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden">
                 <div className={`bg-sky-400 ${styles.container}`}>
                     <div className={`${styles.leftAnimation} flex items-center`}>
                         <Phone className={`${styles.icon} rotate-260`}/>
