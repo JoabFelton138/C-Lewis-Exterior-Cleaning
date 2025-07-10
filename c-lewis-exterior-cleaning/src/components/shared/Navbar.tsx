@@ -87,7 +87,7 @@ export const Navbar = () => {
                                     <li key={index}>
                                         <NavigationMenuLink 
                                             href={subItem.href}
-                                            className={`${isScrolled ? "hover:bg-sky-400/30 data-[active=true]:bg-sky-400/30 data-[active=true]:text-black" : ""}`}
+                                            className={`hover:bg-sky-400/30 hover:text-black ${isScrolled ? "data-[active=true]:bg-sky-400/30 data-[active=true]:text-black" : ""}`}
                                         >
                                             {subItem.title}
                                         </NavigationMenuLink>
