@@ -16,7 +16,7 @@ export const Review = ({ ...ReviewProps }: ReviewProps) => {
   return (
     <Card 
         className="bg-white p-5 h-full w-[320px] md:w-full 
-        cursor-pointer rounded-lg gap-2 hover:-translate-y-2 transition-all duration-300"
+        cursor-pointer rounded-lg gap-1 hover:-translate-y-2 transition-all duration-300"
         onClick={() => window.location.href = ReviewProps.url}>
       <CardHeader className="px-0">
         <CardTitle className="flex justify-between">
@@ -40,7 +40,7 @@ export const Review = ({ ...ReviewProps }: ReviewProps) => {
         </CardTitle>
       </CardHeader>
       <CardContent className="px-0">
-        <p className="text-xs sm:text-sm pt-1 text-gray-500">{ReviewProps.comment}</p>
+        <p className="text-xs sm:text-sm text-gray-500">{ReviewProps.comment}</p>
       </CardContent>
     </Card>
   );

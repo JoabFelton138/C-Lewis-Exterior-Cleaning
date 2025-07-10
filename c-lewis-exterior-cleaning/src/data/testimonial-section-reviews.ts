@@ -42,7 +42,7 @@ export const reviews: Review[] = [
         rating: 5, 
         comment: `Chad recently cleaned my roof which was covered in moss. My roof is now unrecognisable.  Free of moss and looking like new. I'm very happy with Chad's work and can highly recommend him . He is reliable, great communication and his price was very competitive. Thank you, Chad.`,
         author: 'Bia', 
-        url:'https://www.google.com',
+        url:'https://www.google.com/maps/contrib/117071590354496655451/reviews?hl=en',
         image: bia
     },
     {
@@ -56,7 +56,7 @@ export const reviews: Review[] = [
         rating: 5, 
         comment: `Friendly and reliable. Did a fantastic job cleaning our gutters and windows. He took his time unlike others who do a rushed job.`,
         author: 'Raees Azad', 
-        url:'https://www.google.com',
+        url:'https://www.google.com/maps/contrib/103867448182824467428/reviews?hl=en',
         image: raees
     },
     {
