@@ -40,7 +40,7 @@ export const Review = ({ ...ReviewProps }: ReviewProps) => {
         </CardTitle>
       </CardHeader>
       <CardContent className="px-0">
-        <p className="text-xs sm:text-sm text-gray-500">{ReviewProps.comment}</p>
+        <p className="text-xs lg:text-sm text-gray-500">{ReviewProps.comment}</p>
       </CardContent>
     </Card>
   );
