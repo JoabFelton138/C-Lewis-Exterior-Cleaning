@@ -32,7 +32,6 @@ export function ReviewCarousel() {
               rating={review.rating}
               comment={review.comment}
               author={review.author}
-              date={review.date}
               url={review.url}
               image={review.image}
             />
