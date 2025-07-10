@@ -11,11 +11,33 @@ import Fade from "embla-carousel-fade";
 import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
 import { carouselSlides } from "@/data/carousel-slides";
+import { useNavigate } from "react-router-dom";
+import { navigatToAbout } from "../utils/navigation";
 
 export const HomeCarousel = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const slides = carouselSlides;
+  const navigate = useNavigate();
+
+  const handleButtonClick = (subtitle: string) => {
+    switch (subtitle) {
+      case "COVERING STAFFORDSHIRE, SHROPSHIRE, WEST MIDLANDS & MORE":
+        return navigatToAbout();
+      case "PRESSURE WASHING SERVICES":
+        return navigate('/driveways-and-patios');
+      case "ROOF CLEANING & MOSS REMOVAL":
+          return navigate('/roof-cleaning');
+      case "GUTTERS & FASCIA CLEANING":
+          return navigate('/gutter-cleaning');
+      case "WINDOW CLEANING & RESTORATION":
+          return navigate('/window-cleaning');
+      case "CONSERVATORY & SOLAR PANEL CLEANING":
+          return navigate('/conservatories-and-solar-panels');
+      default:
+        return navigate('/');
+    }
+  };
 
   useEffect(() => {
 
@@ -62,6 +84,7 @@ export const HomeCarousel = () => {
                     className={`sm:hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 scale-75 sm:scale-100 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
                     variant="outline"
                     size="lg"
+                    onClick={() => handleButtonClick(slide.subtitle)}
                   >
                     READ MORE
                   </Button>

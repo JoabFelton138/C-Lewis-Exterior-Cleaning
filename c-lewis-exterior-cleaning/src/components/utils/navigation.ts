@@ -51,3 +51,15 @@ export const useLogoNavigation = () => {
 
     return handleLogoClick;
 }
+
+export const navigatToAbout = () => {
+    const element = document.getElementById('about');
+    if (element) {
+        scroll.scrollTo(element.offsetTop - 20, {
+            duration: 1200,
+            smooth: true,
+            spy: true,
+            spyThrottle: 500,
+        });
+    }
+}

@@ -7,7 +7,7 @@ export const AboutMe = () => {
   const navigateToQuoteForm = useQuoteNavigation();
   
   return (
-    <section className="w-full py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+    <section id="about" className="w-full py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
       <div className="container mx-auto px-4">
         <SectionTitle title="About Us" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
