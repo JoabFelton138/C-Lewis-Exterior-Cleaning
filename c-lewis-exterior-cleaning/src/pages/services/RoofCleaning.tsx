@@ -1,7 +1,7 @@
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import { Hero } from "@/components/shared/Hero";
-import roofCleaning from '@/assets/images/roof-cleaning/rc4.jpg';
-import roofHero from '@/assets/images/roof-cleaning/rc3.jpg';
+import roofHero from '@/assets/images/roof-cleaning/rc4.jpg';
+import roofCleaning from '@/assets/images/roof-cleaning/rc3.jpg';
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { ServiceArea } from "@/components/services/ServiceArea";
