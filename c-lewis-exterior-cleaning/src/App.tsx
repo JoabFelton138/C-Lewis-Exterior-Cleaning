@@ -5,6 +5,7 @@ import { Footer } from "./components/shared/Footer";
 import { Testimonials } from './pages/Testimonials';
 import { Patios } from './pages/services/Patios';
 import { RoofCleaning } from './pages/services/RoofCleaning';
+import { Gutters } from './pages/services/Gutters';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/driveways-and-patios" element={<Patios />}/>
         <Route path="/roof-cleaning" element={<RoofCleaning />}/>
+        <Route path="/gutter-cleaning" element={<Gutters />}/>
         <Route path="/testimonials" element={<Testimonials />}/>
       </Routes>
       <Footer />
