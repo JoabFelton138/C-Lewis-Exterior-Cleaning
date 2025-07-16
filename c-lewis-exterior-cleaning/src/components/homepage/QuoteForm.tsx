@@ -5,6 +5,7 @@ import { Textarea } from "../ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader } from "../ui/card";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import { SuccessDialog } from "./SuccessDialog";
 import { ResponsiveButton } from "../shared/ResponsiveButton";
@@ -17,7 +18,7 @@ const formSchema = z.object({
             .min(11, "Number must be at least 11 digits")
             .regex(/^[0-9]+$/, "Number must contain only digits"),
     email: z.string().email("Invalid email address"),
-    postcode: z.string()
+    postCode: z.string()
                .regex(/^[A-Z]{1,2}[0-9][A-Z0-9]? ?[0-9][A-Z]{2}$/i, 
                 "Enter a valid UK postode (e.g. WV8 1QY)"),
     message: z.string().min(10, "Message must be at least 10 characters"),
@@ -30,7 +31,7 @@ export const QuoteForm = () => {
                 fullName: "",
                 number: "",
                 email: "",
-                postcode: "",
+                postCode: "",
                 message: "",
             }
         }
@@ -38,8 +39,12 @@ export const QuoteForm = () => {
 
     const onSubmit = async (data: z.infer<typeof formSchema>) => {
         try {
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            console.log(data);
+            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+            await emailjs.send(serviceId, templateId, data, publicKey);
+
             form.reset();
             setShowSuccessDialog(true);
         } catch (error) {
@@ -137,7 +142,7 @@ export const QuoteForm = () => {
                                 <div>
                                     <FormField
                                         control={form.control}
-                                        name="postcode"
+                                        name="postCode"
                                         render={({ field }) => (
                                             <FormItem>
                                                 <FormLabel>
@@ -152,7 +157,7 @@ export const QuoteForm = () => {
                                     <div className="min-h-[20px] mt-1">
                                         <FormField
                                             control={form.control}
-                                            name="postcode"
+                                            name="postCode"
                                             render={() => <FormMessage />}
                                         />
                                     </div>
