@@ -10,7 +10,7 @@ export const Footer = () => {
 
                 <div className="space-y-4">
                 <h3 className="text-base sm:text-sm lg:text-lg title-style">
-                C. Lewis Exterior Cleaning
+                        C. Lewis Exterior Cleaning
                     </h3>
                     <p className="text-xs sm:text-sm">
                         Professional exterior cleaning services for your home and business.
@@ -19,7 +19,7 @@ export const Footer = () => {
                 
                 <div className="space-y-4">
                 <h3 className="text-base sm:text-sm lg:text-lg title-style">
-                Contact
+                        Contact
                     </h3>
                     <div className="space-y-2">
                         <div className="flex items-center space-x-2 justify-center">
