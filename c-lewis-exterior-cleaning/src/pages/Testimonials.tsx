@@ -12,6 +12,10 @@ export const Testimonials = () => {
     const loadMore = () => {
         setDisplayCount(prev => prev + 3)
     }
+
+    const loadLess = () => {
+        setDisplayCount(prev => prev - 3);
+    }
     
     return (
         <main>
@@ -32,7 +36,12 @@ export const Testimonials = () => {
           
                 </div>
                 <div className="flex mt-8 justify-center gap-4">
-                    <ResponsiveButton text={"LOAD MORE"} onClick={loadMore}/>
+                    {displayCount < reviews.length &&
+                        <ResponsiveButton text={"LOAD MORE"} onClick={loadMore}/>
+                    }
+                    {displayCount > 3 && 
+                        <ResponsiveButton text={"SEE LESS"} onClick={loadLess}/>
+                    }
                 </div>
             </section>
         </main>
