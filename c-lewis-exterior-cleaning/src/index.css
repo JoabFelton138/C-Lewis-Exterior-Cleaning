@@ -68,7 +68,7 @@
 }
 
 .animate-slide-up-fast.active {
-  animation: slideUp 0.6s ease-out 0.2s forwards;
+  animation: slideUp 0.4s ease-out 0.1s forwards;
 }
 
 .animate-on-scroll-left {
@@ -91,6 +91,26 @@
 .animate-on-scroll-right.in-view {
   opacity: 1;
   transform: translateX(0);
+}
+
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide-out-left {
+  animation: none;
+  opacity: 1;
+}
+
+.animate-slide-out-left.active {
+  animation: slideOutLeft 0.3s ease-out 0s forwards;
 }
 
 @keyframes checkmark {
