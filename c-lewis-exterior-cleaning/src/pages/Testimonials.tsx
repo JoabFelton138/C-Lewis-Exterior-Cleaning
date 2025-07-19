@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ResponsiveButton } from "@/components/shared/ResponsiveButton";
 
 export const Testimonials = () => {
-    const [displayCount, setDisplayCount] = useState(3);
+    const [displayCount, setDisplayCount] = useState<number>(3);
     const reviewsToShow = reviews.slice(0, displayCount);
 
     const loadMore = () => {
@@ -25,7 +25,7 @@ export const Testimonials = () => {
                     {reviewsToShow.map((review) => (
                         <div
                             key={review.author}
-                            className={`animate-slide-up active`}
+                            className={`animate-slide-up-fast active`}
                         >
                             <Review
                                 {...review}

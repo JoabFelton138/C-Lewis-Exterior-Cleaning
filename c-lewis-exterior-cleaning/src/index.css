@@ -62,6 +62,15 @@
   animation: slideUp 0.8s ease-out 0.5s forwards;
 }
 
+.animate-slide-up-fast {
+  animation: none;
+  opacity: 0;
+}
+
+.animate-slide-up-fast.active {
+  animation: slideUp 0.6s ease-out 0.2s forwards;
+}
+
 .animate-on-scroll-left {
   opacity: 0;
   transform: translateX(-100%);
