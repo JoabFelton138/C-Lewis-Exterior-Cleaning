@@ -2,6 +2,7 @@ import { BeforeAfter } from '../shared/BeforeAfter';
 import { patioImages } from '@/data/before-after/patioImages';
 import { roofImages } from '@/data/before-after/roofImages';
 import { gutterImages } from '@/data/before-after/gutterImages';
+import { windowImages } from '@/data/before-after/windowImages';
 
 interface BeforeAfterGridProps {
     service: 'patios' | 'roof' | 'gutters' | 'windows' | 'conservatories';
@@ -17,6 +18,8 @@ export const BeforeAfterGrid = ({service}: BeforeAfterGridProps) => {
                 return roofImages;
             case 'gutters':
                 return gutterImages;
+            case 'windows':
+                return windowImages;
         }
     }
 
