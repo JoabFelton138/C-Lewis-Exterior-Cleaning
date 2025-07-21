@@ -14,7 +14,7 @@ export const Gutters = () => {
     
     return (
         <main>
-            <Hero title="Gutters" image={gutterStock} subtitle="Clean Gutters, Clean Home." />
+            <Hero title="Gutter Cleaning" image={gutterStock} subtitle="Clean Gutters, Clean Home." />
             <ServiceLayout 
                 subtitle1="What's Included In The Service?"
                 description1={description1}
