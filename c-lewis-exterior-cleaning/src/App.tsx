@@ -7,6 +7,7 @@ import { Patios } from './pages/services/Patios';
 import { RoofCleaning } from './pages/services/RoofCleaning';
 import { Gutters } from './pages/services/Gutters';
 import { WindowCleaning } from './pages/services/WindowCleaning';
+import { Conservatories } from './pages/services/Conservatories';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/roof-cleaning" element={<RoofCleaning />}/>
         <Route path="/gutter-cleaning" element={<Gutters />}/>
         <Route path="/window-cleaning" element={<WindowCleaning />}/>
+        <Route path="/conservatory-and-solar-panel-cleaning" element={<Conservatories />}/>
         <Route path="/testimonials" element={<Testimonials />}/>
       </Routes>
       <Footer />

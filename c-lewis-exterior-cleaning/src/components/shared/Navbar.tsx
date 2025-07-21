@@ -27,7 +27,7 @@ export const Navbar = () => {
             {title: "ROOF CLEANING & MOSS REMOVAL", href: "/roof-cleaning"},
             {title: "GUTTERS & FASCIAS", href: "/gutter-cleaning"},
             {title: "WINDOW CLEANING", href: "/window-cleaning"},
-            {title: "CONSERVATORIES & SOLAR PANELS", href: "/"},
+            {title: "CONSERVATORIES & SOLAR PANELS", href: "/conservatory-and-solar-panel-cleaning"},
         ],
     },
     {title: "PORTFOLIO", href: "/"},

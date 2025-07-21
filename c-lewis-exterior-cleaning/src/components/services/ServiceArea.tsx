@@ -19,6 +19,7 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
             case "patios":
                 return `${serviceAreaTitle} Patio Cleaning`;
             case "gutters":
+            case "conservatories":
                 return `Service within 25 miles of Wheaton Aston`;
         }
     }
@@ -29,7 +30,7 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
             return `… and the surrounding areas too!`;
         }
 
-        if (service === "gutters") {
+        if (service === "gutters" || service === "conservatories") {
             return `Not sure we cover your area? Get in touch!`;
         }
 
@@ -46,7 +47,7 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
         map = serviceAreas.roofsAndPatios.mapSrc;
     }
 
-    if (service === "gutters") {
+    if (service === "gutters" || service === "conservatories") {
         areas = serviceAreas.gutters.areas;
         map = '';
     }
