@@ -1,7 +1,7 @@
 import { Hero } from '@/components/shared/Hero';
 import { ServiceLayout } from '@/components/services/ServiceLayout';
 import conservatoryHero from '../../assets/images/stock/roof-clean-sun.jpeg';
-import solarPanel from '../../assets/images/cc/cc4.jpg';
+import cleanConservatory from '../../assets/images/cc/cc5.jpg';
 import { BeforeAfterGrid } from '@/components/services/BeforeAfterGrid';
 import { CtaBanner } from '@/components/services/CtaBanner';
 import { ServiceArea } from '@/components/services/ServiceArea';
@@ -23,7 +23,7 @@ export const Conservatories = () => {
                 description1={description1}
                 subtitle2="Sound Good?"
                 description2={description2}
-                image={solarPanel}
+                image={cleanConservatory}
             />
             <BeforeAfterGrid service="conservatories" />
             <CtaBanner />
