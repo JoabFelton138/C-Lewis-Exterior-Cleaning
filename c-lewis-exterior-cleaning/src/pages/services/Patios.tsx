@@ -1,6 +1,6 @@
 import { Hero } from "@/components/shared/Hero";
 import { ServiceLayout } from "@/components/services/ServiceLayout";
-import patios from "@/assets/images/pw/pw.jpg";
+import patios from "@/assets/images/pw/be-view.jpg";
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { ServiceArea } from "@/components/services/ServiceArea";
