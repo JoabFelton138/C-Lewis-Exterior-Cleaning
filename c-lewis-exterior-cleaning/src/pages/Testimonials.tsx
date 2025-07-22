@@ -1,31 +1,11 @@
 import { Hero } from "@/components/shared/Hero";
 import testimonials from '@/assets/images/roof.jpg';
-import {reviews} from '../data/testimonial-section-reviews';
-import { Review } from "@/components/shared/Review";
-import { useState } from "react";
-import { ResponsiveButton } from "@/components/shared/ResponsiveButton";
 import googleLogo from '@/assets/images/logo.svg';
 import { Star } from "lucide-react";
+import { ReviewCarousel } from "@/components/homepage/ReviewCarousel";
 
 export const Testimonials = () => {
-    const [displayCount, setDisplayCount] = useState<number>(3);
-    const reviewsToShow = reviews.slice(0, displayCount);
-    const [isRemoving, setIsRemoving] = useState<boolean>(false);
-    const [removingStartIndex, setRemovingStartIndex] = useState<number>(0)
-    
-    const loadMore = () => {
-        setDisplayCount(prev => prev + 3)
-    }
 
-    const loadLess = () => {
-        setIsRemoving(true);
-        setRemovingStartIndex(displayCount - 3);
-        
-        setTimeout(() => {
-            setDisplayCount(prev => prev - 3);
-            setIsRemoving(false);
-        }, 300);
-    }
     
     return (
         <main>
@@ -63,28 +43,7 @@ export const Testimonials = () => {
                     </div>
                 </div>
                 </header>
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-                    {reviewsToShow.map((review, index) => (
-                        <div
-                            key={review.author}
-                            className={`${isRemoving && index >= removingStartIndex ? 'animate-slide-out-left' : 'animate-slide-up-fast'} active`}
-                        >
-                            <Review
-                                {...review}
-                                isLarge={true}
-                            />
-                        </div>
-                    ))}
-          
-                </div>
-                <div className="flex mt-10 justify-center gap-4">
-                    {displayCount < reviews.length &&
-                        <ResponsiveButton text={"LOAD MORE"} onClick={loadMore}/>
-                    }
-                    {displayCount > 3 && 
-                        <ResponsiveButton text={"SEE LESS"} onClick={loadLess}/>
-                    }
-                </div>
+                <ReviewCarousel cardSize='large'/>
             </section>
         </main>
     );
