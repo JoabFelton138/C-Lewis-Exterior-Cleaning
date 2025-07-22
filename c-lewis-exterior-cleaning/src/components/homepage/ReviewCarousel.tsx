@@ -45,7 +45,7 @@ export function ReviewCarousel({cardSize = "small", showNavigation = false}: Rev
       onMouseEnter={() => plugin.current.stop()}
       onMouseLeave={() => plugin.current.play()}
     >
-      <CarouselContent className="-ml-2">
+      <CarouselContent className={`${cardSize === "large" ? "-ml-2" : ""}`}>
         {getCarouselItems().map((review, index) => (
           <CarouselItem key={index} className={getCarouselItemClass()}>
             <Review {...review} isLarge={cardSize === "large"} />
