@@ -22,7 +22,7 @@ export const Testimonials = () => {
                         </p>
                     </div>
                     <div className='flex flex-col lg:flex-row items-center justify-center gap-12'>
-                    <div className='flex flex-col gap-2 items-center mt-6 xl:mt-0'>
+                    <div className='flex flex-col items-center mt-4 xl:mt-0'>
                         <h3 className="text-black title-style text-sm sm:text-sm md:text-lg lg:text-xl font-bold">  
                             EXCELLENT
                         </h3>

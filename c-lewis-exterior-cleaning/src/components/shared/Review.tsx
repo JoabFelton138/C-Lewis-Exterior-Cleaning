@@ -17,8 +17,8 @@ export const Review = ({ isLarge = false,...ReviewProps}: ReviewProps) => {
     
     const styles = {
       card: isLarge 
-        ? "p-5 sm:p-6 lg:p-8 w-full max-w-[320px] sm:max-w-none h-auto min-h-[250px] sm:min-h-[275px] md:min-h-[300px] lg:min-h-[350px] gap-2 mx-auto sm:mx-0"        
-        : "p-5 w-[320px] md:w-full h-full gap-1 hover:-translate-y-2 transition-all duration-300",
+        ? "p-5 sm:p-6 lg:p-8 w-full max-w-[320px] sm:max-w-none h-auto min-h-[250px] sm:min-h-[275px] md:min-h-[300px] lg:min-h-[300px] gap-2 mx-auto sm:mx-0"        
+        : "p-5 w-[320px] md:w-full h-full gap-1",
       avatar: isLarge 
         ? "w-10 h-10 lg:w-12 lg:h-12" 
         : "w-10 h-10",
@@ -35,7 +35,7 @@ export const Review = ({ isLarge = false,...ReviewProps}: ReviewProps) => {
         ? "w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7"
         : "w-6 h-6",
       comment: isLarge
-        ? "text-sm md:text-base"
+        ? "text-sm md:text-[15px]"
         : "text-xs lg:text-sm",
       cardContent: isLarge
           ? ""
@@ -44,11 +44,11 @@ export const Review = ({ isLarge = false,...ReviewProps}: ReviewProps) => {
 
     return (
       <Card 
-          className={`bg-white cursor-pointer rounded-lg ${styles.card}`}
+          className={`bg-white cursor-pointer rounded-lg ${styles.card} hover:-translate-y-2 transition-all duration-300`}
           onClick={() => window.location.href = ReviewProps.url}>
         <CardHeader className="px-0">
           <CardTitle className="flex justify-between">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
               <Avatar className={`${styles.avatar} flex-shrink-0`}>
                 <AvatarImage src={ReviewProps.image} className="object-cover w-full h-full" />
                 <AvatarFallback>

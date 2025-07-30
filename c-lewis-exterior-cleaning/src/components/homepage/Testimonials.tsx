@@ -47,7 +47,7 @@ export const Testimonials = () => {
                     />
                 </div>
                 <div className="max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-5xl">
-                    <ReviewCarousel cardSize='small'/>
+                    <ReviewCarousel cardSize='small' isHomepage={true}/>
                 </div>
             </div>
             <div className="flex justify-center mt-16">

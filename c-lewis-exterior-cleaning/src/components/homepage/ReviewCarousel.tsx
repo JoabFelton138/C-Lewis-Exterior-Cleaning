@@ -13,20 +13,24 @@ import Autoplay from "embla-carousel-autoplay"
 
 interface ReviewCarouselProps {
   cardSize?: "small" | "large";
-  showNavigation?: boolean;
+  isHomepage?: boolean;
 }
 
-export function ReviewCarousel({cardSize = "small", showNavigation = false}: ReviewCarouselProps) {
+export function ReviewCarousel({cardSize = "small", isHomepage = false}: ReviewCarouselProps) {
 
   const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: false })
+    Autoplay({ 
+      delay: isHomepage ? 7000 : 5000, 
+      stopOnInteraction: false, 
+      stopOnMouseEnter: true 
+    })
   );
 
   const getCarouselItemClass = () => {
     if (cardSize === "large") {
       return "basis-full sm:basis-1/2 lg:basis-1/3 px-2 pt-2"
     }
-    return "basis-full md:basis-1/2 lg:basis-1/2 xl:basis-1/3 px-1 pt-2"
+    return "basis-full md:basis-1/2 lg:basis-1/2 xl:basis-1/3 px-1 pt-2 flex justify-center"
   }
 
   const getCarouselItems = () => {
@@ -36,10 +40,18 @@ export function ReviewCarousel({cardSize = "small", showNavigation = false}: Rev
     return reviews;
   }
 
+  const style = "bg-sky-500 hover:bg-sky-500 hover:scale-120 relative -translate-y-0 -translate-x-0 top-0 [&_svg]:!size-6 w-12 h-12 ";
+
 
   return (
     <Carousel
-      opts={{ align: "start", loop: true }}
+      opts={{ 
+        align: "start", 
+        loop: true,  
+        slidesToScroll: isHomepage ? 1 : 3,
+        duration: 40,
+        dragFree: false
+      }}
       plugins={[plugin.current]}
       className="w-full relative"
       onMouseEnter={() => plugin.current.stop()}
@@ -52,6 +64,12 @@ export function ReviewCarousel({cardSize = "small", showNavigation = false}: Rev
           </CarouselItem>
         ))}
       </CarouselContent>
+      {cardSize === "large" && (
+        <div className="flex justify-center gap-4 mt-6">
+          <CarouselPrevious className={`${style} left-0`}/>
+          <CarouselNext className={`${style} right-0`} />
+        </div>
+      )}
     </Carousel>
   );
 }
