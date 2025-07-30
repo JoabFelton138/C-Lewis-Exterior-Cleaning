@@ -11,7 +11,7 @@ export const Testimonials = () => {
         <main>
             <Hero title="testimonials" image={testimonials} subtitle="Real Stories. Real Results." />
             <section className="py-12 sm:py-16 lg:py-24 px-12 md:px-14 lg:px-16 max-w-6xl mx-auto"> 
-                <header className="pb-10 flex flex-col xl:flex-row justify-between">
+                <header className="pb-6 lg:pb-10 flex flex-col xl:flex-row justify-between">
                     <div className="max-w-2xl flex flex-col gap-4 mx-auto xl:mx-0 text-center xl:text-left">
                         <h2 className="text-gray-800 title-style text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
                             Find out What our Clients say
@@ -21,8 +21,8 @@ export const Testimonials = () => {
                             From driveways to facades, we're delighted that our work takes centre stage in communities across the West Midlands, helping homes look their absolute best every day.
                         </p>
                     </div>
-                    <div className='flex flex-col lg:flex-row items-center justify-center gap-12'>
-                    <div className='flex flex-col items-center mt-4 xl:mt-0'>
+                    <div className='flex flex-col lg:flex-row items-center justify-center'>
+                    <div className='flex flex-col items-center mt-8 xl:mt-0'>
                         <h3 className="text-black title-style text-sm sm:text-sm md:text-lg lg:text-xl font-bold">  
                             EXCELLENT
                         </h3>

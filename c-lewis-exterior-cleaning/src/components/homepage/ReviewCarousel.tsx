@@ -28,7 +28,7 @@ export function ReviewCarousel({cardSize = "small", isHomepage = false}: ReviewC
 
   const getCarouselItemClass = () => {
     if (cardSize === "large") {
-      return "basis-full sm:basis-1/2 lg:basis-1/3 px-2 pt-2"
+      return "basis-full sm:basis-1/2 lg:basis-1/3 px-2 pt-2 flex justify-center"
     }
     return "basis-full md:basis-1/2 lg:basis-1/2 xl:basis-1/3 px-1 pt-2 flex justify-center"
   }
@@ -40,7 +40,7 @@ export function ReviewCarousel({cardSize = "small", isHomepage = false}: ReviewC
     return reviews;
   }
 
-  const style = "bg-sky-500 hover:bg-sky-500 hover:scale-120 relative -translate-y-0 -translate-x-0 top-0 [&_svg]:!size-6 w-12 h-12 ";
+  const style = "bg-sky-500 hover:bg-sky-500 hover:scale-110 sm:hover:scale-120 relative -translate-y-0 -translate-x-0 top-0 [&_svg]:!size-4 sm:[&_svg]:!size-6 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12";
 
 
   return (
@@ -65,7 +65,7 @@ export function ReviewCarousel({cardSize = "small", isHomepage = false}: ReviewC
         ))}
       </CarouselContent>
       {cardSize === "large" && (
-        <div className="flex justify-center gap-4 mt-6">
+        <div className="flex justify-center gap-2 sm:gap-4 mt-6">
           <CarouselPrevious className={`${style} left-0`}/>
           <CarouselNext className={`${style} right-0`} />
         </div>
