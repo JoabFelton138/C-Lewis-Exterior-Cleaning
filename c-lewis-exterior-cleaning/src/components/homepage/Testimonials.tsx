@@ -3,7 +3,6 @@ import googleLogo from '../../assets/images/logo.svg';
 import roof from '../../assets/images/roof.jpg';
 import { ReviewCarousel } from './ReviewCarousel';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import { ResponsiveButton } from '../shared/ResponsiveButton';
 
 export const Testimonials = () => {
@@ -11,10 +10,6 @@ export const Testimonials = () => {
     const handleTestimonialsClick = () => {
         navigate('/testimonials');
     }
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     return (
         <section className='w-full py-16 sm:py-20 md:py-24 bg-black overflow-hidden relative'>

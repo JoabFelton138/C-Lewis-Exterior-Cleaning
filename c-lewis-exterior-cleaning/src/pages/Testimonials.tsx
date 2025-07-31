@@ -3,8 +3,13 @@ import testimonials from '@/assets/images/roof.jpg';
 import googleLogo from '@/assets/images/logo.svg';
 import { Star } from "lucide-react";
 import { ReviewCarousel } from "@/components/homepage/ReviewCarousel";
+import { useEffect } from "react";
 
 export const Testimonials = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     
     return (
