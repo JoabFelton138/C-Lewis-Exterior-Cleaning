@@ -4,7 +4,6 @@ import { ResponsiveButton } from './ResponsiveButton'
 import { portfolioImages } from '../../data/portfolio-images'
 
 interface GridItem {
-    href: string | null;
     image: string;
     title: string;
     description: string;
@@ -36,9 +35,6 @@ export const MasonryGrid = () => {
                             <div className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1">
                                 <span className="text-sm sm:text-sm md:text-lg lg:text-base title-style text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out">
                                     {item.title}
-                                </span>
-                                <span className="text-xs sm:text-sm md:text-base lg:text-sm text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out">
-                                    {item.description}
                                 </span>
                             </div>
                         </div>
