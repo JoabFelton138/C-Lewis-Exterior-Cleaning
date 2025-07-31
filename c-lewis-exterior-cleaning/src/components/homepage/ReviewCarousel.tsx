@@ -18,6 +18,7 @@ interface ReviewCarouselProps {
 
 export function ReviewCarousel({cardSize = "small", isHomepage = false}: ReviewCarouselProps) {
 
+  const [slidesToScroll, setSlidesToScroll] = React.useState(3);
   const plugin = React.useRef(
     Autoplay({ 
       delay: isHomepage ? 7000 : 5000, 
@@ -32,6 +33,24 @@ export function ReviewCarousel({cardSize = "small", isHomepage = false}: ReviewC
     }
     return "basis-full md:basis-1/2 lg:basis-1/2 xl:basis-1/3 px-1 pt-2 flex justify-center"
   }
+
+  React.useEffect(() => {
+      const updateSlidesToScroll = () => {
+        if (cardSize === "large") {
+          if (window.innerWidth >= 1024) {setSlidesToScroll(3);}
+          else if (window.innerWidth >= 640) {setSlidesToScroll(2);}
+          else {setSlidesToScroll(1)};
+        }
+        else {
+          if (window.innerWidth >= 1280) {setSlidesToScroll(3);}
+          else if (window.innerWidth >= 768) {setSlidesToScroll(2);}
+          else {setSlidesToScroll(1)};
+        }
+      }
+      updateSlidesToScroll();
+      window.addEventListener("resize", updateSlidesToScroll);
+      return () => window.removeEventListener("resize", updateSlidesToScroll);
+  },[cardSize, isHomepage]);
 
   const getCarouselItems = () => {
     if (cardSize === "small") {
@@ -48,7 +67,7 @@ export function ReviewCarousel({cardSize = "small", isHomepage = false}: ReviewC
       opts={{ 
         align: "start", 
         loop: true,  
-        slidesToScroll: isHomepage ? 1 : 3,
+        slidesToScroll: slidesToScroll,
         duration: 40,
         dragFree: false
       }}
