@@ -65,7 +65,7 @@ export function ReviewCarousel({cardSize = "small", isHomepage = false}: ReviewC
         ))}
       </CarouselContent>
       {cardSize === "large" && (
-        <div className="flex justify-center gap-2 sm:gap-4 mt-6">
+        <div className="flex justify-center gap-2 sm:gap-4 mt-6 ">
           <CarouselPrevious className={`${style} left-0`}/>
           <CarouselNext className={`${style} right-0`} />
         </div>
