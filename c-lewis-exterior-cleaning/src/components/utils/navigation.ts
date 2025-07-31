@@ -46,6 +46,9 @@ export const useLogoNavigation = () => {
             }
         } else {
             navigate('/');
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 100);
         }
     };
 
