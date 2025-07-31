@@ -30,7 +30,7 @@ export const Navbar = () => {
             {title: "CONSERVATORIES & SOLAR PANELS", href: "/conservatory-and-solar-panel-cleaning"},
         ],
     },
-    {title: "PORTFOLIO", href: "/"},
+    {title: "PORTFOLIO", href: "/portfolio"},
     {title: "TESTIMONIALS", href: "/testimonials"},
   ];
 
