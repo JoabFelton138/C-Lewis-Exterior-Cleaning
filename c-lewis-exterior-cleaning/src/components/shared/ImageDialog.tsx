@@ -17,12 +17,12 @@ export const ImageDialog = ({open, onOpenChange, imageUrl, altText, title, descr
                     <img 
                         src={imageUrl} 
                         alt={altText} 
-                        className="max-w-[95vw] max-h-[75vh] sm:max-w-[90vw] object-contain"
+                        className="max-w-[85vw] max-h-[60vh] sm:max-w-[80vw] sm:max-h-[70vh] lg:max-w-[75vw] lg:max-h-[75vh] object-contain"
                     />
                 </div>
                 
-                <div className="border-t border-gray-200 p-2 sm:p-4 flex-shrink-0 text-center bg-gray-50/50 backdrop-blur-sm">
-                    <DialogTitle className="text-lg sm:text-xl text-gray-800 mb-2 title-style max-w-[95vw] sm:max-w-[90vw]">{title}</DialogTitle>
+                <div className="border-t border-gray-200 p-2 sm:p-3 lg:p-4 flex-shrink-0 text-center bg-gray-50/50 backdrop-blur-sm">
+                    <DialogTitle className="text-base sm:text-lg lg:text-xl text-gray-800 mb-2 title-style max-w-[85vw] sm:max-w-[80vw] lg:max-w-[75vw]">{title}</DialogTitle>
                     <DialogDescription className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-[95vw] sm:max-w-[90vw]">{description}</DialogDescription>
                 </div>
             </DialogContent>
