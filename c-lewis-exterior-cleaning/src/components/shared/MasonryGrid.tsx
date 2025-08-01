@@ -3,16 +3,33 @@ import { ImageDialog } from './ImageDialog'
 import { ResponsiveButton } from './ResponsiveButton'
 import { portfolioImages } from '../../data/portfolio-images'
 
+interface MasonryGridProps {
+    isPage?: boolean;
+}
+
 interface GridItem {
     image: string;
     title: string;
     description: string;
 }
 
-export const MasonryGrid = () => {
+export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
+
     const [open, setOpen] = useState<boolean>(false);
+    const [buttonCount, setButtonCount] = useState<number>(0);
     const [selectedItem, setSelectedItem] = useState<GridItem | null>(null);
-    const items = portfolioImages;
+    const [displayCount, setDisplayCount] = useState<number>(8);
+    const imagesToShow = portfolioImages.slice(0, displayCount);
+
+    const loadMore = () => {
+        setButtonCount(prev => prev + 1);
+        setDisplayCount(prev => prev + 8);
+    }
+
+    const loadLess = () => {
+        setButtonCount(prev => prev - 1);
+        setDisplayCount(prev => prev - 8);
+    }
 
     const handleClick = (selectedItem: GridItem) => {
         setSelectedItem(selectedItem);
@@ -20,10 +37,10 @@ export const MasonryGrid = () => {
     };
     
     return (
-        <section className="pb-14 bg-slate-50 overflow-hidden">
+        <section className={`pb-14 ${isPage ? '' : 'bg-slate-50'} overflow-hidden`}>
             <div className={`w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}>
                 {
-                    items.map((item, index) => (
+                    imagesToShow.map((item, index) => (
                         <div key={index} 
                              className="aspect-[4/3] w-full relative overflow-hidden group cursor-pointer"
                              onClick={() => handleClick(item)}
@@ -42,12 +59,26 @@ export const MasonryGrid = () => {
                     ))
                 }
             </div>
-            <div className="flex justify-center mt-16">
-                <ResponsiveButton 
-                    text="PORTFOLIO" 
-                    onClick={() => {}} 
-                />
-            </div>
+
+            {isPage ? (
+                <div className="flex justify-center gap-4 mt-16">
+                    {buttonCount < 2 &&(
+                    <ResponsiveButton text="Load More" onClick={() => {loadMore()}} />
+                    )}
+                    {buttonCount > 0 && (
+                        <ResponsiveButton text="See Less" onClick={() => {loadLess()}} />
+                    )}
+                </div>
+                ) 
+            : (
+                <div className="flex justify-center mt-16">
+                    <ResponsiveButton
+                        text="PORTFOLIO"
+                        onClick={() => {}}
+                    />
+                </div>
+            )}
+
             <ImageDialog 
                 open={open} 
                 imageUrl={selectedItem?.image || ""} 
