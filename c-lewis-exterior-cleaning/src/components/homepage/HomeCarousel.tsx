@@ -33,7 +33,7 @@ export const HomeCarousel = () => {
       case "WINDOW CLEANING & RESTORATION":
           return navigate('/window-cleaning');
       case "CONSERVATORY & SOLAR PANEL CLEANING":
-          return navigate('/conservatories-and-solar-panels');
+          return navigate('/conservatory-and-solar-panel-cleaning');
       default:
         return navigate('/');
     }
