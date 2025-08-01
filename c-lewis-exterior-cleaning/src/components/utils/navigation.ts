@@ -66,3 +66,11 @@ export const navigatToAbout = () => {
         });
     }
 }
+
+export const usePortfolioNavigation = () => {
+    const navigate = useNavigate();
+    const handlePortfolioClick = () => {
+        navigate('/portfolio');
+    }
+    return handlePortfolioClick;
+}

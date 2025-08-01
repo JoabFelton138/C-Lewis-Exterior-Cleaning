@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ImageDialog } from './ImageDialog'
 import { ResponsiveButton } from './ResponsiveButton'
 import { portfolioImages } from '../../data/portfolio-images'
+import { usePortfolioNavigation } from '../utils/navigation';
 
 interface MasonryGridProps {
     isPage?: boolean;
@@ -20,6 +21,7 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
     const [selectedItem, setSelectedItem] = useState<GridItem | null>(null);
     const [displayCount, setDisplayCount] = useState<number>(8);
     const imagesToShow = portfolioImages.slice(0, displayCount);
+    const handlePortfolioClick = usePortfolioNavigation();
 
     const loadMore = () => {
         setButtonCount(prev => prev + 1);
@@ -63,10 +65,10 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
             {isPage ? (
                 <div className="flex justify-center gap-4 mt-16">
                     {buttonCount < 2 &&(
-                    <ResponsiveButton text="Load More" onClick={() => {loadMore()}} />
+                    <ResponsiveButton text="Load More" onClick={() => loadMore()} />
                     )}
                     {buttonCount > 0 && (
-                        <ResponsiveButton text="See Less" onClick={() => {loadLess()}} />
+                        <ResponsiveButton text="See Less" onClick={() => loadLess()} />
                     )}
                 </div>
                 ) 
@@ -74,7 +76,7 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
                 <div className="flex justify-center mt-16">
                     <ResponsiveButton
                         text="PORTFOLIO"
-                        onClick={() => {}}
+                        onClick={() => handlePortfolioClick()}
                     />
                 </div>
             )}
