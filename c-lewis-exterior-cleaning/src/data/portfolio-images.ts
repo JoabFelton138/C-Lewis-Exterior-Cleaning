@@ -81,13 +81,13 @@ export const portfolioImages = [
         description: `?`
     },
     {
-        image: gc2,
-        title: "gutter clean in ?",
+        image: sp1,
+        title: "solar panel clean in ?",
         description: `?`
     },
     {
-        image: sp1,
-        title: "solar panel clean in ?",
+        image: gc2,
+        title: "gutter clean in ?",
         description: `?`
     },
     {

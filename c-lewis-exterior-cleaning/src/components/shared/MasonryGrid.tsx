@@ -1,9 +1,9 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { ImageDialog } from './ImageDialog'
 import { ResponsiveButton } from './ResponsiveButton'
 import { portfolioImages } from '../../data/portfolio-images'
 import { usePortfolioNavigation } from '../utils/navigation';
-import { motion, useInView } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface MasonryGridProps {
     isPage?: boolean;
@@ -21,15 +21,18 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
     const [buttonCount, setButtonCount] = useState<number>(0);
     const [selectedItem, setSelectedItem] = useState<GridItem | null>(null);
     const [displayCount, setDisplayCount] = useState<number>(8);
+    const [newItems, setNewItems] = useState<number[]>([]);
     const imagesToShow = portfolioImages.slice(0, displayCount);
     const handlePortfolioClick = usePortfolioNavigation();
 
-    const ref = useRef(null);
-    const isInView = useInView(ref, {once: true, amount: 0.1});
 
     const loadMore = () => {
+        const currentCount = displayCount;
         setButtonCount(prev => prev + 1);
         setDisplayCount(prev => prev + 8);
+
+        const newItemIndices = Array.from({ length: 8}, (_, i) => currentCount + i);
+        setNewItems(newItemIndices);
     }
 
     const loadLess = () => {
@@ -41,58 +44,40 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
         setSelectedItem(selectedItem);
         setOpen(true)
     };
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1,
-            }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.6,
-            }
-        }
-    };
     
     return (
-        <section ref={ref} className={`pb-14 ${isPage ? '' : 'bg-slate-50'} overflow-hidden`}>
-            <motion.div 
-                className={`w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}
-                variants={containerVariants}
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                >
-                {
-                    imagesToShow.map((item, index) => (
-                        <motion.div key={index} 
-                            variants={itemVariants}
-                             className="aspect-[4/3] w-full relative overflow-hidden group cursor-pointer"
-                             onClick={() => handleClick(item)}
+        <section className={`pb-14 ${isPage ? '' : 'bg-slate-50'} overflow-hidden`}>
+            
+            <div className={`w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}>
+                <AnimatePresence>
+                        {imagesToShow.map((item, index) => (
+                            <motion.div 
+                                key={index} 
+                                className="aspect-[4/3] w-full relative overflow-hidden group cursor-pointer"
+                                onClick={() => handleClick(item)}
+                                initial={newItems.includes(index) ? { opacity: 0, y: 50, scale: 0.8 } : { opacity: 1, y: 0, scale: 1 }}
+                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={newItems.includes(index) ? {
+                                    duration: 0.6,
+                                    delay: (newItems.indexOf(index) * 0.1),
+                                    ease: "easeOut"
+                                } : { duration: 0.3 }}
                             >
-                            <img src={item.image} 
-                                alt={item.title} 
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                            <div className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1">
-                                <span className="text-sm sm:text-sm md:text-lg lg:text-base title-style text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out">
-                                    {item.title}
-                                </span>
-                            </div>
-                        </motion.div>
+                                    <img src={item.image} 
+                                        alt={item.title} 
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1">
+                                        <span className="text-sm sm:text-sm md:text-lg lg:text-base title-style text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out">
+                                            {item.title}
+                                        </span>
+                                    </div>
+                                </motion.div>
 
-                    ))
-                }
-            </motion.div>
+                            ))
+                        }
+                </AnimatePresence>
+            </div>
 
             {isPage ? (
                 <div className="flex justify-center gap-4 mt-16">
