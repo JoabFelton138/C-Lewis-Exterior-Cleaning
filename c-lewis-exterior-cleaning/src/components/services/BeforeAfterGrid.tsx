@@ -32,7 +32,7 @@ export const BeforeAfterGrid = ({service}: BeforeAfterGridProps) => {
         <section>
             <div className="w-full bg-gradient-to-r from-white via-gray-200 to-gray-300 p-20 flex flex-row items-center justify-center">
                 <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl title-style text-gray-800 drop-shadow-lg">
-                    See The Transformation.
+                    See The Transfermation.
                 </h2>
             </div>
             <div className="max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto py-10 px-4 justify-items-center md:justify-items-start">
