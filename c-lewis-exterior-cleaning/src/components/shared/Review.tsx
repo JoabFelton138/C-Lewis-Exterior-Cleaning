@@ -10,12 +10,13 @@ interface ReviewProps {
   comment: string;
   author: string;
   image?: string;
-  url: string;
   isLarge?: boolean;
 }
 
 export const Review = ({ isLarge = false,...ReviewProps}: ReviewProps) => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    
+  const [isExpanded, setIsExpanded] = useState(false);
+  
     const styles = {
       card: isLarge 
         ? "p-4 sm:p-5 lg:p-6 w-full max-w-[320px] sm:max-w-none min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px] flex flex-col gap-2 mx-auto sm:mx-0 flex-shrink-0 self-start"        
