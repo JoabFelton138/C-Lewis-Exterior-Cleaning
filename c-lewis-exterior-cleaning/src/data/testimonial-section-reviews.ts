@@ -7,6 +7,9 @@ import raees from '../assets/images/reviews/ra.png';
 import julie from '../assets/images/reviews/jc.png';
 import a from '../assets/images/reviews/a.png';
 import lee from '../assets/images/reviews/lm.png';
+import michelle from '../assets/images/reviews/michelle.png';
+import kristina from '../assets/images/reviews/k.png';
+import thar from '../assets/images/reviews/thar.png';
 
 export interface Review {
     rating: number;
@@ -70,6 +73,23 @@ export const reviews: Review[] = [
         author: 'Lee Murphy', 
         image: lee
     },
-    
+    {
+        rating: 5, 
+        comment: `Chad provides an excellent, reliable and friendly service. Guttering, fascia, window frames and windows all sparkling!! More than pleased with the work, will definitely be booking Chad again.`,
+        author: 'Michelle Clines', 
+        image: michelle
+    },
+    {
+        rating: 5, 
+        comment: `We move into our property which was empty and hadn't been looked after so the windows, gutters and facia's were really dirty, chad has done an amazing job it looks amazing and look forward to a consistent window clean every six weeks now thank you so much`,
+        author: 'Kristina Scorgie', 
+        image: kristina
+    },
+    {
+        rating: 5, 
+        comment: `Chad cleaned my block paving and did a really great job. The difference when he'd finished was amazing. He charged a fair price. I'd definitely recommend.`,
+        author: 'T Har', 
+        image: thar
+    }
 ]; 
 

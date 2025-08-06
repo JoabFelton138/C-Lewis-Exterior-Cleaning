@@ -54,7 +54,7 @@ export function ReviewCarousel({cardSize = "small", isHomepage = false}: ReviewC
 
   const getCarouselItems = () => {
     if (cardSize === "small") {
-      return reviews.slice(0, 9);
+      return reviews.slice(0, 6);
     }
     return reviews;
   }
