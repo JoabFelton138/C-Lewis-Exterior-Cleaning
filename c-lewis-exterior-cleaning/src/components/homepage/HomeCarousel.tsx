@@ -61,29 +61,29 @@ export const HomeCarousel = () => {
       >
         <CarouselContent>
           {slides.map((slide, index) => (
-            <CarouselItem key={index} className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] relative">
+            <CarouselItem key={index} className="w-full h-[300px] sm:h-[400px] md:h-[600px] lg:h-[700px] xl:h-[800px] relative">
               <img
                 src={slide.src}
                 alt={slide.alt}
                 className="w-screen h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/30"></div>
-              <div className="absolute inset-0 flex items-center justify-center px-4">
-                <div className="flex flex-col items-center gap-4 sm:gap-6">
+              <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
+                <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
                   <h2
-                    className={`text-[28px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[88px] title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
+                    className={`text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-[88px] title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.title}
                   </h2>
                   <h4
-                    className={`text-[16px] sm:text-xl md:text-2xl title-style text-white/90 text-center animate-slide-left drop-shadow-lg ${activeSlide === index && !isTransitioning ? "active" : ""}`}
+                    className={`text-sm sm:text-lg md:text-xl lg:text-2xl title-style text-white/90 text-center animate-slide-left drop-shadow-lg ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.subtitle}
                   </h4>
                   <Button
-                    className={`sm:hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 scale-75 sm:scale-100 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
+                    className={`hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 text-xs sm:text-sm md:text-base px-3 py-2 sm:px-4 sm:py-2 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
                     variant="outline"
-                    size="lg"
+                    size="sm"
                     onClick={() => handleButtonClick(slide.subtitle)}
                   >
                     READ MORE
