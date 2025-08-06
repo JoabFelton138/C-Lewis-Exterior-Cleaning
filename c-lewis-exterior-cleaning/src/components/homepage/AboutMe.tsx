@@ -2,6 +2,7 @@ import { ResponsiveButton } from "../shared/ResponsiveButton";
 import { SocialIcons } from "../shared/SocialIcons";
 import { SectionTitle } from "../shared/SectionTitle";
 import { useQuoteNavigation } from "../utils/navigation";
+import vid from '../../assets/vid.mp4';
 
 export const AboutMe = () => {
   const navigateToQuoteForm = useQuoteNavigation();
@@ -14,7 +15,7 @@ export const AboutMe = () => {
           <div className="relative order-2 lg:order-1 group">
             <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] rounded-lg overflow-hidden shadow-xl">
               <video
-                src={"/src/assets/vid.mp4"}
+                src={vid}
                 className="w-full h-full object-cover"
                 autoPlay
                 loop
