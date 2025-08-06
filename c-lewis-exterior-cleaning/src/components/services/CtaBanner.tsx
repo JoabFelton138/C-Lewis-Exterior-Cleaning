@@ -33,7 +33,7 @@ export const CtaBanner = () => {
                 <div className={`bg-sky-400 ${styles.container}`}>
                     <div className={`${styles.leftAnimation} flex items-center`}>
                         <Phone className={`${styles.icon} rotate-260`}/>
-                        <h2 className={`${styles.text}`}>Call Us at 07391 853 506</h2>
+                        <h2 className={`${styles.text}`}>CALL 07391 853 506</h2>
                     </div>
                 </div>
                 <a onClick={navigateToQuoteForm} className={`bg-sky-700 ${styles.container} cursor-pointer block`}>
