@@ -30,11 +30,13 @@ export const BeforeAfterGrid = ({service}: BeforeAfterGridProps) => {
 
     return (
         <section>
-            <div className="w-full bg-gradient-to-r from-white via-gray-200 to-gray-300 p-20 flex flex-row items-center justify-center">
-                <h2 className="text-lg lg:text-2xl title-style text-gray-800 drop-shadow-lg">
-                    See The TransfErmation.
+         <div className="w-full bg-gradient-to-r from-white via-gray-200 to-gray-300 p-20">
+            <div className="grid grid-cols-1 items-center justify-center">
+                <h2 className="text-xl lg:text-2xl title-style text-gray-800 drop-shadow-lg text-center">
+                    See The Transformation.
                 </h2>
             </div>
+        </div>
             <div className="max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto py-10 px-4 justify-items-center md:justify-items-start">
                 {images?.map((item, index) => (
                     <BeforeAfter 
