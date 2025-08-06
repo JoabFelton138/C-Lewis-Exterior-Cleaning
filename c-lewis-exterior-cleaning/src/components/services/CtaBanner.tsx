@@ -8,7 +8,7 @@ export const CtaBanner = () => {
     const styles = {
         container: "p-16 lg:p-20 text-white flex flex-row text-center items-center justify-center",
         icon: "w-6 h-6 fill-current",
-        text: "text-lg md-text-xl lg:text-2xl ml-2 md:ml-3 title-style",
+        text: "text-lg lg:text-2xl ml-2 md:ml-3 title-style",
         leftAnimation: "animate-on-scroll-left",
         rightAnimation: "animate-on-scroll-right",
     }
