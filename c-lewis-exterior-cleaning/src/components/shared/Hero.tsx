@@ -7,7 +7,7 @@ interface HeroProps {
 export const Hero = ({ title, subtitle, image }: HeroProps) => {
     
     return (
-        <section className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+        <section className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]">
             {image ? (
                 <img src={image} alt={title} className="w-full h-full object-cover" />
             ) : (
