@@ -11,7 +11,7 @@ export const Portfolio = () => {
         <main>
             <Hero title="portfolio" subtitle="Our Work Speaks For Itself"/>
             <section className="py-12 sm:py-16 lg:py-24">
-                <SectionTitle title="Why Choose Us" />
+                <SectionTitle title="Check Out Our Work!"/>
                 <MasonryGrid isPage={true} />
             </section>
         </main>
