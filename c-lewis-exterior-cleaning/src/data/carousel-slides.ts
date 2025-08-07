@@ -10,14 +10,14 @@ export const carouselSlides = [
     {
       src: van5,
       alt: "Van",
-      title: "EXPERT EXTERIOR CLEANING",
-      subtitle: "COVERING STAFFORDSHIRE, SHROPSHIRE, WEST MIDLANDS & MORE",
+      title: "Elite Exterior CleanING",
+      subtitle: "COVERING THE WEST MIDLANDS & MORE",
     },
     {
       src: pw3,
       alt: "Pressue Washing",
-      title: "LEAVE THE PRESSURE TO ME",
-      subtitle: "PRESSURE WASHING SERVICES",
+      title: "Precision Pressure",
+      subtitle: "PATIO AND DRIVEWAY CLEANING",
     },  
     {
       src: r1,
@@ -28,19 +28,19 @@ export const carouselSlides = [
     {
       src: gc1,
       alt: "Gutter Cleaning",
-      title: "CLEAN GUTTERS, CLEAN MIND",
+      title: "Gutters. Cleaned Right.",
       subtitle: "GUTTERS & FASCIA CLEANING",
     },
     {
       src: wc1,
       alt: "Window Cleaning",
-      title: "STREAK-FREE, STRESS-FREE",
+      title: "STREAK-FREE GUARANTEE",
       subtitle: "WINDOW CLEANING & RESTORATION",
     },
     {
       src: sp,
       alt: "Conservatory Cleaning",
-      title: "LET ME LIGHT UP YOUR HOME",
+      title: "LIGHT UP YOUR HOME",
       subtitle: "CONSERVATORY & SOLAR PANEL CLEANING",
     }
   ];
