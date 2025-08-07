@@ -22,9 +22,9 @@ export const HomeCarousel = () => {
 
   const handleButtonClick = (subtitle: string) => {
     switch (subtitle) {
-      case "COVERING STAFFORDSHIRE, SHROPSHIRE, WEST MIDLANDS & MORE":
+      case "COVERING THE WEST MIDLANDS & MORE":
         return navigatToAbout();
-      case "PRESSURE WASHING SERVICES":
+      case "PATIO & DRIVEWAY CLEANING":
         return navigate('/driveways-and-patios');
       case "ROOF CLEANING & MOSS REMOVAL":
           return navigate('/roof-cleaning');
@@ -81,7 +81,7 @@ export const HomeCarousel = () => {
                     {slide.subtitle}
                   </h4>
                   <Button
-                    className={`hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 text-xs sm:text-sm md:text-base px-3 py-2 sm:px-4 sm:py-2 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
+                    className={`hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 text-xs sm:text-sm md:text-base px-4 py-4 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
                     variant="outline"
                     size="sm"
                     onClick={() => handleButtonClick(slide.subtitle)}

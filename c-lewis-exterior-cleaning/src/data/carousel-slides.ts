@@ -17,7 +17,7 @@ export const carouselSlides = [
       src: pw3,
       alt: "Pressue Washing",
       title: "Leave the Pressure to Me",
-      subtitle: "PATIO AND DRIVEWAY CLEANING",
+      subtitle: "PATIO & DRIVEWAY CLEANING",
     },  
     {
       src: r1,
