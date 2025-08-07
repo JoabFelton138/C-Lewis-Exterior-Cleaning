@@ -10,7 +10,7 @@ export const carouselSlides = [
     {
       src: van5,
       alt: "Van",
-      title: "Elite Exterior CleanING",
+      title: "Expert Exterior Cleaning",
       subtitle: "COVERING THE WEST MIDLANDS & MORE",
     },
     {

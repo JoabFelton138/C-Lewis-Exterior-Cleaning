@@ -19,8 +19,8 @@ export const Review = ({ isLarge = false,...ReviewProps}: ReviewProps) => {
   
     const styles = {
       card: isLarge 
-        ? "p-4 sm:p-5 lg:p-6 w-full max-w-[320px] sm:max-w-none min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px] flex flex-col gap-2 mx-auto sm:mx-0 flex-shrink-0 self-start"        
-        : "p-5 w-[260px] sm:w-[280px] md:w-[300px] lg:w-full h-full gap-1",
+        ? "sm:p-5 lg:p-6 w-full max-w-[320px] sm:max-w-none min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px] flex flex-col gap-2 mx-auto sm:mx-0 flex-shrink-0 self-start"        
+        : "w-[260px] sm:w-[280px] md:w-[300px] lg:w-full h-full gap-1",
       avatar: isLarge 
         ? "w-10 h-10 lg:w-11 lg:h-11" 
         : "w-10 h-10",
@@ -46,7 +46,7 @@ export const Review = ({ isLarge = false,...ReviewProps}: ReviewProps) => {
 
     return (
       <Card 
-          className={`bg-white cursor-pointer rounded-lg ${styles.card} hover:-translate-y-2 transition-all duration-300`}>
+          className={`bg-white cursor-pointer rounded-lg ${styles.card} hover:-translate-y-2 transition-all duration-300 p-4`}>
         <CardHeader className="px-0">
           <CardTitle className="flex justify-between">
             <div className="flex items-center gap-2">
