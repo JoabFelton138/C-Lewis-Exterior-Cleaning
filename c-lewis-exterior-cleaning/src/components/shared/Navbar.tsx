@@ -59,14 +59,14 @@ export const Navbar = () => {
           className={`transition-all duration-300 ease-in-out object-contain ${
             isScrolled 
               ? "w-22 sm:w-26 md:w-36 lg:w-42 brightness-0" 
-              : "w-26 sm:w-30 md:w-40 lg:w-46 brightness-0 invert"
+              : "w-24 sm:w-30 md:w-40 lg:w-46 brightness-0 invert"
           } cursor-pointer hover:scale-105`}
           alt="C-Lewis Exterior Cleaning Logo"
           onClick={navigateToTop}
         />
       </div>
     
-      <NavigationMenuList className={`flex items-center pr-4 ${isScrolled ? "text-black [&>li>a]:text-black" 
+      <NavigationMenuList className={`flex items-center pr-2 sm:pr-4 ${isScrolled ? "text-black [&>li>a]:text-black" 
                                        : "text-white [&>li>a]:text-white"}`}>
        
        <MobileMenuTrigger menuItems={menuItems} isScrolled={isScrolled} />

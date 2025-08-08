@@ -15,9 +15,9 @@ export const carouselSlides = [
     },
     {
       src: pw3,
-      alt: "Pressue Washing",
+      alt: "Pressure Washing",
       title: "Leave the Pressure to Me",
-      subtitle: "PATIO & DRIVEWAY CLEANING",
+      subtitle: "PATIOS & DRIVEWAYS",
     },  
     {
       src: r1,
@@ -29,7 +29,7 @@ export const carouselSlides = [
       src: gc1,
       alt: "Gutter Cleaning",
       title: "Gutters. Cleaned Right.",
-      subtitle: "GUTTERS & FASCIA CLEANING",
+      subtitle: "GUTTERS & FASCIAS",
     },
     {
       src: wc1,
@@ -41,6 +41,6 @@ export const carouselSlides = [
       src: sp,
       alt: "Conservatory Cleaning",
       title: "LIGHT UP YOUR HOME",
-      subtitle: "CONSERVATORY & SOLAR PANEL CLEANING",
+      subtitle: "CONSERVATORIES & SOLAR PANELS",
     }
   ];
