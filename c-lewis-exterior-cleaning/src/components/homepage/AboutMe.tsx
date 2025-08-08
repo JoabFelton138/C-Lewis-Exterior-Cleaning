@@ -25,7 +25,7 @@ export const AboutMe = () => {
             </div>
           </div>
           <div className="order-2 space-y-4 sm:space-y-8">
-            <div className="space-y-2 sm:space-y-4 text-gray-600 text-sm text-justify sm:text-base xl:text-lg px-4">
+            <div className="space-y-4 text-gray-600 text-sm text-justify sm:text-base xl:text-lg px-4">
               <p>Hi! I'm Chad, the owner of C.Lewis Exterior Cleaning.</p>
               <p>
                 In early 2021, I embarked on my journey in the exterior cleaning business. 

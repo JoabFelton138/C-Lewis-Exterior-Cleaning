@@ -8,7 +8,7 @@ interface SectionTitleProps {
 export const SectionTitle = ({ title, className }: SectionTitleProps) => {
     return (
         <div className={cn('text-center px-4 mb-16', className)}>
-            <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-800 title-style'>
+            <h2 className='text-[22px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-800 title-style'>
                 {title}
             </h2>
         </div>
