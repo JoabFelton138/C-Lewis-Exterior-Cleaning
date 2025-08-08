@@ -11,7 +11,7 @@ export const Portfolio = () => {
         <main>
             <Hero title="portfolio" subtitle="We Let the Results Do the Talking" image={van}/>
             <section className="py-12 sm:py-16 lg:py-24">
-                <div className="max-w-4xl gap-4 mx-auto text-center space-y-4 mb-16">
+                <div className="max-w-[85vw] sm:max-w-2xl lg:max-w-4xl gap-4 mx-auto text-center space-y-4 mb-16">
                         <h2 className="text-[22px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-800 title-style">
                             Check Out Our Work!
                         </h2>
