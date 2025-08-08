@@ -58,8 +58,8 @@ export const Navbar = () => {
           src={logo}
           className={`transition-all duration-300 ease-in-out object-contain ${
             isScrolled 
-              ? "w-22 sm:w-26 md:w-36 lg:w-42 brightness-0" 
-              : "w-24 sm:w-30 md:w-40 lg:w-46 brightness-0 invert"
+              ? "w-22 sm:w-26 md:w-36 lg:w-40 brightness-0" 
+              : "w-24 sm:w-30 md:w-40 lg:w-44 brightness-0 invert"
           } cursor-pointer hover:scale-105`}
           alt="C-Lewis Exterior Cleaning Logo"
           onClick={navigateToTop}

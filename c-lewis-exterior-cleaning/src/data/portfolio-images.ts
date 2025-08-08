@@ -25,7 +25,7 @@ import wc3 from '../assets/images/portfolio/wc3.jpg';
 import wc4 from '../assets/images/portfolio/wc4.jpg';
 
 import sp1 from '../assets/images/before-after/conservatory-and-solar-panel-cleaning/after.jpg'
-import cc1 from '../assets/images/portfolio/cc1.jpg';
+import cc1 from '../assets/images/portfolio/cc7.jpg';
 
 export const portfolioImages = [
     {
