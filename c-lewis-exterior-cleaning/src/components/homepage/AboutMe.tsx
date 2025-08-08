@@ -13,7 +13,7 @@ export const AboutMe = () => {
         <SectionTitle title="About Us" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative order-2 lg:order-1 group">
-            <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
               <video
                 src={vid}
                 className="w-full h-full object-cover"
@@ -24,8 +24,8 @@ export const AboutMe = () => {
               />
             </div>
           </div>
-          <div className="order-2 space-y-8">
-            <div className="space-y-6 text-gray-600 text-sm text-justify sm:text-base xl:text-lg px-4">
+          <div className="order-2 space-y-4 sm:space-y-8">
+            <div className="space-y-2 sm:space-y-4 text-gray-600 text-sm text-justify sm:text-base xl:text-lg px-4">
               <p>Hi! I'm Chad, the owner of C.Lewis Exterior Cleaning.</p>
               <p>
                 In early 2021, I embarked on my journey in the exterior cleaning business. 
