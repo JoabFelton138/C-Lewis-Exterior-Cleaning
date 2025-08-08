@@ -17,9 +17,13 @@ export const Navbar = () => {
   const navigateToQuoteForm = useQuoteNavigation();
   const navigateToTop = useLogoNavigation();
 
+  const handleContactClick = () => {
+    window.location.href = "mailto:c.lewis.pws@hotmail.com";
+  }
+
   const menuItems = [
     {title: "GET A QUOTE", onClick: navigateToQuoteForm},
-    {title: "CONTACT US", href: "/"},
+    {title: "CONTACT US", onClick: handleContactClick},
     {
         title: "SERVICES", 
         items: [
