@@ -1,6 +1,5 @@
 import { Hero } from "@/components/shared/Hero";
 import { MasonryGrid } from "@/components/shared/MasonryGrid";
-import { SectionTitle } from "@/components/shared/SectionTitle";
 import {useEffect} from 'react';
 
 export const Portfolio = () => {
