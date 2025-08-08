@@ -25,15 +25,21 @@ export const CtaBanner = () => {
         return () => observer.disconnect();
     }, []);
 
+    const handlePhoneClick = () => {
+        window.location.href = "tel:07391853506";
+    }
+
     const navigateToQuoteForm = useQuoteNavigation();
 
     return (
         <section className="w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden cursor-pointer">
                 <div className={`bg-sky-400 ${styles.container}`}>
-                    <div className={`${styles.leftAnimation} flex items-center`}>
-                        <Phone className={`${styles.icon} rotate-260`}/>
-                        <h2 className={`${styles.text}`}>CALL 07391 853 506</h2>
+                    <div 
+                        className={`${styles.leftAnimation} flex items-center`}
+                        onClick={handlePhoneClick}>
+                            <Phone className={`${styles.icon} rotate-260`}/>
+                            <h2 className={`${styles.text}`}>CALL 07391 853 506</h2>
                     </div>
                 </div>
                 <a onClick={navigateToQuoteForm} className={`bg-sky-700 ${styles.container} cursor-pointer block`}>
