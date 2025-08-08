@@ -17,7 +17,7 @@ export const ImageDialog = ({open, onOpenChange, imageUrl, altText, title, descr
                     <img 
                         src={imageUrl} 
                         alt={altText} 
-                        className="max-w-[85vw] max-h-[60vh] sm:max-w-[80vw] sm:max-h-[70vh] lg:max-w-[75vw] lg:max-h-[75vh] object-contain"
+                        className="max-w-[80vw] max-h-[65vh] sm:max-w-[80vw] sm:max-h-[70vh] lg:max-w-[75vw] lg:max-h-[75vh] object-contain"
                     />
                 </div>
                 
