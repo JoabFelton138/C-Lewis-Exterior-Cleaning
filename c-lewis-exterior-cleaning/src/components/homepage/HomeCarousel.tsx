@@ -24,7 +24,7 @@ export const HomeCarousel = () => {
     switch (subtitle) {
       case "COVERING THE WEST MIDLANDS & MORE":
         return navigatToAbout();
-      case "PATIO & DRIVEWAYS":
+      case "PATIOS & DRIVEWAYS":
         return navigate('/driveways-and-patios');
       case "ROOF CLEANING & MOSS REMOVAL":
           return navigate('/roof-cleaning');
@@ -32,7 +32,7 @@ export const HomeCarousel = () => {
           return navigate('/gutter-cleaning');
       case "WINDOW CLEANING & RESTORATION":
           return navigate('/window-cleaning');
-      case "CONSERVATORY & SOLAR PANELS":
+      case "CONSERVATORIES & SOLAR PANELS":
           return navigate('/conservatory-and-solar-panel-cleaning');
       default:
         return navigate('/');
