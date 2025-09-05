@@ -1,6 +1,6 @@
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import { Hero } from "@/components/shared/Hero";
-import roofHero from '@/assets/images/roof-cleaning/rc4.jpg';
+import roofHero from '@/assets/images/roof-cleaning/rc4.webp';
 import roofCleaning from '@/assets/images/roof-cleaning/rc3.jpg';
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";

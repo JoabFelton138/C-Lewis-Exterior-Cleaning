@@ -1,5 +1,5 @@
 import van5 from "../assets/images/carousel/van5-min.webp";
-import r1 from "../assets/images/roof-cleaning/rc4.jpg";
+import r1 from "../assets/images/roof-cleaning/rc4.webp";
 import gc1 from "../assets/images/stock/gutter-clean1.webp";
 import wc1 from "../assets/images/stock/window-clean.webp";
 import sp from "../assets/images/stock/roof-clean-sun.webp";
