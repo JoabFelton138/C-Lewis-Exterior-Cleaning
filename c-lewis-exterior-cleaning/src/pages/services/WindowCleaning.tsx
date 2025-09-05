@@ -1,5 +1,5 @@
 import { Hero } from "@/components/shared/Hero";
-import windowHero from '../../assets/images/stock/window-clean.jpeg';
+import windowHero from '../../assets/images/stock/window-clean.webp';
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import windowCleaning from '../../assets/images/servicecarousel2/twctwc.png';
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";

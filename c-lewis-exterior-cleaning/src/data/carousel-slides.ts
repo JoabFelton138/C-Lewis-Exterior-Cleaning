@@ -1,7 +1,7 @@
 import van5 from "../assets/images/carousel/van5-min.jpg";
 import r1 from "../assets/images/roof-cleaning/rc4.jpg";
 import gc1 from "../assets/images/stock/gutter-clean1.jpeg";
-import wc1 from "../assets/images/stock/window-clean.jpeg";
+import wc1 from "../assets/images/stock/window-clean.webp";
 import sp from "../assets/images/stock/roof-clean-sun.jpeg";
 import stockPressureWash from "@/assets/images/stock/pressure-wash.jpeg";
 
