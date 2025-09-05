@@ -1,5 +1,5 @@
 import { Bubbles, ShieldCheck, ThumbsUp, TreeDeciduous } from 'lucide-react';
-import wc from '../../assets/images/servicecarousel2/twctwc.png'
+import wc from '../../assets/images/servicecarousel2/twctwc.jpg'
 import { SectionTitle } from "../shared/SectionTitle";
 
 export const WhyUs = () => {

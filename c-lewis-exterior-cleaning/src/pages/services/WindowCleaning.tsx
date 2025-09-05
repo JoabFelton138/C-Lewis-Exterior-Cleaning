@@ -1,7 +1,7 @@
 import { Hero } from "@/components/shared/Hero";
 import windowHero from '../../assets/images/stock/window-clean.webp';
 import { ServiceLayout } from "@/components/services/ServiceLayout";
-import windowCleaning from '../../assets/images/servicecarousel2/twctwc.png';
+import windowCleaning from '../../assets/images/servicecarousel2/twctwc.jpg';
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { ServiceArea } from "@/components/services/ServiceArea";
