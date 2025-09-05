@@ -1,6 +1,6 @@
 import { Hero } from '@/components/shared/Hero';
 import { ServiceLayout } from '@/components/services/ServiceLayout';
-import conservatoryHero from '../../assets/images/stock/roof-clean-sun.jpeg';
+import conservatoryHero from '../../assets/images/stock/roof-clean-sun.webp';
 import cleanConservatory from '../../assets/images/cc/cc1.jpg';
 import { BeforeAfterGrid } from '@/components/services/BeforeAfterGrid';
 import { CtaBanner } from '@/components/services/CtaBanner';
