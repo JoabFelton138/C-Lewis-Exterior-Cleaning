@@ -4,7 +4,7 @@ import patios from "@/assets/images/pw/be-view.jpg";
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { ServiceArea } from "@/components/services/ServiceArea";
-import stockPressureWash from "@/assets/images/stock/pressure-wash.jpeg";
+import stockPressureWash from "@/assets/images/stock/pressure-wash.webp";
 
 export const Patios = () => {
     const description1 = `I have great experience in cleaning many different types of surfaces including drive ways. I use top of the range pressure washing equipment, allowing me to adjust the pressure depending
