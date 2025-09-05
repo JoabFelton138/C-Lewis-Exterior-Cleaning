@@ -1,6 +1,6 @@
 import { Hero } from "@/components/shared/Hero";
 import gutters from "@/assets/images/gc/gc3.jpeg";
-import gutterStock from "../../assets/images/stock/gutter-clean1.jpeg";
+import gutterStock from "../../assets/images/stock/gutter-clean1.webp";
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { CtaBanner } from "@/components/services/CtaBanner";
