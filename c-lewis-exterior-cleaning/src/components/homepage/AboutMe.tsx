@@ -17,8 +17,6 @@ export const AboutMe = () => {
               <video
                 src={vid}
                 className="w-full h-full object-cover"
-                autoPlay
-                loop
                 muted
                 controls
               />
