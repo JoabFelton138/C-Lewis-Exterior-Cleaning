@@ -1,7 +1,7 @@
 import { Hero } from "@/components/shared/Hero";
 import gutters from "@/assets/images/gc/gc3.jpeg";
-import gutterDesktoo from "../../assets/images/stock/gutter-clean1.webp";
-import gutterMobile from "../../assets/images/stock/gutter-clean1-mobile.webp";
+import gutterDesktop from "../../assets/images/stock/gutter-clean1.webp";
+import gutterMobile from "../../assets/images/stock/gutter-clean-mobile.webp";
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { CtaBanner } from "@/components/services/CtaBanner";
@@ -18,7 +18,7 @@ export const Gutters = () => {
             <Hero 
                 title="Gutter Cleaning" 
                 subtitle="Clean Gutters, Clean Home." 
-                desktopImage={gutterDesktoo} 
+                desktopImage={gutterDesktop} 
                 mobileImage={gutterMobile} 
             />
             <ServiceLayout 
