@@ -61,7 +61,7 @@ export const HomeCarousel = () => {
       >
         <CarouselContent>
           {slides.map((slide, index) => (
-            <CarouselItem key={index} className="w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] xl:h-[750px] relative">
+            <CarouselItem key={index} className="relative w-full h-[450px] sm:h-[500px] md:h-[550px] lg:h-[650px] xl:h-[750px]">
               <img
                 src={slide.src}
                 alt={slide.alt}
