@@ -66,6 +66,7 @@ export const HomeCarousel = () => {
                 src={slide.src}
                 alt={slide.alt}
                 className="w-screen h-full object-cover"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-black/30"></div>
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">

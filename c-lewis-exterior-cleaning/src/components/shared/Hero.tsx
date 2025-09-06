@@ -12,7 +12,12 @@ export const Hero = ({ title, subtitle, desktopImage, mobileImage }: HeroProps) 
             <picture>
                 <source media="(max-width: 767px)" srcSet={mobileImage} />
                 <source media="(min-width: 768px)" srcSet={desktopImage} />
-                <img src={desktopImage} alt={title} className="w-full h-full object-cover" />
+                <img 
+                    src={desktopImage} 
+                    alt={title} 
+                    className="w-full h-full object-cover"
+                    loading="eager" 
+                />
             </picture>
             <div className="absolute inset-0 bg-black/30"></div>
             <div className="absolute inset-0 flex flex-col gap-1 sm:gap-2 md:gap-4 items-center justify-center">
