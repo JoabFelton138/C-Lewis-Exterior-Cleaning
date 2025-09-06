@@ -14,7 +14,11 @@ export const Testimonials = () => {
     
     return (
         <main>
-            <Hero title="testimonials" image={testimonials} subtitle="Real Stories. Real Results." />
+            <Hero 
+                title="testimonials" 
+                desktopImage={testimonials} 
+                subtitle="Real Stories. Real Results." 
+            />
             <section className="py-12 sm:py-16 lg:py-24 px-12 md:px-14 lg:px-16 max-w-6xl mx-auto"> 
                 <header className="pb-6 lg:pb-10 flex flex-col xl:flex-row justify-between">
                     <div className="max-w-2xl flex flex-col gap-4 mx-auto xl:mx-0 text-center xl:text-left">
