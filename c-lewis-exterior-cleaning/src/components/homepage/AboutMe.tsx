@@ -3,6 +3,7 @@ import { SocialIcons } from "../shared/SocialIcons";
 import { SectionTitle } from "../shared/SectionTitle";
 import { useQuoteNavigation } from "../utils/navigation";
 import vid from '../../assets/vid.mp4';
+import thumbnail from '../../assets/images/thumbnail.jpg';
 
 export const AboutMe = () => {
   const navigateToQuoteForm = useQuoteNavigation();
@@ -17,8 +18,12 @@ export const AboutMe = () => {
               <video
                 src={vid}
                 className="w-full h-full object-cover"
-                muted
+                autoPlay
+                loop
                 controls
+                muted
+                playsInline
+                poster={thumbnail}
               />
             </div>
           </div>
