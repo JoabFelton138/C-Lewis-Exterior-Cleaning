@@ -4,7 +4,8 @@ import patios from "@/assets/images/pw/be-view.jpg";
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { ServiceArea } from "@/components/services/ServiceArea";
-import stockPressureWash from "@/assets/images/stock/pressure-wash.webp";
+import pressureWash from "@/assets/images/stock/pressure-wash.webp";
+import pressureWashMobile from "@/assets/images/stock/pressure-wash-mobile.webp";
 
 export const Patios = () => {
     const description1 = `I have great experience in cleaning many different types of surfaces including drive ways. I use top of the range pressure washing equipment, allowing me to adjust the pressure depending
@@ -13,7 +14,12 @@ export const Patios = () => {
     const description2 = `If you're looking to restore your outdoor surfaces to their former glory, don't hesitate to get in touch. I offer free, no-obligation quotes and am happy to assess the best approach for your property.`
     return (
         <main>
-            <Hero title="driveways & patios" subtitle="Pristine Paths, Lasting Impressions." image={stockPressureWash} />
+            <Hero 
+                title="driveways & patios" 
+                subtitle="Pristine Paths, Lasting Impressions." 
+                desktopImage={pressureWash} 
+                mobileImage={pressureWashMobile} 
+            />
             <ServiceLayout 
                 subtitle1="What's Included In The Service?"
                 description1={description1}

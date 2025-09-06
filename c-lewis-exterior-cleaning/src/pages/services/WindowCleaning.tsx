@@ -1,5 +1,6 @@
 import { Hero } from "@/components/shared/Hero";
 import windowHero from '../../assets/images/stock/window-clean.webp';
+import windowHeroMobile from '../../assets/images/stock/window-clean-mobile.webp';
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import windowCleaning from '../../assets/images/servicecarousel2/twctwc.jpg';
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
@@ -15,7 +16,12 @@ export const WindowCleaning = () => {
                 The results are always completely crystal clear!`   
     return (
         <main>
-            <Hero title="Window Cleaning" subtitle="Your View, Our Passion." image={windowHero} />
+            <Hero 
+                title="Window Cleaning" 
+                subtitle="Your View, Our Passion." 
+                desktopImage={windowHero} 
+                mobileImage={windowHeroMobile} 
+            />
             <ServiceLayout 
                 subtitle1="Why Clean My Windows?"
                 description1={description1}

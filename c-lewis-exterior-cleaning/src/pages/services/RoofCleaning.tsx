@@ -1,6 +1,8 @@
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import { Hero } from "@/components/shared/Hero";
-import roofHero from '@/assets/images/roof-cleaning/rc4.webp';
+import roofHeroDesktop from '@/assets/images/roof-cleaning/rc4.webp';
+import roofHeroMobile from '@/assets/images/roof-cleaning/rc4-mobile.webp';
+
 import roofCleaning from '@/assets/images/roof-cleaning/rc3.jpg';
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
@@ -11,7 +13,12 @@ export const RoofCleaning = () => {
     const description2 = ` We offer a comprehensive roof cleaning service that uses state-of-the-art equipment and eco-friendly solutions to remove dirt, moss, and algae from your roof. Our expert technicians will assess your roof's condition and develop a tailored cleaning plan to suit your specific needs. We use gentle yet effective cleaning methods to remove dirt and debris without damaging your roof's surface or surrounding vegetation.`   
     return (
         <main>
-            <Hero title="roof cleaning" subtitle="Protect Your Home, One Shingle at a Time." image={roofHero} />
+            <Hero 
+                title="roof cleaning" 
+                subtitle="Protect Your Home, One Shingle at a Time." 
+                desktopImage={roofHeroDesktop} 
+                mobileImage={roofHeroMobile} 
+            />
             <ServiceLayout 
                 subtitle1="Why Should I Clean My Roof?"
                 description1={description1}

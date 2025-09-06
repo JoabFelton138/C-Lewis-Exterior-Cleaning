@@ -1,6 +1,7 @@
 import { Hero } from '@/components/shared/Hero';
 import { ServiceLayout } from '@/components/services/ServiceLayout';
 import conservatoryHero from '../../assets/images/stock/roof-clean-sun.webp';
+import conservatoryHeroMobile from '../../assets/images/stock/roof-clean-sun-mobile.webp';
 import cleanConservatory from '../../assets/images/cc/cc1.jpg';
 import { BeforeAfterGrid } from '@/components/services/BeforeAfterGrid';
 import { CtaBanner } from '@/components/services/CtaBanner';
@@ -14,9 +15,11 @@ export const Conservatories = () => {
             go ahead and get your free quote today!`;
     return (
         <main>
-            <Hero title="Conservatories & Solar Panels" 
-                    subtitle="Gentle Cleaning. Lasting Clarity." 
-                    image={conservatoryHero} 
+            <Hero 
+                title="Conservatories & Solar Panels" 
+                subtitle="Gentle Cleaning. Lasting Clarity." 
+                desktopImage={conservatoryHero} 
+                mobileImage={conservatoryHeroMobile}
             />
             <ServiceLayout 
                 subtitle1="What's Included In The Service?"
