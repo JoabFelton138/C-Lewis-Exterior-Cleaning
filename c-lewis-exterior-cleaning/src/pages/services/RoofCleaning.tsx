@@ -1,7 +1,7 @@
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import { Hero } from "@/components/shared/Hero";
 import roofHeroDesktop from '@/assets/images/roof-cleaning/rc4.webp';
-import roofHeroMobile from '@/assets/images/roof-cleaning/rc4-mobile.webp';
+import roofHeroMobile from '@/assets/images/roof-cleaning/roof-clean-mobile.webp';
 
 import roofCleaning from '@/assets/images/roof-cleaning/rc3.jpg';
 import { CtaBanner } from "@/components/services/CtaBanner";

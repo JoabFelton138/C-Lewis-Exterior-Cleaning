@@ -3,7 +3,7 @@ import van5Mobile from "../assets/images/carousel/van5-min-mobile.webp";
 import stockPressureWash from "@/assets/images/stock/pressure-wash.webp";
 import stockPressureWashMobile from "@/assets/images/stock/pressure-wash-mobile.webp";
 import r1 from "../assets/images/roof-cleaning/rc4.webp";
-import r1Mobile from "../assets/images/roof-cleaning/rc4-mobile.webp";
+import r1Mobile from "../assets/images/roof-cleaning/roof-clean-mobile.webp";
 import gc1 from "../assets/images/stock/gutter-clean1.webp";
 import gc1Mobile from "../assets/images/stock/gutter-clean-mobile.webp";
 import wc1 from "../assets/images/stock/window-clean.webp";
