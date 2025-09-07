@@ -61,7 +61,7 @@ export const HomeCarousel = () => {
       >
         <CarouselContent>
           {slides.map((slide, index) => (
-            <CarouselItem key={index} className="relative w-full h-[450px] sm:h-[500px] md:h-[550px] lg:h-[650px] xl:h-[750px]">
+            <CarouselItem key={index} className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/8.5] lg:aspect-[16/8.2] xl:aspect-[16/8]">
               <img
                 src={slide.src}
                 alt={slide.alt}
@@ -72,7 +72,7 @@ export const HomeCarousel = () => {
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
                 <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
                   <h2
-                    className={`text-[22px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-[88px] title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
+                    className={`text-[22px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-[80px] whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.title}
                   </h2>
