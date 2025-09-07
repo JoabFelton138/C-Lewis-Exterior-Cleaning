@@ -69,14 +69,13 @@ export const HomeCarousel = () => {
                   src={slide.desktopSrc}
                   alt={slide.alt}
                   className="w-screen h-full object-cover"
-                  loading="eager"
-                />
+                 />
              </picture>
               <div className="absolute inset-0 bg-black/30"></div>
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
                 <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
                   <h2
-                    className={`text-[22px] sm:text-3xl md:text-5xl lg:text-6xl xl:text-[80px] whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
+                    className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.title}
                   </h2>
