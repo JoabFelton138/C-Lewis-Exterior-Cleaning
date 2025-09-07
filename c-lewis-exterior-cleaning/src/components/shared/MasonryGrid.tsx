@@ -63,9 +63,11 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
                                     ease: "easeOut"
                                 } : { duration: 0.3 }}
                             >
-                                    <img src={item.image} 
+                                    <img 
+                                        src={item.image} 
                                         alt={item.title} 
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        loading="lazy"
                                     />
                                     <div className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1">
                                         <span className="text-sm sm:text-sm md:text-lg lg:text-base title-style text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out">

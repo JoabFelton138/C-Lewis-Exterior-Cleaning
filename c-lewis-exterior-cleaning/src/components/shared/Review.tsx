@@ -67,7 +67,12 @@ export const Review = ({ isLarge = false,...ReviewProps}: ReviewProps) => {
                 </div>
               </div>
             </div>
-            <img src={google} alt="Google" className={`${styles.googleLogo}`} />
+            <img 
+              src={google} 
+              alt="Google" 
+              className={`${styles.googleLogo}`} 
+              loading="lazy"
+            />
           </CardTitle>
         </CardHeader>
         <CardContent className={`px-0 ${styles.cardContent}`}>
