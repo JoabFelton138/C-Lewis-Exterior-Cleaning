@@ -62,12 +62,16 @@ export const HomeCarousel = () => {
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={index} className="relative w-full h-screen sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-screen">
-              <img
-                src={slide.src}
-                alt={slide.alt}
-                className="w-screen h-full object-cover"
-                loading="eager"
-              />
+             <picture>
+                <source media="(max-width: 767px)" srcSet={slide.mobileSrc} />
+                <source media="(min-width: 768px)" srcSet={slide.desktopSrc} />
+                <img
+                  src={slide.desktopSrc}
+                  alt={slide.alt}
+                  className="w-screen h-full object-cover"
+                  loading="eager"
+                />
+             </picture>
               <div className="absolute inset-0 bg-black/30"></div>
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
                 <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
