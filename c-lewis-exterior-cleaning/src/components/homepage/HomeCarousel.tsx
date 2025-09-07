@@ -61,7 +61,7 @@ export const HomeCarousel = () => {
       >
         <CarouselContent>
           {slides.map((slide, index) => (
-            <CarouselItem key={index} className="relative w-full h-[100vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-screen">
+            <CarouselItem key={index} className="relative w-full h-[80vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-screen">
              <picture>
                 <source media="(max-width: 767px)" srcSet={slide.mobileSrc} />
                 <source media="(min-width: 768px)" srcSet={slide.desktopSrc} />
