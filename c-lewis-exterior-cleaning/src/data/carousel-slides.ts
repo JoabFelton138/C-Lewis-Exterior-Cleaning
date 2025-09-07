@@ -1,5 +1,5 @@
-import van5 from "../assets/images/vans/van1.jpg";
-import van5Mobile from "../assets/images/vans/van1.jpg";
+import van from "../assets/images/vans/van.webp";
+import vanMobile from "../assets/images/vans/van-mobile.webp";
 import stockPressureWash from "@/assets/images/stock/pressure-wash.webp";
 import stockPressureWashMobile from "@/assets/images/stock/pressure-wash-mobile.webp";
 import r1 from "../assets/images/roof-cleaning/rc4.webp";
@@ -13,8 +13,8 @@ import spMobile from "../assets/images/stock/roof-clean-sun-mobile.webp";
 
 export const carouselSlides = [
     {
-      desktopSrc: van5,
-      mobileSrc: van5Mobile,
+      desktopSrc: van,
+      mobileSrc: vanMobile,
       alt: "Van",
       title: "Expert Exterior Cleaning",
       subtitle: "COVERING THE WEST MIDLANDS & MORE",
