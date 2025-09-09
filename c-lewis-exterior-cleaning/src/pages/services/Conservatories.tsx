@@ -16,7 +16,7 @@ export const Conservatories = () => {
     return (
         <main>
             <Hero 
-                title="Conservatories & Solar Panels" 
+                title="Conservatories & Solar" 
                 subtitle="Gentle Cleaning. Lasting Clarity." 
                 desktopImage={conservatoryHero} 
                 mobileImage={conservatoryHeroMobile}
