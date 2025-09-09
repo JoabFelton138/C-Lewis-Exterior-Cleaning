@@ -8,7 +8,7 @@ interface HeroProps {
 export const Hero = ({ title, subtitle, desktopImage, mobileImage }: HeroProps) => {
     
     return (
-        <section className="relative w-full h-[100vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-screen">            
+        <section className="relative w-full h-[85vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-screen">            
             <picture>
                 <source media="(max-width: 767px)" srcSet={mobileImage} />
                 <source media="(min-width: 768px)" srcSet={desktopImage} />
