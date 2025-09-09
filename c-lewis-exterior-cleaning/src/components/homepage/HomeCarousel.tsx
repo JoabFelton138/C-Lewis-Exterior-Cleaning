@@ -75,7 +75,7 @@ export const HomeCarousel = () => {
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
                 <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
                   <h2
-                    className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] md:whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
+                    className={`text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.title}
                   </h2>
