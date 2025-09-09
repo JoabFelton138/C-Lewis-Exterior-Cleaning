@@ -1,8 +1,8 @@
 import { Hero } from "@/components/shared/Hero";
 import { MasonryGrid } from "@/components/shared/MasonryGrid";
 import {useEffect} from 'react';
-import van from "@/assets/images/vans/van6.webp";
-import vanMobile from "@/assets/images/vans/van6-mobile.webp";
+import van from "@/assets/images/vans/van-hero.webp";
+import vanMobile from "@/assets/images/vans/van-hero-mobile.webp";
 
 export const Portfolio = () => {
     useEffect(() => {
