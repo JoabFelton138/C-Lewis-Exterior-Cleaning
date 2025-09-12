@@ -12,7 +12,7 @@ export const Portfolio = () => {
         <main>
             <Hero 
                 title="portfolio" 
-                subtitle="We Let the Results Do the Talking" 
+                subtitle="We Let Our Results Do the Talking" 
                 desktopImage={van}
                 mobileImage={vanMobile}
             />
