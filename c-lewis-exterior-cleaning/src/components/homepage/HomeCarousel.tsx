@@ -73,7 +73,7 @@ export const HomeCarousel = () => {
              </picture>
               <div className="absolute inset-0 bg-black/30"></div>
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
-                <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
+                <div className="flex flex-col items-center gap-3 sm:gap-4 md:gap-6 px-2 sm:px-4">
                   <h2
                     className={`text-[5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[68px] whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
@@ -85,7 +85,7 @@ export const HomeCarousel = () => {
                     {slide.subtitle}
                   </h4>
                   <Button
-                    className={`hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 text-xs sm:text-sm md:text-base px-4 py-4 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
+                    className={`hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 text-xs sm:text-sm md:text-base px-4 py-4 mt-2 sm:mt-0 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
                     variant="outline"
                     size="sm"
                     onClick={() => handleButtonClick(slide.subtitle)}
