@@ -20,19 +20,19 @@ export const HomeCarousel = () => {
   const slides = carouselSlides;
   const navigate = useNavigate();
 
-  const handleButtonClick = (title: string) => {
-    switch (title) {
-      case "Expert Exterior Cleaning":
+  const handleButtonClick = (subtitle: string) => {
+    switch (subtitle) {
+      case "Based in Staffordshire, serving the West Midlands & beyond ":
         return navigatToAbout();
-      case "Pressure Washing":
+      case "Driveways & Patio's. Decking, siding & more":
         return navigate('/driveways-and-patios');
-      case "ROOF CLEANING & MOSS REMOVAL":
+      case "With optional moss prevention treatments available":
           return navigate('/roof-cleaning');
-      case "Gutter clearance & cleaning":
+      case "Also offering soffit and Facia Cleaning":
           return navigate('/gutter-cleaning');
-      case "WINDOW CLEANING & RESTORATION":
+      case "Pure water cleaning technology.":
           return navigate('/window-cleaning');
-      case "CONSERVATORIES & SOLAR PANELS":
+      case "Professional Cleaning to Light up your home.":
           return navigate('/conservatory-and-solar-panel-cleaning');
       default:
         return navigate('/');
@@ -75,7 +75,8 @@ export const HomeCarousel = () => {
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
                 <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
                   <h2
-className={`text-[4vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[68px] whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl truncate max-w-[85vw] ${activeSlide === index && !isTransitioning ? "active" : ""}`}                  >
+                    className={`text-[5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[68px] whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
+                  >
                     {slide.title}
                   </h2>
                   <h4

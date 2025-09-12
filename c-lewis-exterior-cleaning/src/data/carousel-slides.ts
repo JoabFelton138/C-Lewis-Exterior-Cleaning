@@ -51,7 +51,7 @@ export const carouselSlides = [
       desktopSrc: sp,
       mobileSrc: spMobile,
       alt: "Conservatory Cleaning",
-      title: "Conservatory & solar panels.",
+      title: "Conservatories & solar panels.",
       subtitle: "Professional Cleaning to Light up your home.",
     }
   ];
