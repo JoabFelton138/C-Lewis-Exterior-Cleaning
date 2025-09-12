@@ -44,14 +44,14 @@ export const carouselSlides = [
       desktopSrc: wc1,
       mobileSrc: wc1Mobile,
       alt: "Window Cleaning",
-      title: "Window cleaning.",
-      subtitle: "Pure water cleaning technology.",
+      title: "Window cleaning",
+      subtitle: "Pure water cleaning technology",
     },
     {
       desktopSrc: sp,
       mobileSrc: spMobile,
       alt: "Conservatory Cleaning",
-      title: "Conservatories & solar panels.",
-      subtitle: "Professional Cleaning to Light up your home.",
+      title: "Conservatories & solar panels",
+      subtitle: "Professional Cleaning to Light up your home",
     }
   ];

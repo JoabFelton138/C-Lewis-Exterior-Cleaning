@@ -80,7 +80,7 @@ export const HomeCarousel = () => {
                     {slide.title}
                   </h2>
                   <h4
-                    className={`text-[15px] sm:text-lg md:text-xl lg:text-2xl title-style text-white/90 text-center animate-slide-left drop-shadow-lg line-clamp-2 sm:line-clamp-none max-w-[90vw] ${activeSlide === index && !isTransitioning ? "active" : ""}`}
+                    className={`text-[15px] sm:text-lg md:text-xl lg:text-2xl title-style text-white/90 text-center animate-slide-left drop-shadow-lg line-clamp-2 sm:line-clamp-none max-w-[320px] sm:max-w-[450px] md:max-w-[550px] lg:max-w-[650px] xl:max-w-[750px] ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.subtitle}
                   </h4>
