@@ -22,7 +22,7 @@ export const HomeCarousel = () => {
 
   const handleButtonClick = (subtitle: string) => {
     switch (subtitle) {
-      case "Based in Staffordshire, serving the West Midlands & beyond ":
+      case "Based in Staffordshire, serving the West Midlands & beyond":
         return navigatToAbout();
       case "Driveways & Patio's. Decking, siding & more":
         return navigate('/driveways-and-patios');
@@ -30,9 +30,9 @@ export const HomeCarousel = () => {
           return navigate('/roof-cleaning');
       case "Also offering soffit and Facia Cleaning":
           return navigate('/gutter-cleaning');
-      case "Pure water cleaning technology.":
+      case "Pure water cleaning technology":
           return navigate('/window-cleaning');
-      case "Professional Cleaning to Light up your home.":
+      case "Professional Cleaning to Light up your home":
           return navigate('/conservatory-and-solar-panel-cleaning');
       default:
         return navigate('/');

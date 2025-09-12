@@ -17,7 +17,7 @@ export const carouselSlides = [
       mobileSrc: vanMobile,
       alt: "Van",
       title: "Expert Exterior Cleaning",
-      subtitle: "Based in Staffordshire, serving the West Midlands & beyond ",
+      subtitle: "Based in Staffordshire, serving the West Midlands & beyond",
     },
     {
       desktopSrc: stockPressureWash,
