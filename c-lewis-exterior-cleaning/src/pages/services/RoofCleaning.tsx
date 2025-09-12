@@ -9,8 +9,15 @@ import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { ServiceArea } from "@/components/services/ServiceArea";
 
 export const RoofCleaning = () => {
-    const description1 = `In the UK, where the weather is often unpredictable, roof maintenance is crucial to ensure the longevity and integrity of your home. A dirty moss ridden roof can lead to a range of issues, including water damage, mould growth, and even structural damage. That's why roof cleaning is an essential service that can help protect your property.`;
-    const description2 = ` We offer a comprehensive roof cleaning service that uses state-of-the-art equipment and eco-friendly solutions to remove dirt, moss, and algae from your roof. Our expert technicians will assess your roof's condition and develop a tailored cleaning plan to suit your specific needs. We use gentle yet effective cleaning methods to remove dirt and debris without damaging your roof's surface or surrounding vegetation.`   
+    const description1 = `With years of experience in the industry, we take pride in delivering top-quality results safely and efficiently.
+                          Fully insured and equipped with specialist tools, our team ensures your roof is thoroughly cleaned and well-maintained, 
+                          enhancing your property's curb appeal and longevity. We also offer treatment to prevent any growth within the next 
+                          three to four years!`;
+    const description2 = `We offer a comprehensive roof cleaning service that uses state-of-the-art
+                          equipment and eco-friendly solutions to remove dirt, moss, and algae from your roof. 
+                          Our expert technicians will assess your roof's condition and develop a tailored cleaning plan 
+                          to suit your specific needs. We use gentle yet effective cleaning methods to remove dirt 
+                          and debris without damaging your roof's surface.`   
     return (
         <main>
             <Hero 
@@ -20,7 +27,7 @@ export const RoofCleaning = () => {
                 mobileImage={roofHeroMobile} 
             />
             <ServiceLayout 
-                subtitle1="Why Should I Clean My Roof?"
+                subtitle1="Don't Let Growth Deteriorate Your Roof"
                 description1={description1}
                 subtitle2="What's Included In The Service?"
                 description2={description2}

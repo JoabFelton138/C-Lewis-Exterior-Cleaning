@@ -8,9 +8,8 @@ import pressureWash from "@/assets/images/stock/pressure-wash.webp";
 import pressureWashMobile from "@/assets/images/stock/pressure-wash-mobile.webp";
 
 export const Patios = () => {
-    const description1 = `I have great experience in cleaning many different types of surfaces including drive ways. I use top of the range pressure washing equipment, allowing me to adjust the pressure depending
-                on the surface. In some cases, I also use an industrial strength surface cleaning agent called sodium hypochlorite. This allows me to get rid of any stubborn grime with ease, particularly
-                bad cases of black spot, usually found on most stone surfaces. I also offer a re-sanding and re-sealing service.`;
+    const description1 = `Revitalize your property with our professional pressure washing service. We effectively remove dirt, grime, mold, and stains from your surfaces, restoring their original shine. 
+                          Whether it's your driveway, siding, deck, or patio, our experienced team delivers thorough, eco-friendly cleaning that leaves your property looking fresh and well-maintained.`;
     const description2 = `If you're looking to restore your outdoor surfaces to their former glory, don't hesitate to get in touch. I offer free, no-obligation quotes and am happy to assess the best approach for your property.`
     return (
         <main>
@@ -21,7 +20,7 @@ export const Patios = () => {
                 mobileImage={pressureWashMobile} 
             />
             <ServiceLayout 
-                subtitle1="What's Included In The Service?"
+                subtitle1="Our Pressure Washing & Re-Sanding Service."
                 description1={description1}
                 subtitle2="Sound good? Get in touch!"
                 description2={description2}
