@@ -29,21 +29,18 @@ export const AboutMe = () => {
           </div>
           <div className="order-2 space-y-4 sm:space-y-8">
             <div className="space-y-4 text-gray-600 text-sm text-justify sm:text-base xl:text-lg px-4">
-              <p>Hi! I'm Chad, the owner of C.Lewis Exterior Cleaning.</p>
               <p>
-                In early 2021, I embarked on my journey in the exterior cleaning business. 
-                My unwavering mission has been to provide the local community with a professional,
-                dependable, and high-quality service. 
-                </p>
-                <p>
-                I take immense pride in delivering exceptional results and cultivating a stellar reputation within my vicinity and beyond. 
-                Recognizing the significance of customer satisfaction, I've grown my business 
-                through word-of-mouth recommendations. This commitment fuels my determination
-                to consistently offer the finest services possible.
-                </p>
-              
+                Introducing C. Lewis Exterior Cleaning, your trusted pressure washing specialists based in Staffordshire.
+                We are dedicated to restoring and enhancing the beauty of your property with professional, high-quality exterior
+                cleaning services.
+              </p>
               <p>
-                If you have any questions on what I do, feel free to get in touch. You can call me, drop me an email or even get at me on Facebook, I'd love to hear from you!
+                Whether it's driveways, patios, or building exteriors, our team is here to deliver sparkling results and keep your
+                outdoor spaces looking their best. Trust C. Lewis Exterior Cleaning for a cleaner, brighter, and more inviting property or business!
+              </p>
+              <p>
+                Ready to transform your property? Get in touch with C. Lewis Exterior Cleaning today — simply drop us a message using the form below, 
+                reach out via Facebook, give us a call, or send an email. We’ll be happy to provide a free, no-obligation quote and bring your outdoor spaces back to life!
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-6 pt-8">
