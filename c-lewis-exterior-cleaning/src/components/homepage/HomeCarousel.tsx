@@ -20,19 +20,19 @@ export const HomeCarousel = () => {
   const slides = carouselSlides;
   const navigate = useNavigate();
 
-  const handleButtonClick = (subtitle: string) => {
-    switch (subtitle) {
-      case "COVERING THE WEST MIDLANDS & MORE":
+  const handleButtonClick = (title: string) => {
+    switch (title) {
+      case "Expert Exterior Cleaning":
         return navigatToAbout();
-      case "PATIOS & DRIVEWAYS":
+      case "Pressure Washing":
         return navigate('/driveways-and-patios');
-      case "ROOF CLEANING & MOSS REMOVAL":
+      case "Roof cleaning & MOSS REMOVAL":
           return navigate('/roof-cleaning');
-      case "GUTTERS & FASCIAS":
+      case "Gutter clearance & cleaning":
           return navigate('/gutter-cleaning');
-      case "WINDOW CLEANING & RESTORATION":
+      case "Window cleaning.":
           return navigate('/window-cleaning');
-      case "CONSERVATORIES & SOLAR PANELS":
+      case "Conservatory & solar panels.":
           return navigate('/conservatory-and-solar-panel-cleaning');
       default:
         return navigate('/');
@@ -75,7 +75,7 @@ export const HomeCarousel = () => {
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
                 <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
                   <h2
-                    className={`text-[4vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[68px] whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
+                    className={`text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[68px] whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.title}
                   </h2>
@@ -88,7 +88,7 @@ export const HomeCarousel = () => {
                     className={`hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 text-xs sm:text-sm md:text-base px-4 py-4 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
                     variant="outline"
                     size="sm"
-                    onClick={() => handleButtonClick(slide.subtitle)}
+                    onClick={() => handleButtonClick(slide.title)}
                   >
                     READ MORE
                   </Button>
