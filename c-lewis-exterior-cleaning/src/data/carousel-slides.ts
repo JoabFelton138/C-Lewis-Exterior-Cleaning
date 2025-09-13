@@ -38,7 +38,7 @@ export const carouselSlides = [
       mobileSrc: gc1Mobile,
       alt: "Gutter clearance & cleaning",
       title: "Gutter clearance & cleaning",
-      subtitle: "Also offering soffit and Facia Cleaning",
+      subtitle: "Also offering soffit & Facia Cleaning",
     },
     {
       desktopSrc: wc1,
