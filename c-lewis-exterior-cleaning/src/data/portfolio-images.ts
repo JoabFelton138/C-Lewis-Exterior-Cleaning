@@ -3,10 +3,10 @@ import rc2 from '../assets/images/portfolio/rc2.jpg';
 import rc3 from '../assets/images/before-after/roof-cleaning/roof-after-3.jpg';
 import rc4 from '../assets/images/portfolio/rc3.jpg';
 import rc5 from '../assets/images/portfolio/rc5.jpg';
-import rc6 from '../assets/images/portfolio/rc6.jpg';
 import rc7 from '../assets/images/portfolio/rc10.jpeg';
 import rc9 from '../assets/images/portfolio/rc9.jpg';
 import rc10 from '../assets/images/portfolio/rc11.jpg';
+import rc11 from '../assets/images/before-after/roof-cleaning/roof-after-4.jpg';
 
 import dw1 from '../assets/images/portfolio/dw1.jpg';
 import dw2 from '../assets/images/portfolio/dw2.jpg';
@@ -35,12 +35,12 @@ export const portfolioImages = [
     },
     {
         image: dw1,
-        title: "driveway in wheaton aston",
+        title: "driveway service in wheaton aston",
         description: `Pressure washed and re-sanded. This one was really slippery beforehand and quite a hazard due to the slope. Now nice and safe for a lovely cutomer!`
     },
     {
         image: dw3,
-        title: "roof clean in wheaton aston",
+        title: "driveway service in wheaton aston",
         description: `The results speak for themselves! We had a lot of enquiries from this street after completion.`
     },
     {
@@ -55,13 +55,13 @@ export const portfolioImages = [
     },
     {
         image: dw2,
-        title: "driveway in perton",
+        title: "driveway service in perton",
         description: `A blocked driveway completely cleared and re-sanded. Another happy customer!`
     },
     {
         image: rc5,
         title: "Roof Clean in Bridgenorth",
-        description: `Not only did we restore the condition of the tiles, we also replaced 14 tiles to make it look brand new!`
+        description: `Not only did we restore the condition of the roof, we also replaced 14 tiles to make it look brand new!`
     },
     {
         image: rc4,
@@ -70,82 +70,82 @@ export const portfolioImages = [
     },
     {
         image: gcwc,
-        title: "Gutter Clean in ?",
-        description: `?`
+        title: "Gutter & Fascia Clean in Claregate",
+        description: `These gutters and fascias were completely black before we started, but now they’re bright white again and good as new!`
     },
     {
         image: dw5,
-        title: "patio in ?",
-        description: `?`
+        title: "Driveway Cleared in Bilbrook",
+        description: `We cleared this rear driveway and also cleaned the tarmac drive at the front, leaving another very happy customer!`
     },
     {
-        image: rc6,
+        image: rc11,
         title: "roof clean in ?",
         description: `?`
     },
     {
         image: wc4,
-        title: "window clean in ?",
-        description: `?`
+        title: "window clean in Cannock",
+        description: `Regularly keeping petrol station windows spotless inside and out. Ensuring a brighter, cleaner welcome for every customer.`
     },
     {
         image: sp1,
-        title: "solar panel clean in ?",
-        description: `?`
+        title: "solar panel clean in Shifnal",
+        description: `These panels now look brand new, helping them work at their best and generate more energy for the home.`
     },
     {
         image: gc2,
-        title: "gutter clean in ?",
-        description: `?`
+        title: "gutter clean in perton",
+        description: `There aren’t many gutters our gutter vac can’t reach, delivering great results every time.`
     },
     {
         image: dw4,
-        title: "patio clean in ?",
-        description: `?`
+        title: "block clean in wheaton aston",
+        description: `A large garden pond meant we had to limit chemical use, but we still brought these blocks back to looking incredible!`
     },
     {
         image: gc1,
-        title: "gutter Clean in ?",
-        description: `?`
+        title: "gutter Clean in wheaton aston",
+        description: `We always provide after-photos for peace of mind, showing your gutters are fully cleared and free-flowing.`
     },
     {
         image: rc10,
-        title: "patio clean in ?",
-        description: `?`
+        title: "roof clean in compton",
+        description: `What a height, but no spot is out of reach with our Nifty lift!`
     },
     {
         image: dw6,
-        title: "patio clean in ?",
-        description: `?`
+        title: "blocked paving in wheaton aston",
+        description: `We not only cleared the blocked paving but also re-sanded it, leaving the customer over the moon with the results.`
     },
     {
         image: rc7,
-        title: "roof clean in ?",
-        description: `?`
+        title: "roof clean in bridgenorth",
+        description: `The roof now looks brand new! We even replaced a few broken tiles to leave everything in top condition.`
     },
     {
         image: wc3,
-        title: "window clean in ?",
-        description: `?`
+        title: "window clean in tettenhall",
+        description: `Even high-traffic petrol stations need a sparkle, we tackled every pane to keep this Tettenhall location looking its best.`
     },
     {
         image: wc2,
-        title: "window clean in ?",
-        description: `?`
+        title: "caravan clean in marston",
+        description: `we used gentle cleaning techniques to bring this caravan back to life. The proof is in the shine!`
     },
     {
         image: rc9,
-        title: "roof clean in ?",
-        description: `?`
+        title: "roof clean in perton",
+        description: `no more moss falling onto the driveway for this satisfied customer!`
     },
     {
         image: gc3,
-        title: "gutter clean in ?",
-        description: `?`
+        title: "gutter clean in perton",
+        description: `We also cleared the valleys to ensure smooth water flow and fully functioning gutters.`
     },
     {
         image: cc1,
-        title: "conservatory clean in ?",
-        description: `?`
+        title: "conservatory clean in albrighton",
+        description: `All gutters were cleared also and the roof had a gentle wash to restore it to its original condition.`
     }
 ];
