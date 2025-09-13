@@ -25,7 +25,7 @@ export const HomeCarousel = () => {
       case "Based in Staffordshire, serving the West Midlands & beyond":
         return navigatToAbout();
       case "Driveways & Patio's. Decking, siding & more":
-        return navigate('/driveways-and-patios');
+        return navigate('/pressure-washing');
       case "With optional moss prevention treatments available":
           return navigate('/roof-cleaning');
       case "Also offering soffit and Facia Cleaning":

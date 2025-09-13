@@ -14,7 +14,7 @@ export const Patios = () => {
     return (
         <main>
             <Hero 
-                title="driveways & patios" 
+                title="pressure washing" 
                 subtitle="Pristine Paths, Lasting Impressions." 
                 desktopImage={pressureWash} 
                 mobileImage={pressureWashMobile} 
