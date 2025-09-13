@@ -36,7 +36,7 @@ export const portfolioImages = [
     {
         image: dw1,
         title: "driveway service in wheaton aston",
-        description: `Pressure washed and re-sanded. This one was really slippery beforehand and quite a hazard due to the slope. Now nice and safe for a lovely cutomer!`
+        description: `Pressure washed and re-sanded. This one was really slippery beforehand and quite a hazard due to the slope. Now nice and safe for a lovely customer!`
     },
     {
         image: dw3,
@@ -75,13 +75,13 @@ export const portfolioImages = [
     },
     {
         image: dw5,
-        title: "Driveway Cleared in Bilbrook",
-        description: `We cleared this rear driveway and also cleaned the tarmac drive at the front, leaving another very happy customer!`
+        title: "Driveway Clean in Bilbrook",
+        description: `We clearned this rear driveway as well as the tarmac drive at the front, leaving another very happy customer!`
     },
     {
         image: rc11,
-        title: "roof clean in ?",
-        description: `?`
+        title: "roof clean in ludlow",
+        description: `Moss-free and protected! We treated the tiles to stop future growth and keep this roof looking its best.`
     },
     {
         image: wc4,
@@ -131,12 +131,12 @@ export const portfolioImages = [
     {
         image: wc2,
         title: "caravan clean in marston",
-        description: `we used gentle cleaning techniques to bring this caravan back to life. The proof is in the shine!`
+        description: `We used gentle cleaning techniques to bring this caravan back to life. The proof is in the shine!`
     },
     {
         image: rc9,
         title: "roof clean in perton",
-        description: `no more moss falling onto the driveway for this satisfied customer!`
+        description: `No more moss falling onto the driveway for this satisfied customer!`
     },
     {
         image: gc3,
