@@ -28,7 +28,7 @@ export const HomeCarousel = () => {
         return navigate('/pressure-washing');
       case "With optional moss prevention treatments available":
           return navigate('/roof-cleaning');
-      case "Also offering soffit and Facia Cleaning":
+      case "Also offering soffit & Facia Cleaning":
           return navigate('/gutter-cleaning');
       case "Pure water cleaning technology":
           return navigate('/window-cleaning');
