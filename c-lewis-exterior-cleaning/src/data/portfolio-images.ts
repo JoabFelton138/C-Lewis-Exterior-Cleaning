@@ -1,4 +1,4 @@
-import rc1 from '../assets/images/before-after/after1.jpg';
+import rc1 from '../assets/images/before-after/after1.webp';
 import rc2 from '../assets/images/portfolio/rc2.jpg';
 import rc3 from '../assets/images/before-after/roof-cleaning/roof-after-3.jpg';
 import rc4 from '../assets/images/portfolio/rc3.jpg';
