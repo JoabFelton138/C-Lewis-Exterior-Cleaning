@@ -26,8 +26,10 @@ export const Testimonials = () => {
                             Find out What our Clients say
                         </h2>
                         <p className="text-sm md:text-base text-gray-600">
-                            Since we began, we've helped transform over 100 properties and make homes shine with pride.
-                            From driveways to facades, we're delighted that our work takes centre stage in communities across the West Midlands, helping homes look their absolute best every day.
+                            Since we began, we've helped transform countless properties. 
+                            Here you’ll find firsthand experiences and feedback from our valued customers. 
+                            Discover how we've helped others achieve their goals and see why they trust us. 
+                            Your success story could be next!
                         </p>
                     </div>
                     <div className='flex flex-col lg:flex-row items-center justify-center'>
