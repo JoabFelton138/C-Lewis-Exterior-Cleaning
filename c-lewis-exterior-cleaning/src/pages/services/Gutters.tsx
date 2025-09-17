@@ -1,5 +1,5 @@
 import { Hero } from "@/components/shared/Hero";
-import gutters from "@/assets/images/gc/gc3.jpeg";
+import gutters from "@/assets/images/gc/gc3.webp";
 import gutterDesktop from "../../assets/images/stock/gutter-clean1.webp";
 import gutterMobile from "../../assets/images/stock/gutter-clean-mobile.webp";
 import { ServiceLayout } from "@/components/services/ServiceLayout";
