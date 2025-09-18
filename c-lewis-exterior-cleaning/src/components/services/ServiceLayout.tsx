@@ -36,7 +36,7 @@ export const ServiceLayout = ({ subtitle1, description1, subtitle2, description2
                 <img 
                     src={image} 
                     alt="service image" 
-                    className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[450px] w-full rounded-lg overflow-hidden shadow-xl object-cover object-center"
+                    className="relative h-[350px] sm:h-[375px] md:h-[400px] lg:h-[425px] w-full rounded-lg overflow-hidden shadow-xl object-cover object-center"
                     loading="lazy"
                 />
             </div>
