@@ -21,7 +21,7 @@ export const Testimonials = () => {
             />
             <div className='absolute inset-0 bg-black/40'></div>
         </div>
-        <div className='container mx-auto px-4 relative z-10'>
+        <div className='max-w-5xl mx-auto px-4 relative z-10'>
             <div className='flex flex-col lg:flex-row items-center justify-center gap-12'>
                 <div className='flex flex-col gap-2 items-center'>
                     <h3 className="text-white text-sm sm:text-base md:text-xl lg:text-2xl font-bold">  
