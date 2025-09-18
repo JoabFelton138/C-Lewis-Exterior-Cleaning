@@ -14,7 +14,7 @@ export const AboutMe = () => {
         <SectionTitle title="About Us" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative order-2 lg:order-1 group">
-            <div className="relative h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-[350px] sm:h-[375px] md:h-[400px] lg:h-[425px] rounded-lg overflow-hidden shadow-xl">
               <video
                 src={vid}
                 className="w-full h-full object-cover"
