@@ -46,7 +46,7 @@ export const WhyUs = () => {
                         })}
                     </div>
                     <div className="relative order-1 lg:order-2 group">
-                        <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
+                        <div className="relative h-[300px] sm:h-[330px] md:h-[365px] lg:h-[400px] rounded-lg overflow-hidden shadow-xl">
                             <img 
                                 src={wc} 
                                 alt="why choose us" 
