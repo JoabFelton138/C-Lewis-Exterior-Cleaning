@@ -51,7 +51,7 @@ export const HomeCarousel = () => {
   }, [activeSlide])
 
   return (
-    <div className="w-screen overflow-hidden">
+    <div className="w-full overflow-hidden">
       <Carousel
         opts={{ loop: true, dragFree: true }}
         plugins={[Autoplay({ delay: 6000 }), Fade()]}
@@ -68,7 +68,7 @@ export const HomeCarousel = () => {
                 <img
                   src={slide.desktopSrc}
                   alt={slide.alt}
-                  className="w-screen h-full object-cover"
+                  className="w-full h-full object-cover"
                  />
              </picture>
               <div className="absolute inset-0 bg-black/30"></div>
