@@ -59,7 +59,7 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
     return (
         <section className="max-w-7xl mx-auto py-20 px-4">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${reverse ? '[&>*:first-child]:order-2 [&>*:last-child]:order-1' : ''}`}>
-                <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl order-2 lg:order-1">
+                <div className="relative h-[350px] sm:h-[400px] md:h-[450px] rounded-lg overflow-hidden shadow-xl order-2 lg:order-1">
                     <iframe 
                         src={map} 
                         className="object-cover w-full h-full"
