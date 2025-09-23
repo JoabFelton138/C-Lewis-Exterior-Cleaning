@@ -48,8 +48,8 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
     }
 
     if (service === "gutters" || service === "conservatories") {
-        areas = serviceAreas.gutters.areas;
-        map = '';
+        areas = serviceAreas.guttersAndConservatories.areas;
+        map = serviceAreas.guttersAndConservatories.mapSrc;
     }
     
     return (

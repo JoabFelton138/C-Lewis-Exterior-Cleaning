@@ -23,27 +23,28 @@ export const serviceAreas = {
         ],
         mapSrc: "https://www.google.com/maps/d/u/0/embed?mid=1zXpnVO-xL4xv3jSC4yqNbieisF2HHZk&ehbc=2E312F&noprof=1"
     },
-    gutters: {
-        areas: 
-            [ "Wolverhampton", 
-               "Stafford", 
-               "Telford", 
-               "Cannock", 
-               "Penkridge", 
-               "Codsall", 
-               "Shifnal", 
-               "Gnosall", 
-               "Albrighton", 
-               "Newport", 
-               "Bridgnorth", 
-               "Walsall", 
-               "Burntwood", 
-               "Rugeley", 
-               "Stone", 
-               "Eccleshall", 
-               "Madeley", 
-               "Pattingham", 
-               "Great Wyrley"
-            ]
+    guttersAndConservatories: {
+        areas: [ 
+            "Wolverhampton", 
+            "Stafford", 
+            "Telford", 
+            "Cannock", 
+            "Penkridge", 
+            "Codsall", 
+            "Shifnal", 
+            "Gnosall", 
+            "Albrighton", 
+            "Newport", 
+            "Bridgnorth", 
+            "Walsall", 
+            "Burntwood", 
+            "Rugeley", 
+            "Stone", 
+            "Eccleshall", 
+            "Madeley", 
+            "Pattingham", 
+            "Great Wyrley"
+        ],
+        mapSrc: "https://www.google.com/maps/d/u/0/embed?mid=1rKnyc2C4tQmzzO1_x0cQ_0SEqCcCf-U&ehbc=2E312F&noprof=1"
     }
 }
