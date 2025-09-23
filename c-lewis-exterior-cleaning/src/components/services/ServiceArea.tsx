@@ -51,6 +51,10 @@ export const ServiceArea = ({service, reverse = false} : serviceAreaProps) => {
         areas = serviceAreas.guttersAndConservatories.areas;
         map = serviceAreas.guttersAndConservatories.mapSrc;
     }
+
+    if (service === "windows") {
+        map = serviceAreas.guttersAndConservatories.windowCleaning.mapSrc;
+    }
     
     return (
         <section className="max-w-7xl mx-auto py-20 px-4">

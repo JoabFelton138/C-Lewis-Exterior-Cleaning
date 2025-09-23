@@ -45,6 +45,10 @@ export const serviceAreas = {
             "Pattingham", 
             "Great Wyrley"
         ],
-        mapSrc: "https://www.google.com/maps/d/u/0/embed?mid=1rKnyc2C4tQmzzO1_x0cQ_0SEqCcCf-U&ehbc=2E312F&noprof=1"
+        mapSrc: "https://www.google.com/maps/d/u/0/embed?mid=1rKnyc2C4tQmzzO1_x0cQ_0SEqCcCf-U&ehbc=2E312F&noprof=1",
+        windowCleaning: {
+            areas: [],
+            mapSrc: "https://www.google.com/maps/d/u/0/embed?mid=1e4VSsxN0SQrMy86-CHNh3MCvCtR9oKg&ehbc=2E312F&noprof=1"
+        }
     }
 }
