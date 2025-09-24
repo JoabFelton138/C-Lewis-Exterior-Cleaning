@@ -1,31 +1,31 @@
 import rc1 from '../assets/images/before-after/after1.webp';
-import rc2 from '../assets/images/portfolio/rc2.jpg';
+import rc2 from '../assets/images/portfolio/rc2.webp';
 import rc3 from '../assets/images/before-after/roof-cleaning/roof-after-3.jpg';
-import rc4 from '../assets/images/portfolio/rc3.jpg';
-import rc5 from '../assets/images/portfolio/rc5.jpg';
-import rc7 from '../assets/images/portfolio/rc10.jpeg';
-import rc9 from '../assets/images/portfolio/rc9.jpg';
-import rc10 from '../assets/images/portfolio/rc11.jpg';
-import rc11 from '../assets/images/before-after/roof-cleaning/roof-after-4.jpg';
+import rc4 from '../assets/images/portfolio/rc3.webp';
+import rc5 from '../assets/images/portfolio/rc5.webp';
+import rc7 from '../assets/images/portfolio/rc10.webp';
+import rc9 from '../assets/images/portfolio/rc9.webp';
+import rc10 from '../assets/images/portfolio/rc11.webp';
+import rc11 from '../assets/images/before-after/roof-cleaning/roof-after-4.webp';
 
-import dw1 from '../assets/images/portfolio/dw1.jpg';
-import dw2 from '../assets/images/portfolio/dw2.jpg';
-import dw3 from '../assets/images/portfolio/dw3.jpg';
-import dw4 from '../assets/images/portfolio/dw4.jpg';
-import dw5 from '../assets/images/portfolio/dw5.jpg';
-import dw6 from '../assets/images/portfolio/dw6.jpg';
+import dw1 from '../assets/images/portfolio/dw1.webp';
+import dw2 from '../assets/images/portfolio/dw2.webp';
+import dw3 from '../assets/images/portfolio/dw3.webp';
+import dw4 from '../assets/images/portfolio/dw4.webp';
+import dw5 from '../assets/images/portfolio/dw5.webp';
+import dw6 from '../assets/images/portfolio/dw6.webp';
 
-import gcwc from '../assets/images/portfolio/gcwc.jpg';
-import gc1 from '../assets/images/portfolio/gc1.jpg';
-import gc2 from '../assets/images/portfolio/gc2.jpg';
-import gc3 from '../assets/images/portfolio/gc3.jpeg';
+import gcwc from '../assets/images/portfolio/gcwc.webp';
+import gc1 from '../assets/images/portfolio/gc1.webp';
+import gc2 from '../assets/images/portfolio/gc2.webp';
+import gc3 from '../assets/images/portfolio/gc3.webp';
 
-import wc2 from '../assets/images/portfolio/wc2.jpg';
-import wc3 from '../assets/images/portfolio/wc3.jpg';
-import wc4 from '../assets/images/portfolio/wc4.jpg';
+import wc2 from '../assets/images/portfolio/wc2.webp';
+import wc3 from '../assets/images/portfolio/wc3.webp';
+import wc4 from '../assets/images/portfolio/wc4.webp';
 
 import sp1 from '../assets/images/before-after/conservatory-and-solar-panel-cleaning/after.webp'
-import cc1 from '../assets/images/portfolio/cc7.jpg';
+import cc1 from '../assets/images/portfolio/cc7.webp';
 
 export const portfolioImages = [
     {
