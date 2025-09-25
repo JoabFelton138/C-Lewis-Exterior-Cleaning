@@ -1,5 +1,7 @@
-import { Facebook, Instagram } from "lucide-react"
+import { Facebook, Instagram, ClockAlert } from "lucide-react"
 import { Button } from "../ui/button"
+import { useState } from "react"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "../ui/dialog"
 
 interface SocialIconProps {
     title: "facebook" | "instagram" | "tiktok",
@@ -13,6 +15,8 @@ export const SocialIcons = ({ title, background }: SocialIconProps) => {
         instagram: "https://www.instagram.com/c-lewis-exterior-cleaning",
         tiktok: "https://www.tiktok.com/@c-lewis-exterior-cleaning",
     }
+
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const getIcon = () => {
         switch (title) {
@@ -36,18 +40,38 @@ export const SocialIcons = ({ title, background }: SocialIconProps) => {
     }
 
     const handleClick = () => {
-        window.open(socialLinks[title], "_blank", "noopener, noreferrer");
+        if (title === "tiktok" || title === "instagram") {
+            setIsOpen(true);
+        } else {
+            window.open(socialLinks[title], "_blank", "noopener, noreferrer");
+        }
     }
 
     return (
-        <Button
-            variant="outline"
-            size="icon"
-            className={`rounded-full scale-90 sm:scale-100 ${background ? "bg-slate-50" : ""} hover:bg-sky-500 hover:text-white transition-colors`}
-            onClick={handleClick}
-            aria-label={`Visit our ${title} Page`}
-        >
-            {getIcon()}
-        </Button>
+        <>
+            <Button
+                variant="outline"
+                size="icon"
+                className={`rounded-full scale-90 sm:scale-100 ${background ? "bg-slate-50" : ""} hover:bg-sky-500 hover:text-white transition-colors`}
+                onClick={handleClick}
+                aria-label={`Visit our ${title} Page`}
+            >
+                {getIcon()}
+            </Button>
+            <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                <DialogContent className="max-w-md mx-auto text-center p-6">
+                    <DialogHeader>
+                        <DialogTitle className="title-style text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-800 flex items-center gap-2">
+                            <ClockAlert className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7"/>
+                            Coming Soon
+                        </DialogTitle>
+                        <DialogDescription className="text-gray-600 mt-2 text-lg">  
+                            Our {title} page is currently under development. 
+                            Follow us on Facebook for updates!
+                        </DialogDescription>
+                    </DialogHeader>
+                </DialogContent>
+            </Dialog>
+        </>
     );
 }
