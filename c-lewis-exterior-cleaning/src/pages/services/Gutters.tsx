@@ -7,7 +7,7 @@ import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { ServiceArea } from "@/components/services/ServiceArea";
 
-export const Gutters = () => {
+export default function Gutters() {
     const description1 = `Our gutter clearing service involves removing blockages from your gutters and downpipes using our gutter vacuum system, ensuring proper water flow. Additionally, we can also clean the exterior of the gutters and downpipes to improve their appearance and refresh your exterior.`;
     const description2 = `Keeping your gutters cleared is extremely important and is often over looked. Keeping a eye on what's in the gutters can prevent water damage to the exterior and interior of your home,
                 including your roof!`;

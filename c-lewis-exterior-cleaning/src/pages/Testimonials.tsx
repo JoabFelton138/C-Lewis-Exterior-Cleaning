@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 import { ReviewCarousel } from "@/components/homepage/ReviewCarousel";
 import { useEffect } from "react";
 
-export const Testimonials = () => {
+export default function Testimonials() {
 
     useEffect(() => {
         window.scrollTo(0, 0);

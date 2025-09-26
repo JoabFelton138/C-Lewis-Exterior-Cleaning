@@ -5,7 +5,7 @@ import { QuoteForm } from "@/components/homepage/QuoteForm";
 import { WhyUs } from "@/components/homepage/WhyUs";
 import { MasonryGrid } from "@/components/shared/MasonryGrid";
 
-export const Home = () => {
+export default function Home () {
   return (
     <main id="home-main">
       <HomeCarousel />

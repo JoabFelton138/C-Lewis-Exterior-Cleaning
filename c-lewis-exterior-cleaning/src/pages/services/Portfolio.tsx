@@ -4,7 +4,7 @@ import {useEffect} from 'react';
 import van from "@/assets/images/vans/van.webp";
 import vanMobile from "@/assets/images/vans/van-mobile.webp";
 
-export const Portfolio = () => {
+export default function Portfolio() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])

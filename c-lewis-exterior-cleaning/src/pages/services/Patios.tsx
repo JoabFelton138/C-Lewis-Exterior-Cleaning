@@ -7,7 +7,7 @@ import { ServiceArea } from "@/components/services/ServiceArea";
 import pressureWash from "@/assets/images/stock/pressure-wash.webp";
 import pressureWashMobile from "@/assets/images/stock/pressure-wash-mobile.webp";
 
-export const Patios = () => {
+export default function Patios() {
     const description1 = `Revitalize your property with our professional pressure washing service. We effectively remove dirt, grime, mold, and stains from your surfaces, restoring their original shine. 
                           Whether it's your driveway, siding, deck, or patio, our experienced team delivers thorough, eco-friendly cleaning that leaves your property looking fresh and well-maintained.`;
     const description2 = `If you're looking to restore your outdoor surfaces to their former glory, don't hesitate to get in touch. I offer free, no-obligation quotes and am happy to assess the best approach for your property.`

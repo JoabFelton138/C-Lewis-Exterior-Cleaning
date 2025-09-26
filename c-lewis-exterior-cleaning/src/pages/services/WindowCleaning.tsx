@@ -7,7 +7,7 @@ import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { ServiceArea } from "@/components/services/ServiceArea";
 
-export const WindowCleaning = () => {
+export default function WindowCleaning() {
     const description1 = `Dirty window tracks collect dust, insects, and debris that can damage glass and trigger allergies. Professional cleaning protects your windows and keeps your home healthier — without the risk. With full insurance, specialist equipment, and training, we handle the hard-to-reach spots safely so you don’t have to!`;
     const description2 = `We specialize in professional window cleaning using advanced, filtered water technology to deliver streak-free, sparkling results. 
                           Our eco-friendly approach ensures your windows are spotless and safe for your family and the environment. Trust us to brighten your 

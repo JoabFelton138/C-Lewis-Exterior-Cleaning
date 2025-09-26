@@ -7,7 +7,7 @@ import { BeforeAfterGrid } from '@/components/services/BeforeAfterGrid';
 import { CtaBanner } from '@/components/services/CtaBanner';
 import { ServiceArea } from '@/components/services/ServiceArea';
 
-export const Conservatories = () => {
+export default function Conservatories() {
     const description1 = `Cleaning conservatory roofs and solar panels often requires a delicate touch. I use soft brushes combined with a soapy cleaning agent to ensure I’m giving a gentle but effective thorough
             clean. Having a clean conservatory roof free of any moss or growth can reduce costly repairs to the exterior and interior of your conservatory, including damp and structural damage.
             Keeping solar panels clean and free from any debris ensures that they can run sufficiently and most effectively.`;

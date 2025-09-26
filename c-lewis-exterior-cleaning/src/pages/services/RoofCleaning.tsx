@@ -8,7 +8,7 @@ import { CtaBanner } from "@/components/services/CtaBanner";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { ServiceArea } from "@/components/services/ServiceArea";
 
-export const RoofCleaning = () => {
+export default function RoofCleaning() {
     const description1 = `With years of experience in the industry, we take pride in delivering top-quality results safely and efficiently.
                           Fully insured and equipped with specialist tools, our team ensures your roof is thoroughly cleaned and well-maintained, 
                           enhancing your property's curb appeal and longevity. We also offer treatment to prevent any growth within the next 
