@@ -22,7 +22,7 @@ export const HomeCarousel = () => {
 
   const handleButtonClick = (subtitle: string) => {
     switch (subtitle) {
-      case "Based in Staffordshire, serving the West Midlands & beyond":
+      case "Serving Staffordshire, the West Midlands & beyond":
         return navigatToAbout();
       case "Driveways & Patio's. Decking, siding & more":
         return navigate('/pressure-washing');
