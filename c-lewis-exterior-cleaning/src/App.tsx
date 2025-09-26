@@ -3,14 +3,17 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "./components/shared/Footer";
 
+import Patios from './pages/services/Patios';
+import RoofCleaning from './pages/services/RoofCleaning';
+import Gutters from './pages/services/Gutters';
+import WindowCleaning from './pages/services/WindowCleaning';
+import Conservatories from './pages/services/Conservatories';
+
+import Testimonials from './pages/Testimonials';
+
 const Home = lazy(() => import("./pages/Home"));
-const Testimonials = lazy(() => import('./pages/Testimonials'));
-const Patios = lazy(() => import('./pages/services/Patios'));
-const RoofCleaning = lazy(() => import('./pages/services/RoofCleaning'));
-const Gutters = lazy(() => import('./pages/services/Gutters'));
-const WindowCleaning = lazy(() => import('./pages/services/WindowCleaning'));
-const Conservatories = lazy(() => import('./pages/services/Conservatories'));
-const Portfolio = lazy(() => import('./pages/services/Portfolio'));
+const Services = { Patios, RoofCleaning, Gutters, WindowCleaning, Conservatories };
+const Portfolio = lazy(() => import('./pages/Portfolio'));
 
 function App() {
 
@@ -28,11 +31,11 @@ function App() {
       }>
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/pressure-washing" element={<Patios />}/>
-          <Route path="/roof-cleaning" element={<RoofCleaning />}/>
-          <Route path="/gutter-cleaning" element={<Gutters />}/>
-          <Route path="/window-cleaning" element={<WindowCleaning />}/>
-          <Route path="/conservatory-and-solar-panel-cleaning" element={<Conservatories />}/>
+          <Route path="/pressure-washing" element={<Services.Patios />}/>
+          <Route path="/roof-cleaning" element={<Services.RoofCleaning />}/>
+          <Route path="/gutter-cleaning" element={<Services.Gutters />}/>
+          <Route path="/window-cleaning" element={<Services.WindowCleaning />}/>
+          <Route path="/conservatory-and-solar-panel-cleaning" element={<Services.Conservatories />}/>
           <Route path="/portfolio" element={<Portfolio />}/>
           <Route path="/testimonials" element={<Testimonials />}/>
         </Routes>

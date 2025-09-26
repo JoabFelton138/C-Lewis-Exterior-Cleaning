@@ -42,6 +42,10 @@ export default defineConfig({
           if (id.includes('node_modules/embla-carousel')) {
             return 'carousel';
           }
+          // Bundle all service pages together
+          if (id.includes('/pages/services/')) {
+            return 'services';
+          }
           // Other node_modules
           if (id.includes('node_modules')) {
             return 'vendor';
