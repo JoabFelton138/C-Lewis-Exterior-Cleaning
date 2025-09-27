@@ -1,4 +1,4 @@
-import van from "../assets/images/vans/van-hero.webp";
+import van from "../assets/images/vans/new_van.webp";
 import vanMobile from "../assets/images/vans/van-hero-mobile.webp";
 import stockPressureWash from "@/assets/images/stock/pressure-wash.webp";
 import stockPressureWashMobile from "@/assets/images/stock/pressure-wash-mobile.webp";

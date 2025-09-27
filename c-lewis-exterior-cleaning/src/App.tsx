@@ -10,10 +10,10 @@ import WindowCleaning from './pages/services/WindowCleaning';
 import Conservatories from './pages/services/Conservatories';
 
 import Testimonials from './pages/Testimonials';
+import Portfolio from './pages/Portfolio';
 
 const Home = lazy(() => import("./pages/Home"));
 const Services = { Patios, RoofCleaning, Gutters, WindowCleaning, Conservatories };
-const Portfolio = lazy(() => import('./pages/Portfolio'));
 
 function App() {
 
