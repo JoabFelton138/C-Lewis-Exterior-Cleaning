@@ -8,11 +8,10 @@ export const useQuoteNavigation = () => {
     const scrollToQuoteForm = () => {
         const element = document.getElementById('quote-form');
         if (element) {
-            scroll.scrollTo(element.offsetTop - 40, {
-                duration: 1200,
-                smooth: true,
-                spy: true,
-                spyThrottle: 500,
+            // Use native scroll - works reliably on mobile
+            window.scrollTo({
+                top: element.offsetTop - 40,
+                behavior: 'smooth'
             });
         }
     };
@@ -20,7 +19,7 @@ export const useQuoteNavigation = () => {
     const navigateToQuoteForm = () => {
         if (location.pathname !== '/') {
             navigate('/');
-            setTimeout(scrollToQuoteForm, 100);
+            setTimeout(scrollToQuoteForm, 500);
         } else {
             scrollToQuoteForm();
         }
