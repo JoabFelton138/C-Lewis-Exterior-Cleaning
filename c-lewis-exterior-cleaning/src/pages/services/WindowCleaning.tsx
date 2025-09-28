@@ -27,7 +27,6 @@ export default function WindowCleaning() {
                 description2={description2}
                 image={windowCleaning}
             />
-            <BeforeAfterGrid service="windows" />
             <CtaBanner />
             <ServiceArea service="windows" />
         </main>
