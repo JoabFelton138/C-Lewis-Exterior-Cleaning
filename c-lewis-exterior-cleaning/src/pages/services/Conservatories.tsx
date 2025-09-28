@@ -17,7 +17,7 @@ export default function Conservatories() {
         <main>
             <Hero 
                 title="Conservatories & Solar Panels" 
-                subtitle="Gentle Cleaning. Lasting Clarity." 
+                subtitle="Professional Cleaning to Light up your home" 
                 desktopImage={conservatoryHero} 
                 mobileImage={conservatoryHeroMobile}
             />

@@ -16,7 +16,7 @@ export default function Gutters() {
         <main>
             <Hero 
                 title="Gutter Cleaning" 
-                subtitle="Clean Gutters, Clean Home." 
+                subtitle="Also offering soffit & Facia Cleaning" 
                 desktopImage={gutterDesktop} 
                 mobileImage={gutterMobile} 
             />

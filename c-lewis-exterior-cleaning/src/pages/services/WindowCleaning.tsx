@@ -15,7 +15,7 @@ export default function WindowCleaning() {
         <main>
             <Hero 
                 title="Window Cleaning" 
-                subtitle="Your View, Our Passion." 
+                subtitle="Pure water cleaning technology" 
                 desktopImage={windowHero} 
                 mobileImage={windowHeroMobile} 
             />

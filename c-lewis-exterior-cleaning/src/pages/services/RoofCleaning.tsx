@@ -22,7 +22,7 @@ export default function RoofCleaning() {
         <main>
             <Hero 
                 title="roof cleaning" 
-                subtitle="Protect Your Home, One Shingle at a Time." 
+                subtitle="With optional moss prevention treatments available" 
                 desktopImage={roofHeroDesktop} 
                 mobileImage={roofHeroMobile} 
             />

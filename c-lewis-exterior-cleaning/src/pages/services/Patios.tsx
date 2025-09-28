@@ -15,7 +15,7 @@ export default function Patios() {
         <main>
             <Hero 
                 title="pressure washing" 
-                subtitle="Pristine Paths, Lasting Impressions." 
+                subtitle="Driveways & Patio's. Decking, siding & more" 
                 desktopImage={pressureWash} 
                 mobileImage={pressureWashMobile} 
             />
