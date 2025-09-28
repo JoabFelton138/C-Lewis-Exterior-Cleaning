@@ -3,7 +3,6 @@ import windowHero from '../../assets/images/stock/window-clean.webp';
 import windowHeroMobile from '../../assets/images/stock/window-clean-mobile.webp';
 import { ServiceLayout } from "@/components/services/ServiceLayout";
 import windowCleaning from '../../assets/images/servicecarousel2/twctwc.webp';
-import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { ServiceArea } from "@/components/services/ServiceArea";
 
