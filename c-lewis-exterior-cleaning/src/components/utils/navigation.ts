@@ -8,10 +8,9 @@ export const useQuoteNavigation = () => {
     const scrollToQuoteForm = () => {
         const element = document.getElementById('quote-form');
         if (element) {
-            // Use native scroll - works reliably on mobile
-            window.scrollTo({
-                top: element.offsetTop - 40,
-                behavior: 'smooth'
+            element.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
             });
         }
     };
@@ -19,7 +18,7 @@ export const useQuoteNavigation = () => {
     const navigateToQuoteForm = () => {
         if (location.pathname !== '/') {
             navigate('/');
-            setTimeout(scrollToQuoteForm, 500);
+            setTimeout(scrollToQuoteForm, 300);
         } else {
             scrollToQuoteForm();
         }
