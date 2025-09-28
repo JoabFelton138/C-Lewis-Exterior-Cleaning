@@ -1,6 +1,6 @@
 import { Hero } from "@/components/shared/Hero";
 import { ServiceLayout } from "@/components/services/ServiceLayout";
-import patios from "@/assets/images/pw/be-view.webp";
+import patios from "@/assets/images/portfolio/dw2.webp";
 import { CtaBanner } from "@/components/services/CtaBanner";
 import { BeforeAfterGrid } from "@/components/services/BeforeAfterGrid";
 import { ServiceArea } from "@/components/services/ServiceArea";
