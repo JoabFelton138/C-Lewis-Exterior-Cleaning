@@ -8,17 +8,29 @@ export const useQuoteNavigation = () => {
     const scrollToQuoteForm = () => {
         const element = document.getElementById('quote-form');
         if (element) {
-            element.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                window.scrollTo({
+                    top: element.offsetTop - 40,
+                    behavior: 'smooth'
+                });
+            } else {
+                scroll.scrollTo(element.offsetTop - 40, {
+                    duration: 1200,
+                    smooth: true,
+                    spy: true,
+                    spyThrottle: 500,
+                });
+            }
         }
     };
 
     const navigateToQuoteForm = () => {
         if (location.pathname !== '/') {
             navigate('/');
-            setTimeout(scrollToQuoteForm, 300);
+            const isMobile = window.innerWidth <= 768;
+            const delay = isMobile ? 800 : 500;
+            setTimeout(scrollToQuoteForm, delay);
         } else {
             scrollToQuoteForm();
         }
