@@ -56,7 +56,7 @@ export const portfolioImages = [
     {
         image: dw2,
         title: "driveway service in perton",
-        description: `A blocked driveway completely cleared and re-sanded. Another happy customer!`
+        description: `A blocked driveway completely cleaned and re-sanded. Another happy customer!`
     },
     {
         image: rc5,
