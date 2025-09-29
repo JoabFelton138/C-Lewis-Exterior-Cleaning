@@ -68,7 +68,7 @@ export const HomeCarousel = () => {
                 <img
                   src={slide.desktopSrc}
                   alt={slide.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                  />
              </picture>
               <div className="absolute inset-0 bg-black/40"></div>
