@@ -1,7 +1,7 @@
-import before1 from '@/assets/images/before-after/patios/before1.jpg'
-import after1 from '@/assets/images/before-after/patios/after1.jpg'
-import before2 from '@/assets/images/before-after/patios/before2.jpg'
-import after2 from '@/assets/images/before-after/patios/after2.jpg'
+import before1 from '@/assets/images/before-after/patios/patio-before1.webp'
+import after1 from '@/assets/images/before-after/patios/patio-after1.webp'
+import before2 from '@/assets/images/before-after/patios/patio-before2.webp'
+import after2 from '@/assets/images/before-after/patios/patio-after2.webp'
 
 export const patioImages = [
     { before: before1, after: after1, beforeAlt: 'Before', afterAlt: 'After'},
