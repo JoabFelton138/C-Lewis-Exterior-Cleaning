@@ -1,5 +1,5 @@
 import van from "../assets/images/vans/new_van.webp";
-import vanMobile from "../assets/images/vans/new-van-mobilefinal.webp";
+import vanMobile from "../assets/images/vans/new-van-2-mobile-2.webp";
 import stockPressureWash from "@/assets/images/stock/pressure-wash.webp";
 import stockPressureWashMobile from "@/assets/images/stock/pressure-wash-mobile.webp";
 import r1 from "../assets/images/roof-cleaning/rc4.webp";
