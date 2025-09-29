@@ -26,7 +26,7 @@ export const WhyUs = () => {
         }
     ]
     return (
-        <section className="w-full pt-14 pb-20 bg-white overflow-hidden px-4">
+        <section className="w-full py-16 sm:py-20 md:py-24 bg-white overflow-hidden px-4">
             <div className="container mx-auto">
                 <SectionTitle title="Why Choose Us" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
