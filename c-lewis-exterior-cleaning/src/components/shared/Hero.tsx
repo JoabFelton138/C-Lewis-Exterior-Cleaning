@@ -15,7 +15,7 @@ export const Hero = ({ title, subtitle, desktopImage, mobileImage }: HeroProps) 
                 <img 
                     src={desktopImage} 
                     alt={title} 
-                    className="w-full h-full object-cover aspect-video"
+                    className="w-full h-full object-cover"
                 />
             </picture>
             <div className="absolute inset-0 bg-black/30"></div>
