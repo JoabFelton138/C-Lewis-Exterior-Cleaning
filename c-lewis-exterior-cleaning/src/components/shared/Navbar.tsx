@@ -49,69 +49,71 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <NavigationMenu
-      viewport={false}
-      className={`transition-all duration-700 ease-in-out
-                    ${
-                      isScrolled
-                        ? "bg-white/100 shadow-md opacity-100"
-                        : "bg-white/0"
-                    }`}>
-      <div className="ml-[1px]">
-        <img
-          src={logo}
-          className={`transition-all duration-300 ease-in-out object-contain ${
-            isScrolled 
-              ? "w-[80px] sm:w-[96px] md:w-[112px] lg:w-[128px]  brightness-0" 
-              : "w-[96px] sm:w-[112px] md:w-[128px] lg:w-[144px] brightness-0 invert"
-          } cursor-pointer hover:scale-105`}
-          alt="C-Lewis Exterior Cleaning Logo"
-          onClick={navigateToTop}
-        />
-      </div>
-    
-      <NavigationMenuList className={`flex items-center pr-2 sm:pr-4 ${isScrolled ? "text-black [&>li>a]:text-black" 
-                                       : "text-white [&>li>a]:text-white"}`}>
-       
-       <MobileMenuTrigger menuItems={menuItems} isScrolled={isScrolled} />
+    <nav role="navigation" aria-label="Main Navigation">
+      <NavigationMenu
+        viewport={false}
+        className={`transition-all duration-700 ease-in-out
+                      ${
+                        isScrolled
+                          ? "bg-white/100 shadow-md opacity-100"
+                          : "bg-white/0"
+                      }`}>
+        <div className="ml-[1px]">
+          <img
+            src={logo}
+            className={`transition-all duration-300 ease-in-out object-contain ${
+              isScrolled 
+                ? "w-[80px] sm:w-[96px] md:w-[112px] lg:w-[128px]  brightness-0" 
+                : "w-[96px] sm:w-[112px] md:w-[128px] lg:w-[144px] brightness-0 invert"
+            } cursor-pointer hover:scale-105`}
+            alt="C-Lewis Exterior Cleaning Logo"
+            onClick={navigateToTop}
+          />
+        </div>
+      
+        <NavigationMenuList className={`flex items-center pr-2 sm:pr-4 ${isScrolled ? "text-black [&>li>a]:text-black" 
+                                        : "text-white [&>li>a]:text-white"}`}>
+        
+        <MobileMenuTrigger menuItems={menuItems} isScrolled={isScrolled} />
 
 
-        {menuItems.map((item, index) => (
-            <NavigationMenuItem key={index} className="hidden md:block"> 
-                {item.items ? (
-                    <>
-                        <NavigationMenuTrigger 
-                            className={`font-normal ${isScrolled ? "text-black sky-hover" : "text-white"}`}
-                        >
-                            {item.title}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent className={`!w-[200px] ${isScrolled ? "text-black" : "text-white"}`}>
-                            <ul>
-                                {item.items.map((subItem, index) => (
-                                    <li key={index}>
-                                        <NavigationMenuLink 
-                                            href={subItem.href}
-                                            className={`hover:bg-sky-400/30 hover:text-black ${isScrolled ? "data-[active=true]:bg-sky-400/30 data-[active=true]:text-black" : ""}`}
-                                        >
-                                            {subItem.title}
-                                        </NavigationMenuLink>
-                                    </li>
-                                ))}
-                            </ul>
-                        </NavigationMenuContent>
-                    </>
-                ) : (
-                    <NavigationMenuLink 
-                        href={item.href} 
-                        onClick={item.onClick}
-                        className={`${isScrolled ? "hover:bg-sky-400/30 !data-[active=true]:bg-sky-400/30 !data-[active=true]:text-black" : ""}`}
-                    >
-                        {item.title}
-                    </NavigationMenuLink>
-                )}
-            </NavigationMenuItem>
-        ))}
-      </NavigationMenuList>
-    </NavigationMenu>
+          {menuItems.map((item, index) => (
+              <NavigationMenuItem key={index} className="hidden md:block"> 
+                  {item.items ? (
+                      <>
+                          <NavigationMenuTrigger 
+                              className={`font-normal ${isScrolled ? "text-black sky-hover" : "text-white"}`}
+                          >
+                              {item.title}
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent className={`!w-[200px] ${isScrolled ? "text-black" : "text-white"}`}>
+                              <ul>
+                                  {item.items.map((subItem, index) => (
+                                      <li key={index}>
+                                          <NavigationMenuLink 
+                                              href={subItem.href}
+                                              className={`hover:bg-sky-400/30 hover:text-black ${isScrolled ? "data-[active=true]:bg-sky-400/30 data-[active=true]:text-black" : ""}`}
+                                          >
+                                              {subItem.title}
+                                          </NavigationMenuLink>
+                                      </li>
+                                  ))}
+                              </ul>
+                          </NavigationMenuContent>
+                      </>
+                  ) : (
+                      <NavigationMenuLink 
+                          href={item.href} 
+                          onClick={item.onClick}
+                          className={`${isScrolled ? "hover:bg-sky-400/30 !data-[active=true]:bg-sky-400/30 !data-[active=true]:text-black" : ""}`}
+                      >
+                          {item.title}
+                      </NavigationMenuLink>
+                  )}
+              </NavigationMenuItem>
+          ))}
+        </NavigationMenuList>
+      </NavigationMenu>
+    </nav>
   );
 };
