@@ -74,16 +74,16 @@ export const HomeCarousel = () => {
               <div className="absolute inset-0 bg-black/40"></div>
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
                 <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
-                  <h2
+                  <h1
                     className={`text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap title-style text-white text-center animate-slide-down drop-shadow-2xl ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.title}
-                  </h2>
-                  <h4
+                  </h1>
+                  <h2
                     className={`text-sm sm:text-lg md:text-xl lg:text-2xl title-style text-white/90 text-center animate-slide-left drop-shadow-lg line-clamp-2 sm:line-clamp-none max-w-[320px] sm:max-w-[450px] md:max-w-[550px] lg:max-w-[650px] xl:max-w-[750px] ${activeSlide === index && !isTransitioning ? "active" : ""}`}
                   >
                     {slide.subtitle}
-                  </h4>
+                  </h2>
                   <Button
                     className={`hover:scale-105 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 text-xs sm:text-sm md:text-base px-4 py-4 mt-2 sm:mt-0 ${activeSlide === index && !isTransitioning ? "animate-slide-up active" : ""}`}
                     variant="outline"
