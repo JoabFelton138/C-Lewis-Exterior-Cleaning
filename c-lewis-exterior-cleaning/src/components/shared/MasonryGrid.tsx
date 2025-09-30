@@ -51,7 +51,7 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
             <div className={`w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4`}>
                 <AnimatePresence>
                         {imagesToShow.map((item, index) => (
-                            <motion.div 
+                            <motion.figure
                                 key={index} 
                                 className="aspect-[4/3] w-full relative overflow-hidden group cursor-pointer"
                                 onClick={() => handleClick(item)}
@@ -69,12 +69,12 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                         loading="lazy"
                                     />
-                                    <div className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1 px-2">
+                                    <figcaption className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1 px-2">
                                         <span className="text-sm sm:text-sm md:text-lg lg:text-base title-style text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out text-center leading-tight">
                                             {item.title}
                                         </span>
-                                    </div>
-                                </motion.div>
+                                    </figcaption>
+                                </motion.figure>
 
                             ))
                         }
