@@ -30,10 +30,10 @@ export const WhyUs = () => {
             <div className="container mx-auto">
                 <SectionTitle title="Why Choose Us" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-                    <div className="flex flex-col gap-6 md:gap-6 mb-6 md:mb-0">
+                    <ul className="flex flex-col gap-6 md:gap-6 mb-6 md:mb-0">
                         {reasons.map((reason, index) => {
                             return (
-                                <div key={index}>
+                                <li key={index}>
                                     <div className="flex gap-3 items-start mb-2">
                                         <reason.icon className="w-6 h-6 md:w-7 md:h-7 text-primary"/>
                                         <h3 className="text-lg md:text-xl lg:text-2xl text-gray-800 title-style">{reason.title}</h3>
@@ -41,10 +41,10 @@ export const WhyUs = () => {
                                     <p className="text-gray-600 text-sm sm:text-base xl:text-lg ">
                                         {reason.description}
                                     </p>
-                                </div>
+                                </li>
                             )
                         })}
-                    </div>
+                    </ul>
                     <div className="relative order-1 lg:order-2 group">
                         <div className="relative h-[300px] sm:h-[330px] md:h-[365px] lg:h-[400px] rounded-lg overflow-hidden shadow-xl">
                             <img 
