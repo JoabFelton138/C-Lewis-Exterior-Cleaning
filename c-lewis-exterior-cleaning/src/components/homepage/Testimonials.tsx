@@ -37,8 +37,10 @@ export const Testimonials = () => {
                     <p className='text-white text-xs sm:text-md'>
                         Based on <span className="font-bold text-sm sm:text-lg">60+ reviews</span>
                     </p>
-                    <img src={googleLogo} 
-                         alt="Google Logo" 
+                    <img 
+                        src={googleLogo} 
+                        alt="Google Logo" 
+                        loading="lazy"
                     />
                 </div>
                 <div className="max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-5xl">
