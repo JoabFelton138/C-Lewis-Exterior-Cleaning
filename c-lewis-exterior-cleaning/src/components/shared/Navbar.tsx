@@ -68,6 +68,8 @@ export const Navbar = () => {
             } cursor-pointer hover:scale-105`}
             alt="C-Lewis Exterior Cleaning Logo"
             onClick={navigateToTop}
+            role="button"
+            aria-label="Go to home page"
           />
         </div>
       

@@ -33,21 +33,22 @@ export const CtaBanner = () => {
 
     return (
         <section className="w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden cursor-pointer">
-                <div className={`bg-sky-400 ${styles.container}`}>
-                    <div 
-                        className={`${styles.leftAnimation} flex items-center`}
-                        onClick={handlePhoneClick}>
-                            <Phone className={`${styles.icon} rotate-260`}/>
-                            <h2 className={`${styles.text}`}>CALL 07391 853 506</h2>
-                    </div>
-                </div>
-                <a onClick={navigateToQuoteForm} className={`bg-sky-700 ${styles.container} cursor-pointer block`}>
-                    <div className={`${styles.rightAnimation} flex items-center`}>
-                        <MessageCircle className={`${styles.icon}`}/>
-                        <h2 className={`${styles.text}`}>Send Us a Message</h2>
-                    </div>
-                </a>
+            <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+                <button 
+                    className={`bg-sky-400 ${styles.container} ${styles.leftAnimation} flex items-center cursor-pointer`}
+                    onClick={handlePhoneClick}
+                    aria-label="Call us at 07391 853 506">
+                    <Phone className={`${styles.icon} rotate-260`}/>
+                    <h2 className={`${styles.text}`}>CALL 07391 853 506</h2>
+                </button>
+                
+                <button 
+                    className={`bg-sky-700 ${styles.container} ${styles.rightAnimation} flex items-center cursor-pointer`}
+                    onClick={navigateToQuoteForm}
+                    aria-label="Send us a message for a quote">
+                    <MessageCircle className={`${styles.icon}`}/>
+                    <h2 className={`${styles.text}`}>Send Us a Message</h2>
+                </button>
             </div>
         </section>
     );
