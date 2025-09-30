@@ -55,18 +55,21 @@ export const QuoteForm = () => {
     const [showSuccessDialog, setShowSuccessDialog] = useState(false);
     
     return (
-        <section id="quote-form" className="py-24">
+        <section id="quote-form" className="py-24" aria-labelledby="quote-form-title">
             <Card className="p-4 sm:p-6 md:p-10 max-w-[700px] mx-auto space-y-4 sm:space-y-6 md:space-y-8 w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[70%]">
-                <CardHeader className="text-center p-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-800 title-style">
-                    Need a Quote?
+                <CardHeader className="text-center p-4">
+                    <h2 id="quote-form-title" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-800 title-style">
+                        Need a Quote?
+                    </h2>
                     <CardDescription className="text-sm sm:text-base font-normal normal-case tracking-normal mt-2">
                         If you would like a free quote, 
-                        fill out the form and i'll get back to you!
+                        fill out the form and I'll get back to you!
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
                     <Form {...form}>
-                        <div className="space-y-4 sm:space-y-6 md:space-y-5">
+                        <form onSubmit={form.handleSubmit(onSubmit)} aria-label="Quote request form">
+                            <div className="space-y-4 sm:space-y-6 md:space-y-5">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div>
                                     <FormField
@@ -187,12 +190,12 @@ export const QuoteForm = () => {
                                 </div>
                             </div>
                         </div>
-                        <ResponsiveButton className="mt-6 mb-2 mx-auto" 
-                            type="submit"
-                            onClick={form.handleSubmit(onSubmit)}
-                            disabled={form.formState.isSubmitting}
-                            text={form.formState.isSubmitting ? "SUBMITTING..." : "SUBMIT"}
-                        />
+                            <ResponsiveButton className="mt-6 mb-2 mx-auto" 
+                                type="submit"
+                                disabled={form.formState.isSubmitting}
+                                text={form.formState.isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+                            />
+                        </form>
                     </Form>
                 </CardContent>
             </Card>
