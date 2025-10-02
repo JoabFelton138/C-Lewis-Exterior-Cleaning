@@ -22,8 +22,8 @@ export const Navbar = () => {
   }
 
   const menuItems = [
-    {title: "GET A QUOTE", onClick: navigateToQuoteForm},
-    {title: "CONTACT US", onClick: handleContactClick},
+    {title: "GET A QUOTE", onClick: navigateToQuoteForm,},
+    {title: "CONTACT US", onClick: handleContactClick, href: "mailto:c.lewis.pws@hotmail.com"},
     {
         title: "SERVICES", 
         items: [
