@@ -51,7 +51,11 @@ export const Review = ({ isLarge = false,...ReviewProps}: ReviewProps) => {
           <CardTitle className="flex justify-between">
             <div className="flex items-center gap-2">
               <Avatar className={`${styles.avatar} flex-shrink-0`}>
-                <AvatarImage src={ReviewProps.image} className="object-cover w-full h-full" />
+                <AvatarImage 
+                  src={ReviewProps.image} 
+                  className="object-cover w-full h-full" 
+                  alt={`${ReviewProps.author} avatar`}
+                />
                 <AvatarFallback>
                   {ReviewProps.author.charAt(0)}
                 </AvatarFallback>
