@@ -22,7 +22,7 @@ export const Navbar = () => {
   }
 
   const menuItems = [
-    {title: "GET A QUOTE", onClick: navigateToQuoteForm,},
+    {title: "GET A QUOTE", onClick: navigateToQuoteForm, href: "#quote-form"},
     {title: "CONTACT US", onClick: handleContactClick, href: "mailto:c.lewis.pws@hotmail.com"},
     {
         title: "SERVICES", 
@@ -114,7 +114,10 @@ export const Navbar = () => {
                   ) : (
                       <NavigationMenuLink 
                           href={item.href} 
-                          onClick={item.onClick}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            item.onClick?.();
+                          }}
                           className={`${isScrolled ? "hover:bg-sky-400/30 !data-[active=true]:bg-sky-400/30 !data-[active=true]:text-black" : ""}`}
                       >
                           {item.title}
