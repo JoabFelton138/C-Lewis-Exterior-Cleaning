@@ -78,8 +78,8 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-focus:scale-110"
                                         loading="lazy"
                                     />
-                                    <figcaption className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1 px-2 group-hover:opacity-100 group-focus:opacity-100">
-                                        <span className="text-sm sm:text-sm md:text-lg lg:text-base title-style text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out text-center leading-tight group-hover:translate-x-0 group-focus:translate-x-0">
+                                    <figcaption className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1 px-2 group-focus:opacity-100">
+                                        <span className="text-sm sm:text-sm md:text-lg lg:text-base title-style text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out text-center leading-tight group-focus:translate-x-0">
                                             {item.title}
                                         </span>
                                     </figcaption>
