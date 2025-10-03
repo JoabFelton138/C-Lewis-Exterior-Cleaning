@@ -74,3 +74,11 @@ export const usePortfolioNavigation = () => {
     }
     return handlePortfolioClick;
 }
+
+export const useTestimonialsNavigation = () => {
+    const navigate = useNavigate();
+    const handleTestimoialsClick = () => {
+        navigate('/testimonials');
+    }
+    return handleTestimoialsClick;
+}

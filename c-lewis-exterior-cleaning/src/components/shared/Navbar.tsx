@@ -9,7 +9,7 @@ import {
 import logo from "../../assets/Transparent Logo.png";
 import { useState, useEffect } from "react";
 import { MobileMenuTrigger } from "./MobileMenuTrigger";
-import { useLogoNavigation, useQuoteNavigation } from "../utils/navigation";
+import { useLogoNavigation, usePortfolioNavigation, useQuoteNavigation, useTestimonialsNavigation } from "../utils/navigation";
 
 
 export const Navbar = () => {
@@ -20,6 +20,9 @@ export const Navbar = () => {
   const handleContactClick = () => {
     window.location.href = "mailto:c.lewis.pws@hotmail.com";
   }
+
+  const navigateToPortfolio = usePortfolioNavigation();
+  const navigateToTestimonials = useTestimonialsNavigation();
 
   const menuItems = [
     {title: "GET A QUOTE", onClick: navigateToQuoteForm, href: "#quote-form"},
@@ -34,8 +37,8 @@ export const Navbar = () => {
             {title: "CONSERVATORIES & SOLAR PANELS", href: "/conservatory-and-solar-panel-cleaning"},
         ],
     },
-    {title: "PORTFOLIO", href: "/portfolio"},
-    {title: "TESTIMONIALS", href: "/testimonials"},
+    {title: "PORTFOLIO", onClick: navigateToPortfolio, href: "/portfolio"},
+    {title: "TESTIMONIALS", onClick: navigateToTestimonials, href: "/testimonials"},
   ];
 
   useEffect(() => {
