@@ -53,7 +53,16 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
                         {imagesToShow.map((item, index) => (
                             <motion.figure
                                 key={index} 
-                                className="aspect-[4/3] w-full relative overflow-hidden group cursor-pointer"
+                                tabIndex={0}
+                                role="button"
+                                aria-label={`View ${item.title} -  ${item.description}`}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        handleClick(item);
+                                    }
+                                }}
+                                className="aspect-[4/3] w-full relative overflow-hidden group cursor-pointer focus-visible:outline-none"
                                 onClick={() => handleClick(item)}
                                 initial={newItems.includes(index) ? { opacity: 0, y: 50, scale: 0.8 } : { opacity: 1, y: 0, scale: 1 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -66,11 +75,11 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
                                     <img 
                                         src={item.image} 
                                         alt={item.title} 
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-focus:scale-110"
                                         loading="lazy"
                                     />
-                                    <figcaption className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1 px-2">
-                                        <span className="text-sm sm:text-sm md:text-lg lg:text-base title-style text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out text-center leading-tight">
+                                    <figcaption className="absolute flex flex-col inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-y-1 px-2 group-hover:opacity-100 group-focus:opacity-100">
+                                        <span className="text-sm sm:text-sm md:text-lg lg:text-base title-style text-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out text-center leading-tight group-hover:translate-x-0 group-focus:translate-x-0">
                                             {item.title}
                                         </span>
                                     </figcaption>
