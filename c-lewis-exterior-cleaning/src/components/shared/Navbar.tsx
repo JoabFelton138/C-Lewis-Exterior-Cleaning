@@ -65,7 +65,7 @@ export const Navbar = () => {
               isScrolled 
                 ? "w-[80px] sm:w-[96px] md:w-[112px] lg:w-[128px]  brightness-0" 
                 : "w-[96px] sm:w-[112px] md:w-[128px] lg:w-[144px] brightness-0 invert"
-            } cursor-pointer hover:scale-105 focus:outline-none focus:ring-1 focus:ring-sky-300 focus:ring-offset-1 focus:rounded-md`}
+            } cursor-pointer hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-sky-300 focus-visible:ring-offset-1 focus-visible:rounded-md`}
             alt="C-Lewis Exterior Cleaning Logo"
             onClick={navigateToTop}
             role="button"
