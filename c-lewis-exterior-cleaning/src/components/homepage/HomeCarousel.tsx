@@ -69,6 +69,7 @@ export const HomeCarousel = () => {
                   src={slide.desktopSrc}
                   alt={slide.alt}
                   className="w-full h-full object-cover"
+                  fetchPriority={index === 0 ? "high" : "auto"}
                  />
              </picture>
               <div className="absolute inset-0 bg-black/40"></div>
