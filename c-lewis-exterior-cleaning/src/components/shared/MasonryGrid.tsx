@@ -68,7 +68,7 @@ export const MasonryGrid = ({ isPage = false}: MasonryGridProps) => {
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 transition={newItems.includes(index) ? {
                                     duration: 0.6,
-                                    delay: (newItems.indexOf(index) * 0.1),
+                                    delay: window.innerWidth < 768 ? 0 : (newItems.indexOf(index) * 0.1),
                                     ease: "easeOut"
                                 } : { duration: 0.3 }}
                             >
