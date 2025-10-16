@@ -8,7 +8,7 @@ interface SuccessDialogProps {
 export const SuccessDialog = ({open, onOpenChange}: SuccessDialogProps) => {
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="sm:max-w-[425px]">
+            <DialogContent className="sm:max-w-[425px] p-5">
                 <DialogHeader>
                     <div className="flex justify-center">
                         <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
