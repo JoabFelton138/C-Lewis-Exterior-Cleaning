@@ -52,7 +52,7 @@ export const QuoteForm = () => {
         }
     };
 
-    const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+    const [showSuccessDialog, setShowSuccessDialog] = useState(true);
     
     return (
         <section id="quote-form" className="py-24" aria-labelledby="quote-form-title">
