@@ -19,7 +19,6 @@ export const Testimonials = () => {
                 alt="Roof background" 
                 className='w-full h-full object-cover'
             />
-            <div className='absolute inset-0 bg-black/40'></div>
         </div>
         <div className='max-w-5xl mx-auto px-4 relative z-10'>
             <div className='flex flex-col lg:flex-row items-center justify-center gap-12'>

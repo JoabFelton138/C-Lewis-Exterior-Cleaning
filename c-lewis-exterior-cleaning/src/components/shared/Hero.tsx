@@ -8,17 +8,16 @@ interface HeroProps {
 export const Hero = ({ title, subtitle, desktopImage, mobileImage }: HeroProps) => {
     
     return (
-        <section className="relative w-full h-[85vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-screen bg-white">            
+        <section className="relative w-full h-[85vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-screen">            
             <picture>
                 <source media="(max-width: 767px)" srcSet={mobileImage} />
                 <source media="(min-width: 768px)" srcSet={desktopImage} />
                 <img 
                     src={desktopImage} 
                     alt={title} 
-                    className="w-full h-full object-cover bg-white"
+                    className="w-full h-full object-cover"
                 />
             </picture>
-            <div className="absolute inset-0 bg-black/30"></div>
             <div className="absolute inset-0 flex flex-col gap-1 sm:gap-2 md:gap-4 items-center justify-center">
                 <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap title-style text-white text-center">
                     {title.toUpperCase()}

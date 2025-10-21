@@ -72,7 +72,6 @@ export const HomeCarousel = () => {
                   fetchPriority={index === 0 ? "high" : "auto"}
                  />
              </picture>
-              <div className="absolute inset-0 bg-black/40"></div>
               <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4 md:px-6">
                 <div className="flex flex-col items-center gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4">
                   <h1
